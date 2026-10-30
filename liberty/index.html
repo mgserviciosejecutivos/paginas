@@ -65,13 +65,13 @@ h2{font:500 clamp(34px,4.6vw,54px)/1.08 'Cormorant Garamond',serif;margin:14px 0
 .nums span{display:block;max-width:20ch;margin:0 auto;font-size:10px;letter-spacing:.24em;line-height:1.8;text-transform:uppercase;color:var(--mut);font-weight:500}
 .contact{background:var(--bg2);color:var(--ink);text-align:center;padding:76px 24px 64px;position:relative}
 .contact:before{content:"";position:absolute;inset:14px;border:1px solid rgba(232,160,58,.55);pointer-events:none}
-.contact h2{color:var(--ink)}.contact p{max-width:44ch;margin:0 auto 34px;color:var(--mut)}
-.wsp{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--dk);color:#fff;padding:17px 34px;text-decoration:none;font-size:11px;letter-spacing:.2em;font-weight:500;text-transform:uppercase;transition:.3s}
-.wsp:hover{background:#25d366}
-.wsp svg{width:20px;height:20px;fill:#25d366;flex:none}.wsp:hover svg{fill:#fff}
+.eyebrow.ce:after{content:"";width:34px;height:1px;background:currentColor;display:inline-block;margin-left:14px;vertical-align:middle}.contact h2{color:var(--ink)}.contact p{max-width:44ch;margin:0 auto 34px;color:var(--mut)}
+.wsp{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--acc2);color:#fff;padding:17px 38px;white-space:nowrap;text-decoration:none;font-size:11px;letter-spacing:.2em;font-weight:500;text-transform:uppercase;transition:.3s}
+.wsp:hover{background:#b0711a}
+.wsp svg{width:20px;height:20px;fill:#fff;flex:none}
 .addr{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
 .addr:before{content:"";width:28px;height:1px;background:var(--acc);margin-bottom:14px}
-.addr b{font:500 22px 'Cormorant Garamond',serif;letter-spacing:.08em;color:var(--ink);text-transform:none}
+.addr b{font:400 18px Montserrat,sans-serif;font-variant-numeric:lining-nums;letter-spacing:.14em;color:var(--ink);text-transform:none}
 .addr a{color:inherit;text-decoration:none}
 .float{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:50}
 .float svg{width:28px;height:28px;fill:#fff}
@@ -113,8 +113,8 @@ footer{padding:28px 20px 90px;text-align:center;font-size:11px;color:var(--mut);
 
 <section><div class="wrap"><div class="nums"><div><b>40</b><span>años de trayectoria</span></div><div><b>100%</b><span>a medida</span></div><div><b>3 en 1</b><span>asesoramiento, medición e instalación</span></div></div></div></section>
 
-<section id="contacto" style="padding-top:0"><div class="wrap"><div class="contact"><div class="eyebrow" style="justify-content:center;color:var(--acc2)">Contacto</div><h2>Te asesoramos</h2><p>Pedí tu cotización y mirá el catálogo completo. Te respondemos por WhatsApp.</p>
-<a class="wsp" href="https://wa.me/5493541540526?text=Hola%20Liberty%2C%20quiero%20que%20me%20asesoren%20y%20pedir%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-1.9a12.5 12.5 0 0 0 5.6 1.4C23 28.5 28.600 22.900 28.600 16S23 3 16 3zm0 22.800c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.900 10.200 5.200 16 5.200S26.500 9.900 26.500 15.600 21.800 25.800 16 25.800zm5.700-7.600c-.3-.2-1.900-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7 0a8.400 8.400 0 0 1-4.200-3.700c-.3-.6.300-.6.900-1.700.1-.2 0-.4 0-.5s-.7-1.700-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.600 2.400 1 3 .8 3.500.7.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.1-.3-.2-.7-.4z"/></svg>Pedir cotización y ver catálogo</a>
+<section id="contacto" style="padding-top:0"><div class="wrap"><div class="contact"><div class="eyebrow ce" style="justify-content:center;color:var(--acc2)">Contacto</div><h2>Te asesoramos</h2><p>Pedí tu cotización y mirá el catálogo completo. Te respondemos por WhatsApp.</p>
+<a class="wsp" href="https://wa.me/5493541540526?text=Hola%20Liberty%2C%20quiero%20que%20me%20asesoren%20y%20pedir%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-1.9a12.5 12.5 0 0 0 5.6 1.4C23 28.5 28.600 22.900 28.600 16S23 3 16 3zm0 22.800c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.900 10.200 5.200 16 5.200S26.500 9.900 26.500 15.600 21.800 25.800 16 25.800zm5.700-7.600c-.3-.2-1.900-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7 0a8.400 8.400 0 0 1-4.200-3.700c-.3-.6.300-.6.900-1.700.1-.2 0-.4 0-.5s-.7-1.700-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.600 2.400 1 3 .8 3.500.7.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.1-.3-.2-.7-.4z"/></svg>Pedir cotización</a>
 <div class="addr"><b>+54 9 3541 54-0526</b><span>Gral. Paz 280</span><span>Villa Carlos Paz</span></div></div></div></section>
 <footer>Propuesta de diseño de MG Servicios Ejecutivos. Fotos y marca © Liberty Decoraciones.</footer></div>
 <a class="float" href="https://wa.me/5493541540526" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-1.9a12.5 12.5 0 0 0 5.6 1.4C23 28.5 28.6 22.9 28.6 16S23 3 16 3zm5.700 15.200c-.3-.2-1.900-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7 0a8.400 8.400 0 0 1-4.200-3.700c-.3-.6.300-.6.900-1.700.1-.2 0-.4 0-.5s-.7-1.700-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.600 2.400 1 3 .8 3.500.7.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.1-.3-.2-.7-.4z"/></svg></a>
