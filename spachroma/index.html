@@ -176,9 +176,10 @@ section{position:relative}
 
 /* SUCURSALES */
 .sucursales{padding:120px 0;background:var(--sand)}
-.suc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;margin-top:56px;align-items:stretch}
-.suc-list{display:grid;gap:16px}
-.suc{background:var(--cream);border-radius:var(--r);padding:28px 30px;display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:center;cursor:pointer;border:1px solid transparent;transition:.3s}
+.suc-grid{margin-top:56px}
+.suc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.suc-list .hours{grid-column:1/-1;justify-content:center}
+.suc{background:var(--cream);border-radius:var(--r);padding:28px 30px;display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:center;border:1px solid transparent;transition:.3s}
 .suc:hover{border-color:var(--line)}
 .suc.active{border-color:var(--ink);box-shadow:0 18px 40px -24px rgba(20,17,16,.35)}
 .suc small{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rose)}
@@ -262,7 +263,7 @@ footer{background:var(--ink);color:rgba(250,246,242,.7);padding:80px 0 36px}
   .equipo .wrap{grid-template-columns:1fr 1fr}
   .equipo .intro{grid-column:1/-1;padding:0;text-align:center;align-items:center}
   .why{text-align:left}
-  .map{min-height:420px}
+  .suc-list{grid-template-columns:1fr}
   .map-info{padding:26px}
   .map-info h3{font-size:1.8rem}
 }
@@ -506,7 +507,7 @@ footer{background:var(--ink);color:rgba(250,246,242,.7);padding:80px 0 36px}
     </div>
     <div class="suc-grid">
       <div class="suc-list">
-        <div class="suc active rv" data-q="Obispo Oro 471, Córdoba, Argentina">
+        <div class="suc rv" data-q="Obispo Oro 471, Córdoba, Argentina">
           <small>Nueva Córdoba</small><h3>Obispo Oro 471</h3><p>Córdoba Capital</p>
           <a href="https://www.google.com/maps/search/?api=1&query=Obispo%20Oro%20471%2C%20C%C3%B3rdoba" target="_blank" rel="noopener" aria-label="Cómo llegar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
@@ -523,12 +524,6 @@ footer{background:var(--ink);color:rgba(250,246,242,.7);padding:80px 0 36px}
           <div><b>Martes a sábado · 9 a 20 h</b><span>Consultá horarios y disponibilidad de cada sede por WhatsApp</span></div>
         </div>
       </div>
-      <div class="map rv d1">
-        <img src="sucursal-frente.jpg" alt="Frente de una sucursal Chroma Estilistas" loading="lazy">
-        <div class="map-info">
-          <div><small id="mapZona">Nueva Córdoba</small><h3 id="mapDir">Obispo Oro 471</h3></div>
-          <a class="btn btn-blush" id="mapLink" href="https://www.google.com/maps/search/?api=1&query=Obispo%20Oro%20471%2C%20C%C3%B3rdoba" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Cómo llegar</a>
-        </div>
       </div>
     </div>
   </div>
@@ -605,13 +600,6 @@ footer{background:var(--ink);color:rgba(250,246,242,.7);padding:80px 0 36px}
   lb.onclick=function(e){if(e.target!==lbi)lb.classList.remove('on')};
   document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
 
-  var mz=document.getElementById('mapZona'),md=document.getElementById('mapDir'),ml=document.getElementById('mapLink');
-  document.querySelectorAll('.suc').forEach(function(s){s.addEventListener('click',function(e){
-    if(e.target.closest('a'))return;
-    document.querySelectorAll('.suc').forEach(function(x){x.classList.remove('active')});s.classList.add('active');
-    mz.textContent=s.querySelector('small').textContent;md.textContent=s.querySelector('h3').textContent;
-    ml.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.dataset.q);
-  })});
 })();
 </script>
 </body>
