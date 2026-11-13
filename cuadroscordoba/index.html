@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuadros Córdoba Capital · Arte abstracto pintado a mano</title>
+<meta name="description" content="Cuadros abstractos pintados a mano con marcos de madera maciza, espejos y piezas únicas. Showroom en Barrio Maipú, Córdoba. Te mostramos cómo queda el cuadro en tu espacio.">
+<meta property="og:title" content="Cuadros Córdoba Capital · Arte que transforma espacios">
+<meta property="og:image" content="hero-living.jpg">
+<meta name="theme-color" content="#2B2621">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2B2621;--sand:#EFE8DE;--linen:#F7F3EC;--oak:#A97E52;--clay:#8C5A3C;--muted:#7A7068;--line:rgba(43,38,33,.14);--serif:"Libre Caslon Display",Georgia,serif;--sans:"Inter Tight",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--linen);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+section{position:relative;overflow:hidden}
+.ey{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--oak)}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.02;letter-spacing:-.02em;margin-top:16px}
+.h2 i{font-family:var(--sans);font-weight:300;font-style:italic;letter-spacing:-.04em;color:var(--oak)}
+.lead{color:var(--muted);font-size:1.06rem;max-width:520px;font-weight:300}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 30px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;transition:.35s;white-space:nowrap;border:1px solid transparent}
+.btn svg{width:18px;height:18px}
+.btn-d{background:var(--ink);color:var(--linen)}.btn-d:hover{background:var(--clay)}
+.btn-l{border-color:var(--ink)}.btn-l:hover{background:var(--ink);color:var(--linen)}
+.btn-w{background:var(--linen);color:var(--ink)}.btn-w:hover{background:#fff}
+
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:.35s;color:#fff}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:92px;transition:.35s}
+.nav.scrolled{background:rgba(247,243,236,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav.scrolled .wrap{height:72px}
+.brand{font-family:var(--serif);font-size:1.5rem;line-height:1;letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.42em;text-transform:uppercase;margin-top:6px;opacity:.75}
+.links{display:flex;gap:34px;align-items:center}
+.links a{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;position:relative}
+.links a:not(.cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:currentColor;transition:.35s}
+.links a:not(.cta):hover::after{width:100%}
+.links .cta{border:1px solid currentColor;padding:11px 20px;transition:.3s}
+.links .cta:hover{background:#fff;color:var(--ink);border-color:#fff}
+.nav.scrolled .links .cta:hover{background:var(--ink);color:var(--linen);border-color:var(--ink)}
+.burger{display:none;width:42px;height:42px;border:0;background:none;position:relative;cursor:pointer;color:inherit}
+.burger span{position:absolute;left:9px;right:9px;height:1.5px;background:currentColor;transition:.3s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.nav.open .burger span:nth-child(1){top:21px;transform:rotate(45deg)}.nav.open .burger span:nth-child(2){opacity:0}.nav.open .burger span:nth-child(3){top:21px;transform:rotate(-45deg)}
+
+.hero{height:100vh;min-height:680px;color:#fff;display:flex;align-items:flex-end;isolation:isolate}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:-2;animation:zoom 18s ease-out forwards}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,25,20,.45) 0%,rgba(30,25,20,.05) 35%,rgba(30,25,20,.2) 55%,rgba(30,25,20,.78) 100%);z-index:-1}
+.hero .wrap{width:100%;padding-bottom:80px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,8vw,7.6rem);line-height:.95;letter-spacing:-.03em}
+.hero h1 i{font-family:var(--sans);font-weight:300;letter-spacing:-.05em}
+.hero p{max-width:380px;font-weight:300;font-size:1.05rem;opacity:.9;margin-bottom:26px}
+.scroll{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;opacity:.7}
+
+.manifesto{padding:140px 0 120px}
+.manifesto .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:start}
+.manifesto blockquote{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.18;letter-spacing:-.015em}
+.manifesto blockquote i{font-family:var(--sans);font-weight:300;color:var(--oak);letter-spacing:-.04em}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.facts div{padding:26px 20px 0 0}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:1.5rem}
+.facts span{font-size:.88rem;color:var(--muted)}
+
+.cols{padding:0 0 140px}
+.cgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:56px}
+.col{position:relative;overflow:hidden;display:block}
+.col .ph{overflow:hidden;height:100%}
+.col img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.col:hover img{transform:scale(1.05)}
+.col .cap{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0 0;gap:10px}
+.col h3{font-family:var(--serif);font-weight:400;font-size:1.55rem;letter-spacing:-.01em}
+.col span{font-size:.8rem;color:var(--muted);letter-spacing:.06em}
+.c1{grid-column:span 7}.c1 .ph{height:560px}
+.c2{grid-column:span 5}.c2 .ph{height:560px}
+.c3{grid-column:span 4}.c3 .ph{height:420px}
+.c4{grid-column:span 4}.c4 .ph{height:420px}
+.c5{grid-column:span 4}.c5 .ph{height:420px}
+
+.obras{padding:130px 0;background:var(--sand)}
+.ohead{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 22px}
+.ob .ph{aspect-ratio:3/4;overflow:hidden;background:#e6ddd0}
+.ob img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.ob:hover img{transform:scale(1.04)}
+.ob h4{font-family:var(--serif);font-weight:400;font-size:1.25rem;margin-top:14px}
+.ob .meta{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:var(--muted);margin-top:2px}
+.ob .meta a{color:var(--ink);font-weight:500;border-bottom:1px solid var(--oak);padding-bottom:1px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.pay{display:flex;gap:16px;flex-wrap:wrap;margin-top:56px;justify-content:center}
+.pay div{display:flex;align-items:center;gap:12px;background:var(--linen);padding:16px 22px;font-size:.92rem}
+.pay svg{width:22px;height:22px;color:var(--oak)}
+
+.viz{padding:140px 0}
+.viz .wrap{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.vimgs{position:relative;height:620px}
+.vimgs .a{position:absolute;left:0;top:0;width:62%;height:78%;object-fit:cover}
+.vimgs .b{position:absolute;right:0;bottom:0;width:56%;height:62%;object-fit:cover;border:10px solid var(--linen)}
+.vimgs .tag{position:absolute;left:26%;bottom:34%;background:var(--ink);color:var(--linen);padding:12px 18px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;z-index:2}
+.vsteps{margin:40px 0 40px}
+.vs{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.vs:last-child{border-bottom:1px solid var(--line)}
+.vs b{font-family:var(--serif);font-weight:400;font-size:1.9rem;color:var(--oak);line-height:1}
+.vs h4{font-weight:500;font-size:1.05rem;margin-bottom:2px}
+.vs p{font-size:.94rem;color:var(--muted);font-weight:300}
+
+.proc{background:var(--ink);color:var(--linen);padding:140px 0}
+.proc .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}
+.proc .ey{color:#D6B48C}.proc .h2 i{color:#D6B48C}
+.proc .lead{color:rgba(247,243,236,.65);margin:22px 0 36px}
+.pimgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pimgs img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.pimgs img:nth-child(2){margin-top:60px}
+.mat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mat div{border:1px solid rgba(247,243,236,.16);padding:18px 20px}
+.mat b{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem;color:#fff}
+.mat span{font-size:.86rem;color:rgba(247,243,236,.6)}
+
+.show{padding:140px 0}
+.sgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-top:56px}
+.sgrid .big{min-height:640px;position:relative;overflow:hidden}.sgrid .big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.sgrid .sm{position:relative}.sgrid .sm img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sside{display:grid;grid-template-rows:1fr auto;gap:20px}
+.sside .sm{overflow:hidden;min-height:300px}
+.scard{background:var(--sand);padding:40px}
+.scard h3{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.1;margin:10px 0 12px}
+.scard p{color:var(--muted);font-size:.96rem;font-weight:300;margin-bottom:26px}
+.scard .row{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{background:var(--ink);color:rgba(247,243,236,.65);padding:90px 0 36px}
+.fbig{font-family:var(--serif);font-size:clamp(2.6rem,7vw,6rem);line-height:1;color:var(--linen);letter-spacing:-.03em;margin-bottom:50px}
+.fbig i{font-family:var(--sans);font-weight:300;color:#D6B48C;letter-spacing:-.05em}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:40px 0;border-top:1px solid rgba(247,243,236,.14)}
+.fgrid h5{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:#D6B48C;font-weight:500;margin-bottom:12px}
+.fgrid a:hover{color:#fff}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;padding-top:24px;border-top:1px solid rgba(247,243,236,.14)}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);transition:.3s}.wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;color:#fff}
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+@media(max-width:1080px){.ogrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){
+ .links{position:fixed;inset:72px 0 auto;background:var(--linen);color:var(--ink);flex-direction:column;gap:0;padding:8px 32px 28px;transform:translateY(-140%);transition:.45s;box-shadow:0 20px 30px -20px rgba(0,0,0,.2);z-index:-1}
+ .nav.open{background:var(--linen);color:var(--ink)}.nav.open .links{transform:none}
+ .links a{width:100%;text-align:center;padding:16px 0;border-bottom:1px solid var(--line)}.links a::after{display:none}.links .cta{margin-top:18px;border-color:var(--ink)}
+ .burger{display:block}
+ .manifesto .wrap,.viz .wrap,.proc .wrap,.sgrid{grid-template-columns:1fr}
+ .manifesto .wrap{gap:40px}.viz .wrap,.proc .wrap{gap:60px}
+ .cgrid{grid-template-columns:1fr 1fr}.c1,.c2,.c3,.c4,.c5{grid-column:span 1}.c1 .ph,.c2 .ph{height:420px}.c3 .ph,.c4 .ph,.c5 .ph{height:340px}.c5{grid-column:span 2}
+ .sgrid .big{height:460px}
+ .vimgs{height:480px}
+}
+@media(max-width:600px){
+ .wrap{padding:0 20px}
+ .manifesto{padding:100px 0 80px}.cols{padding-bottom:90px}.obras,.viz,.proc,.show{padding:90px 0}
+ .hero .wrap{padding-bottom:70px}
+ .facts{grid-template-columns:1fr 1fr 1fr}.facts b{font-size:1.15rem}.facts span{font-size:.78rem}
+ .cgrid{grid-template-columns:1fr}.c5{grid-column:span 1}.c1 .ph,.c2 .ph,.c3 .ph,.c4 .ph,.c5 .ph{height:360px}
+ .ogrid{grid-template-columns:1fr 1fr;gap:22px 14px}.ob .meta{flex-direction:column;align-items:flex-start;gap:6px}
+ .vimgs{height:400px}
+ .mat{grid-template-columns:1fr}
+ .scard{padding:30px 24px}
+ .fgrid{grid-template-columns:1fr}
+ .brand{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="brand">Cuadros Córdoba<small>Capital · Arte &amp; Deco</small></a>
+    <nav class="links" id="menu">
+      <a href="#colecciones">Colecciones</a>
+      <a href="#obras">Obras</a>
+      <a href="#visualiza">Visualizá</a>
+      <a href="#showroom">Showroom</a>
+      <a class="cta" href="https://wa.me/5493518577079?text=Hola!%20Vi%20su%20web%20y%20quiero%20consultar%20por%20un%20cuadro" target="_blank" rel="noopener">Consultar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <img src="hero-living.jpg" alt="Living con dos cuadros abstractos pintados a mano">
+  <div class="wrap">
+    <h1 class="rv">Arte que<br><i>transforma</i><br>espacios.</h1>
+    <div class="rv d2">
+      <p>Cuadros abstractos pintados a mano, con marcos de madera maciza. Piezas únicas para darle personalidad a tu hogar.</p>
+      <a class="btn btn-w" href="#obras">Ver obras disponibles</a>
+    </div>
+  </div>
+  <span class="scroll">Deslizá</span>
+</section>
+
+<section class="manifesto">
+  <div class="wrap">
+    <p class="ey rv">Nuestra esencia</p>
+    <div>
+      <blockquote class="rv d1">Cada cuadro está pintado completamente a mano, por eso <i>no existen dos iguales.</i> Texturas, capas y color pensados para que tu espacio cuente una historia.</blockquote>
+      <div class="facts rv d2">
+        <div><b>100% a mano</b><span>Obras originales</span></div>
+        <div><b>Madera maciza</b><span>Marcos de calidad</span></div>
+        <div><b>A medida</b><span>Hechos a pedido</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cols" id="colecciones">
+  <div class="wrap">
+    <p class="ey rv">Colecciones</p>
+    <h2 class="h2 rv d1">Para cada <i>rincón</i> de tu casa.</h2>
+    <div class="cgrid">
+      <a class="col c1 rv" href="https://wa.me/5493518577079?text=Hola!%20Quiero%20ver%20cuadros%20de%20gran%20formato" target="_blank" rel="noopener"><div class="ph"><img src="living-horizonte.jpg" alt="Cuadro de gran formato en living" loading="lazy"></div><div class="cap"><h3>Gran formato</h3><span>Hasta 153 cm</span></div></a>
+      <a class="col c2 rv d1" href="https://wa.me/5493518577079?text=Hola!%20Quiero%20ver%20d%C3%ADpticos%20y%20tr%C3%ADpticos" target="_blank" rel="noopener"><div class="ph"><img src="diptico-flores.jpg" alt="Díptico abstracto" loading="lazy"></div><div class="cap"><h3>Dípticos y trípticos</h3><span>Combinables</span></div></a>
+      <a class="col c3 rv" href="https://wa.me/5493518577079?text=Hola!%20Quiero%20ver%20cuadros%20texturados" target="_blank" rel="noopener"><div class="ph"><img src="textura-detalle.jpg" alt="Detalle de textura" loading="lazy"></div><div class="cap"><h3>Texturados</h3><span>Relieve y capas</span></div></a>
+      <a class="col c4 rv d1" href="https://wa.me/5493518577079?text=Hola!%20Quiero%20ver%20cuadros%20para%20recibidor" target="_blank" rel="noopener"><div class="ph"><img src="recibidor.jpg" alt="Cuadro en recibidor" loading="lazy"></div><div class="cap"><h3>Recibidores</h3><span>Formato vertical</span></div></a>
+      <a class="col c5 rv d2" href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20espejos" target="_blank" rel="noopener"><div class="ph"><img src="espejo-living.jpg" alt="Espejo con marco de madera" loading="lazy"></div><div class="cap"><h3>Espejos</h3><span>Madera maciza</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="obras" id="obras">
+  <div class="wrap">
+    <div class="ohead"><div><p class="ey rv">Obras disponibles</p><h2 class="h2 rv d1">Elegí tu <i>próxima</i> pieza.</h2></div><p class="lead rv d2">Una selección de obras listas para llevar. Consultá precio y disponibilidad por WhatsApp.</p></div>
+    <div class="ogrid">
+      <div class="ob rv"><div class="ph"><img src="obra-azul.jpg" alt="Obra abstracta azul y arena" loading="lazy"></div><h4>Bloques en azul</h4><div class="meta"><span>52 × 72 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Bloques%20en%20azul" target="_blank" rel="noopener">Consultar</a></div></div>
+      <div class="ob rv d1"><div class="ph"><img src="obra-dorada.jpg" alt="Obra con detalles dorados" loading="lazy"></div><h4>Cruz dorada</h4><div class="meta"><span>53 × 74 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Cruz%20dorada" target="_blank" rel="noopener">Consultar</a></div></div>
+      <div class="ob rv d2"><div class="ph"><img src="obra-espiral.jpg" alt="Obra espiral en negro" loading="lazy"></div><h4>Espiral</h4><div class="meta"><span>52 × 72 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Espiral" target="_blank" rel="noopener">Consultar</a></div></div>
+      <div class="ob rv d3"><div class="ph"><img src="obra-negro.jpg" alt="Obra en negro y madera" loading="lazy"></div><h4>Contraste</h4><div class="meta"><span>52 × 73 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Contraste" target="_blank" rel="noopener">Consultar</a></div></div>
+      <div class="ob rv"><div class="ph"><img src="obra-mar.jpg" alt="Obra mar azul" loading="lazy"></div><h4>Mar abierto</h4><div class="meta"><span>100 × 150 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Mar%20abierto" target="_blank" rel="noopener">Consultar</a></div></div>
+      <div class="ob rv d1"><div class="ph"><img src="obra-80.jpg" alt="Obra texturada beige" loading="lazy"></div><h4>Tramas</h4><div class="meta"><span>80 × 80 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Tramas" target="_blank" rel="noopener">Consultar</a></div></div>
+      <div class="ob rv d2"><div class="ph"><img src="obra-ocre.jpg" alt="Obra abstracta en tonos ocre" loading="lazy"></div><h4>Ocre</h4><div class="meta"><span>123 × 63 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Ocre" target="_blank" rel="noopener">Consultar</a></div></div>
+      <div class="ob rv d3"><div class="ph"><img src="obra-atril.jpg" alt="Obra en tonos azules sobre atril" loading="lazy"></div><h4>Composición</h4><div class="meta"><span>53 × 73 cm</span><a href="https://wa.me/5493518577079?text=Hola!%20Quiero%20consultar%20por%20la%20obra%20Composici%C3%B3n" target="_blank" rel="noopener">Consultar</a></div></div>
+    </div>
+    <div class="pay">
+      <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>3 cuotas sin interés con tarjeta</div>
+      <div class="rv d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg>Descuento en efectivo o transferencia</div>
+      <div class="rv d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-6 9 6v11H3z"/><path d="M9 20v-6h6v6"/></svg><a href="https://cuadroscordobacapital.mitiendanube.com" target="_blank" rel="noopener" style="border-bottom:1px solid var(--oak)">También en nuestra tienda online</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="viz" id="visualiza">
+  <div class="wrap">
+    <div class="vimgs rv">
+      <img class="a" src="living-moderno.jpg" alt="Living antes del cuadro" loading="lazy">
+      <img class="b" src="living-texturado.jpg" alt="Living con cuadro incorporado" loading="lazy">
+      <span class="tag">Servicio gratuito</span>
+    </div>
+    <div>
+      <p class="ey rv">Visualizá antes de decidir</p>
+      <h2 class="h2 rv d1">¿Cómo quedaría<br>en <i>tu espacio?</i></h2>
+      <p class="lead rv d2" style="margin-top:20px">Elegir una obra solo viendo una foto es difícil. Por eso te mostramos el cuadro incorporado en tu propio ambiente, sin costo.</p>
+      <div class="vsteps">
+        <div class="vs rv"><b>01</b><div><h4>Mandanos una foto</h4><p>Sacale una foto a la pared o al ambiente que querés renovar.</p></div></div>
+        <div class="vs rv d1"><b>02</b><div><h4>Elegí un cuadro</h4><p>De nuestro catálogo o contanos qué estilo buscás.</p></div></div>
+        <div class="vs rv d2"><b>03</b><div><h4>Te devolvemos la imagen</h4><p>Con el cuadro incorporado en tu espacio, para que decidas con seguridad.</p></div></div>
+      </div>
+      <a class="btn btn-d rv d3" href="https://wa.me/5493518577079?text=Hola!%20Quiero%20usar%20el%20servicio%20para%20ver%20c%C3%B3mo%20queda%20un%20cuadro%20en%20mi%20espacio" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.7-.1 1.4z"/></svg>Enviar mi foto</a>
+    </div>
+  </div>
+</section>
+
+<section class="proc">
+  <div class="wrap">
+    <div>
+      <p class="ey rv">El proceso</p>
+      <h2 class="h2 rv d1">Hecho a mano,<br><i>de principio a fin.</i></h2>
+      <p class="lead rv d2">Cada obra nace en nuestro taller: preparamos el bastidor, construimos las texturas capa por capa y la terminamos con un marco de madera maciza.</p>
+      <div class="mat rv d3">
+        <div><b>Bastidor entelado</b><span>Base firme y duradera</span></div>
+        <div><b>Texturas</b><span>Relieves que se sienten</span></div>
+        <div><b>Madera maciza</b><span>Kiri natural o pintada</span></div>
+        <div><b>A pedido</b><span>Medidas y colores a tu gusto</span></div>
+      </div>
+    </div>
+    <div class="pimgs rv d1">
+      <img src="proceso.jpg" alt="Proceso creativo de un cuadro" loading="lazy">
+      <img src="textura-cruz.jpg" alt="Detalle de textura" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="show" id="showroom">
+  <div class="wrap">
+    <p class="ey rv">Showroom</p>
+    <h2 class="h2 rv d1">Vení a <i>conocerlos</i> en persona.</h2>
+    <div class="sgrid">
+      <div class="big rv"><img src="showroom.jpg" alt="Showroom de cuadros en Barrio Maipú" loading="lazy"></div>
+      <div class="sside">
+        <div class="sm rv d1"><img src="showroom-2.jpg" alt="Obras en el showroom" loading="lazy"></div>
+        <div class="scard rv d2">
+          <p class="ey">Barrio Maipú 2ª Sección</p>
+          <h3>Coordiná tu visita</h3>
+          <p>Cerca de Barrio General Paz. Escribinos y te pasamos la dirección y los horarios disponibles.</p>
+          <div class="row"><a class="btn btn-d" href="https://wa.me/5493518577079?text=Hola!%20Quiero%20coordinar%20una%20visita%20al%20showroom" target="_blank" rel="noopener">Coordinar visita</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbig">Tu espacio,<br><i>tu obra.</i></div>
+    <div class="fgrid">
+      <div><h5>WhatsApp</h5><a href="https://wa.me/5493518577079" target="_blank" rel="noopener">351 857-7079</a></div>
+      <div><h5>Showroom</h5><span>Barrio Maipú 2ª Sección · Córdoba</span></div>
+      <div><h5>Seguinos</h5><a href="https://www.instagram.com/cuadroscordobacapital/" target="_blank" rel="noopener">@cuadroscordobacapital</a> · <a href="https://cuadroscordobacapital.mitiendanube.com" target="_blank" rel="noopener">Tienda online</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Cuadros Córdoba Capital</span><span>Diseño web por <a href="https://mgserviciosejecutivos.com" target="_blank" rel="noopener">MG Servicios Ejecutivos</a></span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5493518577079?text=Hola!%20Vi%20su%20web%20y%20quiero%20consultar%20por%20un%20cuadro" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.7-.1 1.4z"/></svg></a>
+
+<script>
+(function(){var n=document.getElementById('nav');function s(){n.classList.toggle('scrolled',scrollY>40)}s();addEventListener('scroll',s,{passive:true});
+document.getElementById('burger').onclick=function(){n.classList.toggle('open')};document.querySelectorAll('#menu a').forEach(function(a){a.onclick=function(){n.classList.remove('open')}});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});})();
+</script>
+</body>
+</html>
