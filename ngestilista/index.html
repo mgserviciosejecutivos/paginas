@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nati Gigena · Estilista en Córdoba</title>
+<meta name="description" content="Peluquería y belleza en Córdoba: cortes, alisado sin formol, nutrición, color, peinados, uñas semipermanentes y depilación definitiva. Sacá tu turno por WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%232A1F1A%27/%3E%3Cg fill=%27%23D99A1C%27%3E%3Crect x=%2716%27 y=%2712%27 width=%2730%27 height=%277%27/%3E%3Crect x=%2726%27 y=%2712%27 width=%278%27 height=%2740%27/%3E%3Crect x=%2737%27 y=%2712%27 width=%278%27 height=%2740%27/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F7F2EC;
+  --cream:#EFE6DA;
+  --sand:#E2D4C2;
+  --cocoa:#2A1F1A;
+  --cocoa-2:#4A3A31;
+  --muted:#7D6B5F;
+  --gold:#B8924A;
+  --gold-soft:#D9C08C;
+  --line:rgba(42,31,26,.12);
+  --radius:22px;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Jost', system-ui, -apple-system, sans-serif;
+  --wa:#25D366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--cocoa);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1180px,100% - 48px);margin-inline:auto}
+.eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.3rem,4.6vw,3.6rem);margin-top:14px}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.lead{color:var(--muted);font-size:1.06rem;font-weight:300;max-width:520px}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.sec-head .lead{margin:16px auto 0}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-size:.92rem;font-weight:500;letter-spacing:.04em;transition:transform .25s ease, background .25s ease, box-shadow .25s ease, color .25s ease;white-space:nowrap}
+.btn-dark{background:var(--cocoa);color:var(--ivory)}
+.btn-dark:hover{background:var(--cocoa-2);transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(42,31,26,.5)}
+.btn-ghost{border:1px solid var(--cocoa);color:var(--cocoa)}
+.btn-ghost:hover{background:var(--cocoa);color:var(--ivory)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s ease, box-shadow .35s ease, padding .35s ease;padding:22px 0}
+.nav.scrolled{background:rgba(247,242,236,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:14px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;line-height:1;--lgk:#161616;--lgg:#5E5E5E;--lgo:#D99A1C}
+.logo-svg{display:block;height:54px;width:155px;transition:height .35s ease,width .35s ease}
+.nav.scrolled .logo-svg{height:44px;width:126px}
+.logo-light{--lgk:#F7F2EC;--lgg:#BFB3A6;--lgo:#D99A1C}
+footer .logo-svg{height:58px;width:166px}
+.nav-links{display:flex;gap:34px;font-size:.88rem;letter-spacing:.04em}
+.nav-links a{position:relative;padding:4px 0;color:var(--cocoa-2)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s ease}
+.nav-links a:hover::after{width:100%}
+.nav .btn{padding:12px 22px;font-size:.84rem}
+.burger{display:none;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center}
+.burger span{display:block;width:20px;height:1.5px;background:var(--cocoa);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:1.5px;background:var(--cocoa);transition:transform .3s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.mobile-menu{position:fixed;inset:0;background:var(--ivory);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu a{font-family:var(--serif);font-size:2.2rem}
+.mobile-menu .close{position:absolute;top:22px;right:24px;width:44px;height:44px;font-size:1.8rem;line-height:1}
+
+/* Hero */
+.hero{position:relative;padding:150px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,var(--cream) 0%,rgba(239,230,218,0) 70%);right:-200px;top:-120px;z-index:-1}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(3rem,6.6vw,5.6rem);margin:22px 0 24px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.hero-meta{display:flex;gap:34px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);max-width:520px}
+.hero-meta div{font-size:.82rem;color:var(--muted);line-height:1.4}
+.hero-meta strong{display:block;font-family:var(--serif);font-size:1.25rem;color:var(--cocoa);font-weight:500;margin-bottom:2px}
+.hero-art{position:relative;height:600px}
+.arch{position:absolute;right:40px;top:0;width:340px;height:520px;border-radius:200px 200px 26px 26px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(42,31,26,.45)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.92) contrast(1.03)}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(184,146,74,.08),rgba(42,31,26,.18))}
+.circle{position:absolute;left:10px;bottom:20px;width:230px;height:230px;border-radius:50%;overflow:hidden;border:8px solid var(--ivory);box-shadow:0 30px 60px -30px rgba(42,31,26,.5)}
+.circle img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:0;bottom:70px;background:var(--cocoa);color:var(--ivory);padding:18px 22px;border-radius:18px;max-width:200px;box-shadow:0 20px 40px -20px rgba(42,31,26,.6)}
+.badge span{display:block;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:6px}
+.badge b{font-family:var(--serif);font-size:1.3rem;font-weight:500;line-height:1.15}
+.ring{position:absolute;left:62px;top:56px;width:132px;height:132px;z-index:3;filter:drop-shadow(0 14px 24px rgba(42,31,26,.18))}
+.ring text{font-size:10.5px;fill:var(--cocoa-2);font-family:var(--sans);text-transform:uppercase;font-weight:500}
+.ring .spin{transform-origin:60px 60px;transform-box:view-box;animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Marquee */
+.marquee{background:var(--cocoa);color:var(--ivory);overflow:hidden;padding:20px 0}
+.marquee .track{display:flex;gap:48px;width:max-content;animation:marq 38s linear infinite}
+.marquee span{font-family:var(--serif);font-style:italic;font-size:1.5rem;display:inline-flex;align-items:center;gap:48px;white-space:nowrap}
+.marquee span::after{content:"✦";font-style:normal;font-size:.85rem;color:var(--gold-soft)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* Services */
+section{padding:120px 0}
+.services{background:var(--ivory)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 32px 34px;display:flex;flex-direction:column;transition:transform .35s ease, box-shadow .35s ease}
+.svc:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px rgba(42,31,26,.4)}
+.svc .ico{width:58px;height:58px;border-radius:50%;background:var(--cream);display:grid;place-items:center;color:var(--gold);margin-bottom:26px}
+.svc .ico svg{width:26px;height:26px}
+.svc h3{font-size:1.85rem;margin-bottom:10px}
+.svc p{color:var(--muted);font-weight:300;font-size:.97rem}
+.svc ul{list-style:none;margin:22px 0 28px;border-top:1px solid var(--line)}
+.svc li{padding:12px 0;border-bottom:1px solid var(--line);font-size:.93rem;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.svc li::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-soft);flex:none}
+.svc .more{margin-top:auto;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;display:inline-flex;align-items:center;gap:10px;color:var(--cocoa)}
+.svc .more svg{width:16px;height:16px;transition:transform .3s}
+.svc:hover .more svg{transform:translateX(5px)}
+
+/* Feature (Aura Liss) */
+.feature{background:var(--cream);position:relative;overflow:hidden}
+.feature .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.feature-img{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.feature-img img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.feature-img .tag{position:absolute;left:20px;top:20px;background:rgba(247,242,236,.92);backdrop-filter:blur(6px);padding:9px 16px;border-radius:999px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:36px 0 40px}
+.benefit{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:16px;padding:18px}
+.benefit i{width:30px;height:30px;border-radius:50%;background:var(--cocoa);color:var(--gold-soft);display:grid;place-items:center;flex:none;font-style:normal;font-size:.8rem}
+.benefit b{display:block;font-weight:500;font-size:.98rem}
+.benefit span{font-size:.86rem;color:var(--muted);font-weight:300;line-height:1.45}
+
+/* Booking */
+.booking{background:var(--cocoa);color:var(--ivory);position:relative;overflow:hidden}
+.booking::before{content:"";position:absolute;width:640px;height:640px;border-radius:50%;border:1px solid rgba(217,192,140,.14);left:-260px;top:-260px}
+.booking::after{content:"";position:absolute;width:440px;height:440px;border-radius:50%;border:1px solid rgba(217,192,140,.14);right:-160px;bottom:-200px}
+.booking .sec-head h2{color:var(--ivory)}
+.booking .lead{color:rgba(247,242,236,.68)}
+.steps{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:-20px auto 48px}
+.step{display:flex;align-items:center;gap:10px;font-size:.84rem;color:rgba(247,242,236,.75);padding:9px 16px;border:1px solid rgba(247,242,236,.14);border-radius:999px}
+.step b{width:22px;height:22px;border-radius:50%;background:var(--gold);color:var(--cocoa);display:grid;place-items:center;font-size:.72rem;font-weight:600}
+.book-card{position:relative;z-index:1;background:var(--ivory);color:var(--cocoa);border-radius:28px;padding:40px;max-width:980px;margin:0 auto;box-shadow:0 50px 100px -50px rgba(0,0,0,.7)}
+.tabs{display:flex;gap:8px;background:var(--cream);padding:6px;border-radius:999px;width:max-content;max-width:100%;margin:0 auto 30px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:11px 22px;border-radius:999px;font-size:.88rem;font-weight:500;color:var(--muted);transition:all .25s;white-space:nowrap}
+.tab.active{background:var(--cocoa);color:var(--ivory)}
+.prefs{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:28px;padding-bottom:28px;border-bottom:1px dashed var(--line)}
+.prefs > span{font-size:.82rem;color:var(--muted);margin-right:6px}
+.chip{padding:8px 15px;border-radius:999px;border:1px solid var(--line);font-size:.82rem;transition:all .2s;background:#fff}
+.chip:hover{border-color:var(--cocoa)}
+.chip.on{background:var(--gold);border-color:var(--gold);color:#fff}
+.book-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.book-item{display:flex;align-items:center;gap:18px;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:18px;transition:all .25s ease;text-align:left}
+.book-item:hover{border-color:var(--cocoa);transform:translateY(-2px);box-shadow:0 18px 36px -24px rgba(42,31,26,.45)}
+.book-item .num{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--gold);width:34px;flex:none;text-align:center}
+.book-item .txt{flex:1;min-width:0}
+.book-item b{display:block;font-weight:500;font-size:1.02rem;line-height:1.3}
+.book-item small{display:block;color:var(--muted);font-size:.84rem;font-weight:300;line-height:1.4;margin-top:2px}
+.book-item .go{width:42px;height:42px;border-radius:50%;background:var(--cream);display:grid;place-items:center;flex:none;transition:all .25s}
+.book-item .go svg{width:20px;height:20px;color:var(--cocoa)}
+.book-item:hover .go{background:var(--wa)}
+.book-item:hover .go svg{color:#fff}
+.book-note{text-align:center;font-size:.84rem;color:var(--muted);margin-top:26px}
+.book-note a{color:var(--cocoa);border-bottom:1px solid var(--gold)}
+
+/* Gallery */
+.gallery{background:var(--ivory)}
+.g-filters{display:flex;justify-content:center;gap:10px;margin:-24px 0 40px;flex-wrap:wrap}
+.g-filters button{padding:9px 20px;border-radius:999px;border:1px solid var(--line);font-size:.86rem;transition:all .2s}
+.g-filters button.on{background:var(--cocoa);color:var(--ivory);border-color:var(--cocoa)}
+.g-grid{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px}
+.g-item{border-radius:18px;overflow:hidden;position:relative;transition:opacity .35s ease, transform .35s ease}
+.g-item.tall{grid-row:span 2}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;filter:saturate(.95)}
+.g-item:hover img{transform:scale(1.05)}
+.g-item figcaption{position:absolute;left:14px;bottom:14px;background:rgba(247,242,236,.92);padding:6px 13px;border-radius:999px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;opacity:0;transform:translateY(6px);transition:all .3s}
+.g-item:hover figcaption{opacity:1;transform:none}
+.g-item.hide{display:none}
+.g-cta{text-align:center;margin-top:44px}
+
+/* Why */
+.why{background:var(--cream);padding:100px 0}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-item{padding:40px 30px;text-align:center;border-right:1px solid var(--line)}
+.why-item:last-child{border-right:0}
+.why-item .n{font-family:var(--serif);font-style:italic;font-size:2.6rem;color:var(--gold);line-height:1}
+.why-item h4{font-family:var(--serif);font-size:1.4rem;font-weight:500;margin:14px 0 8px}
+.why-item p{font-size:.9rem;color:var(--muted);font-weight:300}
+
+/* Location */
+.location .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.loc-card{background:var(--cocoa);color:var(--ivory);border-radius:28px;padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
+.loc-card h2{color:var(--ivory)}
+.loc-list{list-style:none;margin:34px 0 38px;display:grid;gap:22px}
+.loc-list li{display:flex;gap:16px;align-items:flex-start}
+.loc-list .ic{width:44px;height:44px;border-radius:50%;border:1px solid rgba(217,192,140,.35);display:grid;place-items:center;color:var(--gold-soft);flex:none}
+.loc-list .ic svg{width:19px;height:19px}
+.loc-list small{display:block;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(247,242,236,.55);margin-bottom:3px}
+.loc-list b{font-weight:400;font-size:1.05rem}
+.loc-card .btns{display:flex;gap:12px;flex-wrap:wrap}
+.loc-card .btn-light{background:var(--ivory);color:var(--cocoa)}
+.loc-card .btn-light:hover{background:var(--gold-soft);transform:translateY(-2px)}
+.loc-card .btn-line{border:1px solid rgba(247,242,236,.4);color:var(--ivory)}
+.loc-card .btn-line:hover{background:rgba(247,242,236,.1)}
+.map{border-radius:28px;overflow:hidden;position:relative;min-height:460px;background:var(--sand)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) sepia(.15)}
+.map-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:30px;background:
+  radial-gradient(circle at 50% 46%, rgba(184,146,74,.22) 0 60px, transparent 61px),
+  repeating-linear-gradient(0deg, transparent 0 46px, rgba(42,31,26,.06) 46px 47px),
+  repeating-linear-gradient(90deg, transparent 0 46px, rgba(42,31,26,.06) 46px 47px), var(--cream)}
+.map-fallback .pin{width:58px;height:58px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--cocoa);display:grid;place-items:center;box-shadow:0 16px 30px -12px rgba(42,31,26,.6)}
+.map-fallback .pin::after{content:"";width:18px;height:18px;border-radius:50%;background:var(--gold-soft)}
+.map-fallback b{font-family:var(--serif);font-size:1.6rem;font-weight:500;margin-top:10px}
+.map-fallback span{font-size:.9rem;color:var(--muted)}
+
+/* CTA band */
+.cta-band{padding:110px 0;text-align:center;background:var(--ivory)}
+.cta-band h2{font-size:clamp(2.5rem,5.4vw,4.4rem);max-width:820px;margin:16px auto 22px}
+.cta-band .lead{margin:0 auto 36px}
+
+/* Footer */
+footer{background:var(--cocoa);color:rgba(247,242,236,.7);padding:60px 0 34px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:34px;border-bottom:1px solid rgba(247,242,236,.12)}
+.socials{display:flex;gap:12px}
+.socials a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(247,242,236,.2);display:grid;place-items:center;transition:all .25s}
+.socials a:hover{background:var(--gold);border-color:var(--gold);color:var(--cocoa)}
+.socials svg{width:18px;height:18px}
+.copy{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:26px;font-size:.8rem;color:rgba(247,242,236,.45)}
+
+/* Floating WA */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:40;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(37,211,102,.7);transition:transform .25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float.away{opacity:0;transform:scale(.6);pointer-events:none}
+.wa-float{transition:transform .3s ease, opacity .3s ease}
+.wa-float svg{width:30px;height:30px;color:#fff}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:pulse 2.4s ease-out infinite;z-index:-1}
+@keyframes pulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.7);opacity:0}}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:1024px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero{padding-top:130px}
+  .hero-art{height:540px;max-width:520px;width:100%;margin:0 auto}
+  .feature .wrap{grid-template-columns:1fr;gap:50px}
+  .feature-img{max-width:520px;width:100%;margin:0 auto;aspect-ratio:4/4.4}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .why-item:nth-child(2){border-right:0}
+  .why-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .location .wrap{grid-template-columns:1fr}
+  .g-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:820px){
+  .nav-links,.nav .btn{display:none}
+  .burger{display:flex}
+  .book-list{grid-template-columns:1fr}
+  .book-card{padding:28px 20px}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 36px)}
+  section{padding:84px 0}
+  .hero{padding:118px 0 64px}
+  .hero h1{font-size:2.9rem}
+  .hero .actions .btn{flex:1 1 100%}
+  .hero-meta{gap:20px;justify-content:space-between}
+  .hero-art{height:440px}
+  .arch{width:250px;height:390px;right:10px}
+  .circle{width:170px;height:170px;left:0;bottom:10px;border-width:6px}
+  .badge{right:0;bottom:40px;padding:14px 16px;max-width:165px}
+  .badge b{font-size:1.1rem}
+  .ring{left:16px;top:10px;width:100px;height:100px}
+  .svc-grid{grid-template-columns:1fr}
+  .benefits{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .why-item{border-right:0;border-bottom:1px solid var(--line)}
+  .why-item:last-child{border-bottom:0}
+  .g-grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px;gap:10px}
+  .loc-card{padding:42px 26px}
+  .wa-float{width:54px;height:54px;right:16px;bottom:16px}
+  .logo-svg{height:46px;width:132px}
+  .nav.scrolled .logo-svg{height:40px;width:115px}
+  footer{padding-bottom:96px}
+  .wa-float svg{width:27px;height:27px}
+  .map{min-height:340px}
+  .sec-head{margin-bottom:44px}
+  .book-item{padding:16px}
+  .book-item .num{display:none}
+  .steps{margin-top:-14px;flex-direction:column;align-items:center;gap:8px}
+  .eyebrow{font-size:.66rem;letter-spacing:.22em;gap:10px}
+  .eyebrow::before,.eyebrow.center::after{width:20px}
+  .hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .hero-meta div{font-size:.74rem}
+  .hero-meta strong{font-size:1.02rem;white-space:nowrap}
+  .tabs{width:100%;display:flex}
+  .tab{flex:1;padding:11px 8px;font-size:.84rem}
+  .prefs{gap:8px}
+  .prefs > span{flex-basis:100%;text-align:center;margin:0 0 4px}
+  .foot{flex-direction:column;align-items:center;text-align:center}
+  .copy{justify-content:center;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ng-logo" viewBox="10 10 556 194">
+    <path style="fill:var(--lgk)" d="M18 101V18H33L59 72V18H73V101H58L32 47V101Z"/>
+    <path style="fill:var(--lgk)" fill-rule="evenodd" d="M77 101L96 18H110L129 101H115L111 83H95L91 101ZM98 70H108L103 46Z"/>
+    <path style="stroke:var(--lgk)" fill="none" stroke-width="14" d="M209 18V50Q209 70 226 70Q243 70 243 50M243 18V82Q243 101 226 101"/>
+    <g style="fill:var(--lgo)"><rect x="148" y="18" width="46" height="12"/><rect x="163" y="18" width="12" height="178"/><rect x="179" y="18" width="12" height="178"/><rect x="152" y="111" width="11" height="13"/></g>
+    <g style="stroke:var(--lgg)" fill="none" stroke-width="13">
+      <path d="M113 128V125Q113 113 100 113H85Q72 113 72 126V181Q72 195 85 195H99Q112 195 112 182V161H95"/>
+      <path d="M266 128V125Q266 113 253 113H238Q225 113 225 126V181Q225 195 238 195H252Q265 195 265 182V161H248"/>
+      <path d="M352 113H323V195H352M323 154H347"/>
+    </g>
+    <path style="fill:var(--lgg)" d="M395 196V111H409L440 170V111H453V196H439L408 137V196Z"/>
+    <path style="fill:var(--lgg)" fill-rule="evenodd" d="M496 196L522 111H536L562 196H548L543 178H515L510 196ZM519 165H539L529 132Z"/>
+    <circle style="fill:var(--lgg)" cx="34" cy="160" r="11"/>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Naty Gigena, inicio">
+      <svg class="logo-svg" role="img" aria-label="Naty Gigena"><use href="#ng-logo"/></svg>
+    </a>
+    <nav class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#alisado">Alisado sin formol</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+    <a href="#turnos" class="btn btn-dark">Sacá tu turno</a>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="menu">
+  <button class="close" id="close" aria-label="Cerrar menú">×</button>
+  <a href="#servicios">Servicios</a>
+  <a href="#alisado">Alisado sin formol</a>
+  <a href="#trabajos">Trabajos</a>
+  <a href="#ubicacion">Ubicación</a>
+  <a href="#turnos" class="btn btn-dark" style="font-family:var(--sans);font-size:1rem;margin-top:10px">Sacá tu turno</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Peluquería &amp; belleza · Córdoba</span>
+      <h1>Tu pelo, tus manos, <em>tu momento.</em></h1>
+      <p class="lead">Cortes, alisados sin formol, color, nutrición y uñas semipermanentes. Un espacio cálido donde te escuchamos y cuidamos cada detalle.</p>
+      <div class="actions">
+        <a href="#turnos" class="btn btn-dark">
+          Reservá tu turno
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>Cabello</strong>Corte · color · alisado</div>
+        <div><strong>Manos y pies</strong>Semipermanente</div>
+        <div><strong>Estética</strong>Depilación · facial</div>
+      </div>
+    </div>
+
+    <div class="hero-art reveal">
+      <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+        <circle cx="60" cy="60" r="59" fill="#F7F2EC"/>
+        <g class="spin"><text><textPath href="#circ" textLength="286" lengthAdjust="spacing">Nati Gigena · Estilista · Córdoba · </textPath></text></g>
+        <circle cx="60" cy="60" r="4" fill="#B8924A"/>
+      </svg>
+      <div class="arch"><img src="ngestilista/pelo-2.jpg" alt="Cabello largo, liso y brillante luego de un alisado" fetchpriority="high"></div>
+      <div class="circle"><img src="ngestilista/unas-1.jpg" alt="Uñas semipermanentes negras con detalle brillante"></div>
+      <div class="badge"><span>Tratamiento estrella</span><b>Alisado Aura Liss sin formol</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Cortes</span><span>Alisado sin formol</span><span>Nutrición</span><span>Color</span><span>Peinados</span><span>Semipermanente</span><span>Depilación definitiva</span><span>Limpieza facial</span>
+    <span>Cortes</span><span>Alisado sin formol</span><span>Nutrición</span><span>Color</span><span>Peinados</span><span>Semipermanente</span><span>Depilación definitiva</span><span>Limpieza facial</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow center">Servicios</span>
+      <h2>Todo lo que necesitás, <em>en un solo lugar</em></h2>
+      <p class="lead">Elegí lo que querés hacerte y reservalo fácilmente desde WhatsApp.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div>
+        <h3>Cabello</h3>
+        <p>Cortes, color y tratamientos para que tu pelo luzca sano y con brillo.</p>
+        <ul><li>Corte y brushing</li><li>Alisado sin formol</li><li>Nutrición e hidratación</li><li>Coloración</li><li>Peinados para eventos</li></ul>
+        <a href="#turnos" class="more" data-tab="cabello">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 21V10a3 3 0 0 1 6 0v11"/><path d="M9.5 6.5C9.5 4 10.5 3 12 3s2.5 1 2.5 3.5"/><path d="M7 21h10"/></svg></div>
+        <h3>Manos y pies</h3>
+        <p>Esmaltado semipermanente de larga duración y diseños a tu gusto.</p>
+        <ul><li>Semipermanente en manos</li><li>Semipermanente en pies</li><li>Nail art y diseños</li><li>Belleza de pies</li></ul>
+        <a href="#turnos" class="more" data-tab="unas">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c2 3.5 6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 10 6.5 12 3z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+        <h3>Estética</h3>
+        <p>Tratamientos para tu piel y depilación definitiva, con atención personalizada.</p>
+        <ul><li>Depilación definitiva</li><li>Limpieza facial profunda</li><li>Facial con masajes</li><li>Mascarilla de colágeno</li></ul>
+        <a href="#turnos" class="more" data-tab="estetica">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: AURA LISS -->
+<section class="feature" id="alisado">
+  <div class="wrap">
+    <div class="feature-img reveal">
+      <img src="ngestilista/pelo-1.jpg" alt="Resultado de alisado Aura Liss: cabello lacio y brillante" decoding="async">
+      <span class="tag">Resultado real</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Tratamiento estrella</span>
+      <h2>Alisado Aura Liss, <em>sin formol</em></h2>
+      <p class="lead" style="margin-top:18px">Un tratamiento pensado para que tu pelo quede liso, suave y disciplinado, cuidando su salud. El resultado que enamora, sin químicos agresivos.</p>
+      <div class="benefits">
+        <div class="benefit"><i>✦</i><div><b>Más liso y disciplinado</b><span>Se acomoda solo, todos los días.</span></div></div>
+        <div class="benefit"><i>✦</i><div><b>Adiós al frizz</b><span>Incluso con humedad.</span></div></div>
+        <div class="benefit"><i>✦</i><div><b>Suave y sedoso</b><span>Al tacto, desde el primer día.</span></div></div>
+        <div class="benefit"><i>✦</i><div><b>Brillo increíble</b><span>Y mucho más fácil de peinar.</span></div></div>
+      </div>
+      <a class="btn btn-dark wa-link" data-service="Alisado Aura Liss (sin formol)" href="#turnos">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+        Quiero mi alisado
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="turnos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow center">Turnos online</span>
+      <h2>Reservá tu turno <em>en segundos</em></h2>
+      <p class="lead">Tocá el servicio que querés y se abre WhatsApp con tu mensaje listo. Solo tenés que enviarlo.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b>1</b>Elegí el servicio</div>
+      <div class="step"><b>2</b>Se abre WhatsApp</div>
+      <div class="step"><b>3</b>Tocá enviar</div>
+    </div>
+
+    <div class="book-card reveal">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-cat="cabello" role="tab">Cabello</button>
+        <button class="tab" data-cat="unas" role="tab">Manos y pies</button>
+        <button class="tab" data-cat="estetica" role="tab">Estética</button>
+      </div>
+      <div class="prefs">
+        <span>¿Preferís algún horario? <em style="font-style:normal;opacity:.7">(opcional)</em></span>
+        <button class="chip" data-pref="por la mañana">Mañana</button>
+        <button class="chip" data-pref="por la tarde">Tarde</button>
+        <button class="chip" data-pref="un sábado">Sábado</button>
+      </div>
+      <div class="book-list" id="bookList"></div>
+      <p class="book-note">¿No encontrás lo que buscás? <a class="wa-link" data-service="" href="#turnos">Escribinos tu consulta</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="trabajos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow center">Trabajos reales</span>
+      <h2>Resultados que <em>hablan solos</em></h2>
+    </div>
+    <div class="g-filters reveal">
+      <button class="on" data-f="all">Todos</button>
+      <button data-f="pelo">Cabello</button>
+      <button data-f="unas">Uñas</button>
+    </div>
+    <div class="g-grid">
+      <figure class="g-item tall reveal" data-c="pelo"><img src="ngestilista/pelo-2.jpg" alt="Alisado en cabello castaño" decoding="async"><figcaption>Alisado</figcaption></figure>
+      <figure class="g-item reveal" data-c="unas"><img src="ngestilista/unas-2.jpg" alt="Semipermanente bordó con flores pintadas" decoding="async"><figcaption>Nail art</figcaption></figure>
+      <figure class="g-item reveal" data-c="unas"><img src="ngestilista/unas-4.jpg" alt="Uñas largas azul metalizado" decoding="async"><figcaption>Efecto espejo</figcaption></figure>
+      <figure class="g-item tall reveal" data-c="pelo"><img src="ngestilista/pelo-brillo.jpg" alt="Cabello con brillo intenso tras nutrición" decoding="async"><figcaption>Nutrición</figcaption></figure>
+      <figure class="g-item reveal" data-c="unas"><img src="ngestilista/unas-5.jpg" alt="Francesita rosa con flor y glitter" decoding="async"><figcaption>Semipermanente</figcaption></figure>
+      <figure class="g-item reveal" data-c="unas"><img src="ngestilista/unas-3.jpg" alt="Uñas almendradas negras" decoding="async"><figcaption>Semipermanente</figcaption></figure>
+      <figure class="g-item tall reveal" data-c="pelo"><img src="ngestilista/pelo-3.jpg" alt="Cabello oscuro lacio y brillante" decoding="async"><figcaption>Alisado</figcaption></figure>
+      <figure class="g-item reveal" data-c="unas"><img src="ngestilista/unas-6.jpg" alt="Semipermanente verde y gris con diseño" decoding="async"><figcaption>Diseño</figcaption></figure>
+      <figure class="g-item reveal" data-c="unas"><img src="ngestilista/unas-1.jpg" alt="Uñas negras con línea de glitter" decoding="async"><figcaption>Nail art</figcaption></figure>
+      <figure class="g-item tall reveal" data-c="pelo"><img src="ngestilista/pelo-1.jpg" alt="Alisado Aura Liss terminado" decoding="async"><figcaption>Aura Liss</figcaption></figure>
+    </div>
+    <div class="g-cta reveal">
+      <a class="btn btn-ghost" href="https://www.instagram.com/ng.estilista/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+        Ver más en Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-grid reveal">
+      <div class="why-item"><div class="n">01</div><h4>Atención personalizada</h4><p>Te escuchamos y te asesoramos según tu tipo de pelo y tu estilo.</p></div>
+      <div class="why-item"><div class="n">02</div><h4>Productos profesionales</h4><p>Tratamientos de calidad, como el alisado sin formol.</p></div>
+      <div class="why-item"><div class="n">03</div><h4>Todo en un lugar</h4><p>Pelo, uñas y estética en una misma visita.</p></div>
+      <div class="why-item"><div class="n">04</div><h4>Turnos fáciles</h4><p>Reservás desde el celular, directo por WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="ubicacion">
+  <div class="wrap">
+    <div class="loc-card reveal">
+      <span class="eyebrow">Visitanos</span>
+      <h2>Te esperamos en <em>Córdoba</em></h2>
+      <ul class="loc-list">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>Dirección</small><b>9 de Julio 2841, Córdoba</b></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>WhatsApp</small><b>351 753-7801</b></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>Atención</small><b>Con turno previo · consultá disponibilidad</b></div></li>
+      </ul>
+      <div class="btns">
+        <a class="btn btn-light wa-link" data-service="" href="#turnos">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+          Escribinos
+        </a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=9+de+Julio+2841%2C+C%C3%B3rdoba%2C+Argentina" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <div class="map-fallback">
+        <div class="pin"></div>
+        <b>9 de Julio 2841</b>
+        <span>Córdoba, Argentina</span>
+      </div>
+      <iframe id="mapFrame" title="Mapa: 9 de Julio 2841, Córdoba" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://www.google.com/maps?q=9+de+Julio+2841,+C%C3%B3rdoba,+Argentina&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap reveal">
+    <span class="eyebrow center">Date un gusto</span>
+    <h2>Regalate un momento <em>para vos</em></h2>
+    <p class="lead">Reservá tu turno hoy y salí sintiéndote increíble.</p>
+    <a href="#turnos" class="btn btn-dark">Sacá tu turno
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#inicio" class="logo logo-light" aria-label="Naty Gigena"><svg class="logo-svg" role="img" aria-label="Naty Gigena"><use href="#ng-logo"/></svg></a>
+      <div class="socials">
+        <a href="https://www.instagram.com/ng.estilista/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+        <a class="wa-link" data-service="" href="#turnos" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="yr">2026</span> Nati Gigena Estilista · 9 de Julio 2841, Córdoba</span>
+      <span>Diseño web: MG Servicios Ejecutivos</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" data-service="" href="#turnos" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<script>
+document.documentElement.classList.add('js');
+const WA = '5493517537801';
+const SERVICES = {
+  cabello: [
+    ['Corte y brushing', 'Corte a medida + secado'],
+    ['Alisado Aura Liss (sin formol)', 'Liso, sin frizz y con brillo'],
+    ['Nutrición e hidratación', 'Recuperá suavidad y brillo'],
+    ['Coloración', 'Color, retoque de raíz o cambio de look'],
+    ['Peinado para evento', 'Recogidos, ondas y más'],
+    ['Asesoramiento de look', 'Te ayudamos a elegir tu próximo cambio']
+  ],
+  unas: [
+    ['Semipermanente en manos', 'Brillo que dura semanas'],
+    ['Semipermanente en pies', 'Pies prolijos y lindos'],
+    ['Manos y pies semipermanente', 'Combo completo'],
+    ['Nail art / diseño', 'Flores, glitter, francesita y más']
+  ],
+  estetica: [
+    ['Depilación definitiva', 'Consultá zonas disponibles'],
+    ['Limpieza facial profunda', 'Piel limpia y renovada'],
+    ['Limpieza facial + masajes', 'Un momento de relax'],
+    ['Facial con mascarilla de colágeno', 'Con masajes anti age']
+  ]
+};
+let pref = '';
+
+function waUrl(service){
+  let msg;
+  if(service){
+    msg = `¡Hola Nati! 😊 Quiero sacar un turno para *${service}*.` + (pref ? ` Si puede ser, ${pref}.` : '') + ` ¿Qué días y horarios tenés disponibles?`;
+  } else {
+    msg = `¡Hola Nati! 😊 Vi tu página web y quería hacerte una consulta.`;
+  }
+  return `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+}
+function bindWa(el){
+  el.href = waUrl(el.dataset.service);
+  el.target = '_blank';
+  el.rel = 'noopener';
+}
+
+const ARROW = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>';
+let currentCat = 'cabello';
+function renderList(){
+  const list = document.getElementById('bookList');
+  list.innerHTML = SERVICES[currentCat].map(([name, desc], i) => `
+    <a class="book-item wa-link" data-service="${name}" href="#turnos">
+      <span class="num">${String(i+1).padStart(2,'0')}</span>
+      <span class="txt"><b>${name}</b><small>${desc}</small></span>
+      <span class="go">${ARROW}</span>
+    </a>`).join('');
+  list.querySelectorAll('.wa-link').forEach(bindWa);
+}
+function setCat(cat){
+  currentCat = cat;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
+  renderList();
+}
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => setCat(t.dataset.cat)));
+document.querySelectorAll('.svc .more').forEach(a => a.addEventListener('click', () => setCat(a.dataset.tab)));
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+  const on = !c.classList.contains('on');
+  document.querySelectorAll('.chip').forEach(x => x.classList.remove('on'));
+  if(on){ c.classList.add('on'); pref = c.dataset.pref; } else { pref = ''; }
+  document.querySelectorAll('.wa-link').forEach(bindWa);
+}));
+renderList();
+document.querySelectorAll('.wa-link').forEach(bindWa);
+
+/* Nav */
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+const menu = document.getElementById('menu');
+document.getElementById('burger').onclick = () => menu.classList.add('open');
+document.getElementById('close').onclick = () => menu.classList.remove('open');
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+/* Gallery filters */
+document.querySelectorAll('.g-filters button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.g-filters button').forEach(x => x.classList.toggle('on', x === b));
+  const f = b.dataset.f;
+  document.querySelectorAll('.g-item').forEach(it => it.classList.toggle('hide', f !== 'all' && it.dataset.c !== f));
+}));
+
+/* Reveal */
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12, rootMargin:'0px 0px -40px 0px'}) : null;
+document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+/* Map: only load on real hosting (sandboxed previews block iframes) */
+const mf = document.getElementById('mapFrame');
+if (location.protocol.startsWith('http') && !/claude|claudeusercontent/.test(location.hostname)) { mf.src = mf.dataset.src; }
+else { mf.remove(); }
+
+/* Hide floating WA while the booking list is on screen */
+if('IntersectionObserver' in window){const fl=document.querySelector('.wa-float');new IntersectionObserver(es=>es.forEach(e=>fl.classList.toggle('away',e.isIntersecting)),{threshold:.15}).observe(document.querySelector('.book-card'));}
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
