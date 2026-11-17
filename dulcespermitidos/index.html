@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dulces Permitidos · Repostería saludable por Gisela Romero</title>
+<meta name="description" content="Pastelería low carb, sin azúcar y apta para diabéticos. Alfajores, cookies, cajas regalo y clases. Pedidos con anticipación, envíos por Zona Norte.">
+<meta property="og:title" content="Dulces Permitidos · Repostería saludable">
+<meta property="og:description" content="Low carb · Sin azúcar · Apto diabéticos. Hecho a mano por Gisela Romero.">
+<meta property="og:image" content="hero.webp">
+<meta name="theme-color" content="#4A2556">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#4A2556; --violet:#7B4B94; --lilac:#CDB8E3; --lilac-soft:#F3ECF9;
+  --sage:#6F8F6B; --sage-soft:#E7EFE4; --cream:#FBF8F3; --rose:#E7A3B5; --rose-soft:#FBEAEF;
+  --ink:#2B1E30; --muted:#6E6273; --line:#E9E1EE;
+  --r:22px; --shadow:0 18px 50px -20px rgba(74,37,86,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;line-height:1.08;letter-spacing:-.01em;color:var(--plum)}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+h2 .script{font-size:1.25em;color:var(--violet);line-height:.8}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--sage)}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:currentColor}
+.center{text-align:center}
+.center .eyebrow{justify-content:center}
+.lead{font-size:1.1rem;color:var(--muted);max-width:56ch}
+.center .lead{margin-inline:auto}
+section{padding:110px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.6rem;border-radius:999px;font-weight:500;font-size:1rem;transition:.25s ease;white-space:nowrap}
+.btn-primary{background:var(--plum);color:#fff;box-shadow:0 10px 24px -10px rgba(74,37,86,.7)}
+.btn-primary:hover{background:var(--violet);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--plum);color:var(--plum)}
+.btn-ghost:hover{background:var(--plum);color:#fff}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1ebe5a;transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+.nav.scrolled{background:rgba(251,248,243,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:.65rem}
+.brand-mark{width:44px;height:44px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-text .script{font-size:1.75rem;color:var(--plum)}
+.brand-text small{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-top:2px}
+.nav-links{display:flex;gap:2rem;align-items:center;font-size:.95rem}
+.nav-links a:not(.btn){position:relative;color:var(--ink)}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:0;background:var(--violet);transition:.25s}
+.nav-links a:not(.btn):hover::after{width:100%}
+.nav .btn{padding:.7rem 1.2rem;font-size:.92rem}
+.burger{display:none;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center}
+.burger span{display:block;width:22px;height:2px;background:var(--plum);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--plum)}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+
+/* HERO */
+.hero{padding:150px 0 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,var(--lilac-soft) 0%,transparent 70%);right:-160px;top:-120px;z-index:-1}
+.hero::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--sage-soft) 0%,transparent 70%);left:-200px;bottom:-200px;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+.hero h1{font-size:clamp(2.7rem,6vw,4.9rem);margin:1.2rem 0 1.4rem}
+.hero h1 .script{display:block;padding-left:.08em;font-size:1.3em;color:var(--violet);line-height:.85;margin-top:.1em}
+.hero .lead{font-size:1.18rem}
+.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap;margin:2.2rem 0 2.4rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem}
+.badge{display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .95rem;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.85rem;font-weight:500;color:var(--plum)}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--sage);display:block}
+.hero-visual{position:relative;justify-self:center;width:min(460px,100%)}
+.arch{border-radius:240px 240px 28px 28px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);border:8px solid #fff;background:#fff}
+.arch img{width:100%;height:100%;object-fit:cover}
+.float-card{position:absolute;background:#fff;border-radius:18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:.8rem;padding:.7rem 1rem .7rem .7rem}
+.float-card img{width:58px;height:58px;border-radius:12px;object-fit:cover}
+.float-card b{display:block;font-family:'Fraunces',serif;font-weight:500;color:var(--plum);font-size:.98rem;line-height:1.2}
+.float-card span{font-size:.78rem;color:var(--sage);font-weight:500}
+.fc-1{left:-60px;bottom:70px;animation:bob 6s ease-in-out infinite}
+.fc-2{right:-40px;top:60px;animation:bob 6s ease-in-out infinite 1.5s}
+.stamp{position:absolute;right:-26px;bottom:-26px;width:124px;height:124px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;text-align:center;box-shadow:var(--shadow)}
+.stamp svg{position:absolute;inset:0;animation:spin 22s linear infinite}
+.stamp b{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:500;line-height:1}
+.stamp small{display:block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* MARQUEE */
+.marquee{background:var(--plum);color:#fff;overflow:hidden;padding:1.05rem 0}
+.marquee-track{display:flex;gap:2.8rem;width:max-content;animation:scroll 38s linear infinite}
+.marquee span{display:inline-flex;align-items:center;gap:2.8rem;font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;white-space:nowrap}
+.marquee span::after{content:"✿";color:var(--lilac);font-style:normal;font-size:1rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:3.5rem}
+.pillar{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.6rem;text-align:center;transition:.3s}
+.pillar:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.pillar .ic{width:66px;height:66px;border-radius:50%;margin:0 auto 1.2rem;display:grid;place-items:center;background:var(--lilac-soft);color:var(--violet)}
+.pillar:nth-child(even) .ic{background:var(--sage-soft);color:var(--sage)}
+.pillar .ic svg{width:30px;height:30px}
+.pillar h3{font-size:1.3rem;margin-bottom:.5rem}
+.pillar p{color:var(--muted);font-size:.95rem}
+
+/* CATALOG */
+#productos{background:#fff}
+.cat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+.tab{padding:.6rem 1.15rem;border-radius:999px;border:1.5px solid var(--line);font-size:.92rem;font-weight:500;color:var(--muted);transition:.2s}
+.tab:hover{border-color:var(--lilac);color:var(--plum)}
+.tab.active{background:var(--plum);border-color:var(--plum);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.card{background:var(--cream);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.3s;border:1px solid transparent}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);background:#fff;border-color:var(--line)}
+.card-img{aspect-ratio:1;overflow:hidden;position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover .card-img img{transform:scale(1.06)}
+.tag{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);color:var(--plum);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.32rem .7rem;border-radius:999px}
+.tag.sage{color:var(--sage)}
+.card-body{padding:1.15rem 1.2rem 1.25rem;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:1.12rem;margin-bottom:.3rem}
+.card-body p{font-size:.88rem;color:var(--muted);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1rem;gap:.5rem}
+.price{font-size:.85rem;color:var(--sage);font-weight:500;white-space:nowrap}
+.price b{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--plum);font-weight:500}
+.add{white-space:nowrap;display:inline-flex;align-items:center;gap:.35rem;background:var(--plum);color:#fff;border-radius:999px;padding:.5rem .95rem;font-size:.85rem;font-weight:500;transition:.2s}
+.add:hover{background:var(--violet)}
+.qty{display:none;align-items:center;gap:.2rem;background:#fff;border:1.5px solid var(--lilac);border-radius:999px;padding:.15rem}
+.qty button{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:var(--plum);font-size:1.1rem;font-weight:600}
+.qty button:hover{background:var(--lilac-soft)}
+.qty span{min-width:22px;text-align:center;font-weight:600;color:var(--plum)}
+.card.in .add{display:none}.card.in .qty{display:inline-flex}
+.cat-note{text-align:center;margin-top:2.5rem;color:var(--muted);font-size:.95rem}
+
+/* GIFT */
+.gift{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center}
+.gift-pics{display:grid;grid-template-columns:1fr 1fr;gap:1rem;position:relative}
+.gift-pics img{border-radius:var(--r);width:100%;height:100%;object-fit:cover;box-shadow:var(--shadow)}
+.gift-pics .wide{grid-column:span 2;aspect-ratio:16/10}
+.gift-pics .sm{aspect-ratio:1}
+.occasions{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:2rem 0 2.2rem}
+.occ{display:flex;align-items:center;gap:.75rem;background:#fff;border:1px solid var(--line);border-radius:16px;padding:.85rem 1rem;font-weight:500;color:var(--plum)}
+.occ em{font-style:normal;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--rose-soft);font-size:1.05rem;flex:none}
+
+/* ABOUT */
+#gise{background:linear-gradient(180deg,var(--lilac-soft),var(--cream))}
+#clases{padding-top:30px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:center}
+.about-pic{position:relative;width:min(440px,100%);justify-self:center}
+.about-pic .frame{border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);border:8px solid #fff}
+.about-pic .frame img{width:100%;height:100%;object-fit:cover;object-position:62% 55%}
+.about-pic .years{position:absolute;left:-30px;top:40px;background:#fff;border-radius:20px;padding:1rem 1.3rem;box-shadow:var(--shadow);text-align:center}
+.years b{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--violet);line-height:1;font-weight:500;display:block}
+.years span{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.about-text p{color:var(--muted);margin-top:1.1rem;font-size:1.04rem}
+.quote{margin-top:2rem;padding:1.5rem 1.8rem;border-left:3px solid var(--rose);background:#fff;border-radius:0 18px 18px 0}
+.quote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--plum)!important;margin:0!important;line-height:1.4}
+.quote .script{display:block;font-size:1.8rem;color:var(--violet);margin-top:.4rem}
+.facts{display:flex;gap:2.5rem;margin-top:2rem;flex-wrap:wrap}
+.facts div b{display:block;font-family:'Fraunces',serif;font-size:1.15rem;color:var(--plum);font-weight:500}
+.facts div span{font-size:.85rem;color:var(--muted)}
+
+/* CLASSES */
+.classes-top{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center;margin-bottom:3.5rem}
+.classes-top .pic{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/10}
+.classes-top .pic img{width:100%;height:100%;object-fit:cover}
+.class-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.ccard{border-radius:var(--r);padding:2rem;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.ccard.feat{background:var(--plum);color:#fff;border-color:var(--plum)}
+.ccard.feat h3,.ccard.feat .k{color:#fff}
+.ccard.feat li{color:rgba(255,255,255,.85)}
+.ccard.feat li::before{background:var(--lilac)}
+.ccard .k{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--sage)}
+.ccard h3{font-size:1.55rem;margin:.6rem 0 1rem}
+.ccard ul{list-style:none;display:grid;gap:.6rem;flex:1;margin-bottom:1.6rem}
+.ccard li{position:relative;padding-left:1.3rem;font-size:.95rem;color:var(--muted)}
+.ccard li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--violet)}
+.ccard .btn{align-self:flex-start;padding:.75rem 1.25rem;font-size:.92rem}
+.ccard.feat .btn{background:#fff;color:var(--plum)}
+.ccard.feat .btn:hover{background:var(--lilac)}
+
+/* GALLERY */
+#galeria{background:#fff;padding-bottom:0}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:.8rem;margin-top:3rem}
+.gallery figure{overflow:hidden;border-radius:18px;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gallery figure:hover img{transform:scale(1.07)}
+.gallery{grid-template-areas:"a a b b c c" "a a e f c c" "g g h h i i"}
+.g1{grid-area:a}.g2{grid-area:b}.g3{grid-area:i}.g4{grid-area:c}.g5{grid-area:e}.g6{grid-area:f}.g7{grid-area:g}.g8{grid-area:h}
+.ig-row{display:flex;justify-content:center;padding:2.6rem 0 0}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.5rem;counter-reset:s}
+.step{position:relative;padding:2rem 1.6rem;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s);font-family:'Fraunces',serif;font-size:2.8rem;color:var(--lilac);line-height:1;display:block;margin-bottom:.8rem}
+.step h3{font-size:1.2rem;margin-bottom:.4rem}
+.step p{font-size:.93rem;color:var(--muted)}
+.delivery{margin-top:2.2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.delivery div{display:flex;align-items:center;gap:.7rem;background:var(--sage-soft);color:#3f5a3c;border-radius:999px;padding:.75rem 1.3rem;font-weight:500;font-size:.95rem}
+.delivery svg{width:20px;height:20px}
+
+/* FAQ */
+#faq{background:var(--lilac-soft)}
+.faq{max-width:820px;margin:3rem auto 0;display:grid;gap:.8rem}
+.faq details{background:#fff;border-radius:18px;padding:0 1.6rem;border:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:1.3rem 0;font-family:'Fraunces',serif;font-size:1.15rem;color:var(--plum);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Outfit';font-size:1.6rem;color:var(--violet);transition:.25s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 1.4rem;color:var(--muted)}
+
+/* CTA */
+.cta{padding:0 0 110px;background:var(--lilac-soft)}
+.cta-box{border-radius:32px;background:var(--plum);color:#fff;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.cta-box::before,.cta-box::after{content:"";position:absolute;border-radius:50%;background:rgba(205,184,227,.18)}
+.cta-box::before{width:340px;height:340px;left:-110px;top:-140px}
+.cta-box::after{width:260px;height:260px;right:-70px;bottom:-120px;background:rgba(111,143,107,.3)}
+.cta-box h2{color:#fff;position:relative}
+.cta-box h2 .script{color:var(--lilac)}
+.cta-box p{color:rgba(255,255,255,.82);max-width:52ch;margin:1.1rem auto 2rem;position:relative}
+.cta-box .btn{position:relative}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.75);padding:4rem 0 2rem;font-size:.93rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem}
+footer .brand-text .script{color:#fff}
+footer h4{font-family:'Fraunces',serif;font-weight:500;color:#fff;font-size:1.1rem;margin-bottom:1rem}
+footer ul{list-style:none;display:grid;gap:.55rem}
+footer a:hover{color:var(--lilac)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:3rem;padding-top:1.6rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem;opacity:.7}
+
+/* CART */
+.cart-fab{visibility:hidden;opacity:0;position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:.7rem;background:var(--plum);color:#fff;border-radius:999px;padding:.95rem 1.4rem;box-shadow:0 14px 34px -10px rgba(74,37,86,.7);font-weight:500;transform:translateY(140%);transition:.35s cubic-bezier(.3,1.4,.6,1)}
+.cart-fab.show{transform:none;visibility:visible;opacity:1}
+.cart-fab .n{background:var(--rose);color:var(--plum);min-width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.85rem;font-weight:700}
+.wa-fab{position:fixed;right:22px;bottom:22px;z-index:59;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.7);transition:.3s}
+.wa-fab svg{width:30px;height:30px;color:#fff}
+.wa-fab.hide{transform:scale(0)}
+.drawer-bg{position:fixed;inset:0;background:rgba(43,30,48,.45);z-index:70;opacity:0;pointer-events:none;transition:.3s}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:min(430px,100%);background:var(--cream);z-index:71;transform:translateX(100%);transition:.4s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.open .drawer-bg{opacity:1;pointer-events:auto}.open .drawer{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 1.6rem;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-size:1.5rem}
+.x{width:40px;height:40px;border-radius:50%;font-size:1.5rem;color:var(--plum);display:grid;place-items:center}
+.x:hover{background:var(--lilac-soft)}
+.drawer-items{flex:1;overflow:auto;padding:1rem 1.6rem}
+.ditem{display:flex;gap:.9rem;align-items:center;padding:.8rem 0;border-bottom:1px dashed var(--line)}
+.ditem img{width:58px;height:58px;border-radius:12px;object-fit:cover}
+.ditem b{font-family:'Fraunces',serif;font-weight:500;color:var(--plum);display:block;line-height:1.2}
+.ditem .qty{display:inline-flex;margin-top:.35rem}
+.ditem .qty button{width:26px;height:26px}
+.drawer-form{padding:1.2rem 1.6rem 1.6rem;border-top:1px solid var(--line);display:grid;gap:.7rem;background:#fff}
+.drawer-form label{font-size:.8rem;font-weight:600;color:var(--plum);letter-spacing:.03em}
+.drawer-form input,.drawer-form select,.drawer-form textarea{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink);margin-top:.25rem}
+.drawer-form input:focus,.drawer-form select:focus,.drawer-form textarea:focus{outline:none;border-color:var(--lilac)}
+.drawer-form .row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.drawer-form .btn{width:100%;margin-top:.3rem}
+.hint{font-size:.78rem;color:var(--muted);text-align:center}
+.empty{text-align:center;color:var(--muted);padding:3rem 1rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media (max-width:1080px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .pillars,.steps{grid-template-columns:repeat(2,1fr)}
+  .fc-1{left:-20px}.fc-2{right:-10px}
+}
+@media (max-width:900px){
+  section{padding:80px 0}
+  .nav-links{position:fixed;inset:78px 0 auto 0;background:var(--cream);flex-direction:column;gap:1.2rem;padding:1.8rem 0 2.2rem;box-shadow:0 20px 30px -20px rgba(0,0,0,.2);transform:translateY(-130%);transition:.35s;z-index:-1}
+  .nav-links.open{transform:none}
+  .burger{display:flex}
+  .hero{padding:120px 0 70px}
+  .hero-grid,.gift,.about,.classes-top{grid-template-columns:1fr;gap:3rem}
+  .hero-visual{width:min(400px,86%)}
+  .hero-copy{text-align:center}
+  .hero-copy .eyebrow{justify-content:center}
+  .hero .lead{margin-inline:auto}
+  .hero-cta,.badges{justify-content:center}
+  .class-cards{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;grid-template-areas:"a b" "a e" "c f" "c g" "h h" "i i"}
+  .foot{grid-template-columns:1fr;gap:2rem}
+  .about-pic .years{left:-10px}
+  .gift-pics{order:2}
+}
+@media (max-width:640px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:.9rem}
+  .card-body{padding:.9rem}
+  .card-body h3{font-size:1rem}
+  .card-body p{display:none}
+  .card-foot{flex-direction:column;align-items:stretch}
+  .add,.qty{justify-content:center}
+  .price{text-align:center}
+  .pillars,.steps{grid-template-columns:1fr}
+  .occasions{grid-template-columns:1fr}
+  .fc-2{display:none}
+  .fc-1{left:-14px;top:34px;bottom:auto}
+  .hero-copy .eyebrow::before{display:none}
+  .hero-copy .eyebrow{letter-spacing:.12em}
+  .stamp{width:100px;height:100px;right:-12px;bottom:-16px}
+  .stamp b{font-size:1.5rem}
+  .cta-box{padding:3.2rem 1.5rem}
+  .cat-head{justify-content:center;text-align:center}
+  .cat-head .eyebrow{justify-content:center}
+  .tabs{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="brand" aria-label="Dulces Permitidos">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="#F3ECF9" stroke="#CDB8E3"/>
+        <g transform="translate(24 22)">
+          <g fill="#B794D6"><ellipse rx="5" ry="8" transform="rotate(0) translate(0 -7)"/><ellipse rx="5" ry="8" transform="rotate(72) translate(0 -7)"/><ellipse rx="5" ry="8" transform="rotate(144) translate(0 -7)"/><ellipse rx="5" ry="8" transform="rotate(216) translate(0 -7)"/><ellipse rx="5" ry="8" transform="rotate(288) translate(0 -7)"/></g>
+          <circle r="4.2" fill="#7B4B94"/>
+        </g>
+        <path d="M14 38c4-4 8-5 10-5s6 1 10 5" stroke="#6F8F6B" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text"><span class="script">Dulces Permitidos</span><small>Repostería saludable</small></span>
+    </a>
+    <nav class="nav-links" id="links">
+      <a href="#productos">Productos</a>
+      <a href="#regalos">Cajas regalo</a>
+      <a href="#gise">Sobre Gise</a>
+      <a href="#clases">Clases</a>
+      <a href="#pedir">Cómo pedir</a>
+      <a href="#" class="btn btn-primary js-wa" data-msg="¡Hola Gise! Vengo de la web y quiero hacer una consulta 😊">Hacé tu pedido</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy rv">
+      <span class="eyebrow">Low carb · Sin azúcar · Apto diabéticos</span>
+      <h1>Dulces que sí están <span class="script">permitidos</span></h1>
+      <p class="lead">Alfajores, cookies y tortas hechos a mano con harina de almendras y frutos secos, sin azúcar añadida. Para darte el gusto sin dejar de cuidarte.</p>
+      <div class="hero-cta">
+        <a href="#productos" class="btn btn-primary">Ver productos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#" class="btn btn-ghost js-wa" data-msg="¡Hola Gise! Vengo de la web y quiero hacer un pedido 😊">Pedir por WhatsApp</a>
+      </div>
+      <div class="badges">
+        <span class="badge"><i></i>Sin azúcar añadida</span>
+        <span class="badge"><i></i>Keto · Low carb</span>
+        <span class="badge"><i></i>Apto diabéticos</span>
+        <span class="badge"><i></i>Harina de almendras</span>
+      </div>
+    </div>
+    <div class="hero-visual rv">
+      <div class="arch"><img src="hero.webp" alt="Alfajor glaseado con frambuesa y pistacho" fetchpriority="high"></div>
+      <div class="float-card fc-1"><img src="alfajor-chocolate-ddl.webp" alt=""><div><b>Alfajor de chocolate</b><span>Con dulce de leche sin azúcar</span></div></div>
+      <div class="float-card fc-2"><img src="cookies-frambuesa.webp" alt=""><div><b>Cookies de frambuesa</b><span>Low carb</span></div></div>
+      <div class="stamp">
+        <svg viewBox="0 0 124 124"><defs><path id="c" d="M62,62 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs><text font-size="9" fill="#CDB8E3" font-family="Outfit" font-weight="600"><textPath href="#c" textLength="296" lengthAdjust="spacing">HECHO A MANO · CON AMOR · ZONA NORTE ·</textPath></text></svg>
+        <div><b>8</b><small>años</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Sin azúcar añadida</span><span>Low carb</span><span>Keto friendly</span><span>Apto para diabéticos</span><span>Harina de almendras 100% pura</span><span>Hecho a mano</span><span>Cambio de hábitos</span>
+    <span>Sin azúcar añadida</span><span>Low carb</span><span>Keto friendly</span><span>Apto para diabéticos</span><span>Harina de almendras 100% pura</span><span>Hecho a mano</span><span>Cambio de hábitos</span>
+  </div>
+</div>
+
+<!-- PILLARS -->
+<section id="permitidos">
+  <div class="wrap center">
+    <span class="eyebrow rv">¿Qué es un permitido?</span>
+    <h2 class="rv" style="margin-top:1rem">Rico de verdad, <span class="script">y mejor</span></h2>
+    <p class="lead rv" style="margin-top:1rem">Un “permitido” es ese dulce que podés comer tranquila: pensado para quienes cuidan el azúcar, siguen una alimentación keto o low carb, o quieren empezar a comer mejor sin renunciar a lo rico.</p>
+    <div class="pillars">
+      <div class="pillar rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+        <h3>Sin azúcar añadida</h3><p>Endulzamos con eritritol y endulzantes aptos, que no elevan la glucosa como el azúcar común.</p>
+      </div>
+      <div class="pillar rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3c4 3 6 6.5 6 10a6 6 0 01-12 0c0-3.5 2-7 6-10z"/><path d="M12 9v10"/></svg></div>
+        <h3>Harina de almendras</h3><p>Usamos harinas de almendra 100% puras y frutos secos en lugar de harina de trigo.</p>
+      </div>
+      <div class="pillar rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg></div>
+        <h3>Bajo en carbohidratos</h3><p>Recetas keto y low carb para disfrutar sin salirte de tu plan de alimentación.</p>
+      </div>
+      <div class="pillar rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg></div>
+        <h3>Apto diabéticos</h3><p>Pastelería pensada para que todos en la mesa puedan compartir el mismo postre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section id="productos">
+  <div class="wrap">
+    <div class="cat-head">
+      <div>
+        <span class="eyebrow">Nuestros productos</span>
+        <h2 style="margin-top:.8rem">Elegí tus <span class="script">permitidos</span></h2>
+      </div>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-f="all">Todos</button>
+        <button class="tab" data-f="alfajores">Alfajores</button>
+        <button class="tab" data-f="dulces">Cookies y más</button>
+        <button class="tab" data-f="cajas">Cajas regalo</button>
+        <button class="tab" data-f="pan">Panificados</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="cat-note">Sumá lo que quieras y te armamos el pedido por WhatsApp. Todo se hace por encargo, con anticipación.</p>
+  </div>
+</section>
+
+<!-- GIFT -->
+<section id="regalos">
+  <div class="wrap gift">
+    <div class="gift-pics rv">
+      <img class="wide" src="caja-surtida-wide.webp" alt="Caja regalo surtida con alfajores, tartas y bombones" loading="lazy">
+      <img class="sm" src="caja-te-quiero.webp" alt="Caja regalo Te quiero" loading="lazy">
+      <img class="sm" src="caja-mama.webp" alt="Caja de alfajores para mamá" loading="lazy">
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Cajas regalo</span>
+      <h2 style="margin-top:1rem">Regalá algo rico <span class="script">que también cuida</span></h2>
+      <p class="lead" style="margin-top:1.1rem">Cajas surtidas con alfajores, cookies, tartaletas y bombones, en packaging de regalo listo para entregar. Las armamos a tu gusto y con el mensaje que quieras.</p>
+      <div class="occasions">
+        <div class="occ"><em>🎂</em>Cumpleaños</div>
+        <div class="occ"><em>💐</em>Día de la Madre</div>
+        <div class="occ"><em>💌</em>San Valentín</div>
+        <div class="occ"><em>🎄</em>Fiestas y empresas</div>
+      </div>
+      <a href="#" class="btn btn-primary js-wa" data-msg="¡Hola Gise! Quiero armar una caja regalo 🎁 ¿Me contás las opciones?">Armar mi caja regalo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="gise">
+  <div class="wrap about">
+    <div class="about-pic rv">
+      <div class="frame"><img src="gisela.webp" alt="Gisela Romero decorando una torta" loading="lazy"></div>
+      <div class="years"><b>8</b><span>años de<br>cambio de hábitos</span></div>
+    </div>
+    <div class="about-text rv">
+      <span class="eyebrow">Sobre Gise</span>
+      <h2 style="margin-top:1rem">De la pastelería artística <span class="script">al cambio de hábitos</span></h2>
+      <p>Soy Gisela Romero, pastelera. Durante años hice tortas artísticas, hasta que entendí que en la pastelería tradicional estaba todo lo que me hacía mal: harinas refinadas, azúcar y malos hábitos muy fáciles de repetir.</p>
+      <p>Hace 8 años cambié el rumbo. Empecé a crear dulces low carb y aptos para diabéticos que fueran igual de ricos y lindos que los de siempre. Así nació Dulces Permitidos, para que puedas empezar este proceso sin sentir que te estás privando de nada.</p>
+      <div class="quote">
+        <p>“Comer rico y sano no tiene por qué ser difícil.”</p>
+        <span class="script">Gise</span>
+      </div>
+      <div class="facts">
+        <div><b>Por encargo</b><span>Todo se hace a pedido</span></div>
+        <div><b>Zona Norte</b><span>Buenos Aires</span></div>
+        <div><b>Clases</b><span>Virtuales y presenciales</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="clases">
+  <div class="wrap">
+    <div class="classes-top">
+      <div class="rv">
+        <span class="eyebrow">Clases y talleres</span>
+        <h2 style="margin-top:1rem">Aprendé a cocinar <span class="script">tus permitidos</span></h2>
+        <p class="lead" style="margin-top:1.1rem">Clases súper fáciles, sin experiencia ni conocimientos previos. Te enseño recetas keto, low carb y aptas para diabéticos para que puedas hacerlas en casa, o sumarlas a tu emprendimiento.</p>
+      </div>
+      <div class="pic rv"><img src="clase-presencial.webp" alt="Alumnas en una clase presencial de pastelería low carb" loading="lazy"></div>
+    </div>
+    <div class="class-cards">
+      <div class="ccard rv">
+        <span class="k">Desde tu casa</span>
+        <h3>Clases virtuales</h3>
+        <ul>
+          <li>Por grupo privado de Facebook</li>
+          <li>Si no podés en vivo, queda grabada</li>
+          <li>Incluye PDF con recetario para imprimir</li>
+          <li>Pan dulce, pizza, tapas de empanada y tarta, pionono, helado y más</li>
+        </ul>
+        <a href="#" class="btn btn-ghost js-wa" data-msg="¡Hola Gise! Quiero info de las clases virtuales 💻">Quiero info</a>
+      </div>
+      <div class="ccard feat rv">
+        <span class="k">Manos en la masa</span>
+        <h3>Talleres presenciales</h3>
+        <ul>
+          <li>Grupos reducidos, cupos limitados</li>
+          <li>Cocinamos juntas paso a paso</li>
+          <li>Te llevás lo que preparás y las recetas</li>
+          <li>En espacios aliados como Más Orgánico</li>
+        </ul>
+        <a href="#" class="btn js-wa" data-msg="¡Hola Gise! Quiero saber cuándo es el próximo taller presencial 🙌">Próximas fechas</a>
+      </div>
+      <div class="ccard rv">
+        <span class="k">Para emprender</span>
+        <h3>Masterclass</h3>
+        <ul>
+          <li>Recetas pensadas para vender</li>
+          <li>Versión tradicional y versión keto</li>
+          <li>Ampliá tu oferta y llegá a más clientes</li>
+          <li>Ediciones especiales, como Pan Dulce</li>
+        </ul>
+        <a href="#" class="btn btn-ghost js-wa" data-msg="¡Hola Gise! Me interesa la próxima masterclass ✨">Reservar mi lugar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galeria">
+  <div class="wrap center">
+    <span class="eyebrow rv">Galería</span>
+    <h2 class="rv" style="margin-top:1rem">Hechos a mano, <span class="script">uno por uno</span></h2>
+    <div class="gallery">
+      <figure class="g1"><img src="alfajor-relleno.webp" alt="Alfajor relleno con pistacho" loading="lazy"></figure>
+      <figure class="g2"><img src="alfajores-mix.webp" alt="Alfajores variados" loading="lazy"></figure>
+      <figure class="g3"><img src="tartaletas-wide.webp" alt="Tartaletas low carb" loading="lazy"></figure>
+      <figure class="g4"><img src="alfajores-apilados.webp" alt="Alfajores apilados" loading="lazy"></figure>
+      <figure class="g5"><img src="alfajor-chocolate-flor.webp" alt="Alfajor de chocolate" loading="lazy"></figure>
+      <figure class="g6"><img src="bombones.webp" alt="Alfajorcitos con frambuesa" loading="lazy"></figure>
+      <figure class="g7"><img src="caja-surtida.webp" alt="Caja surtida" loading="lazy"></figure>
+      <figure class="g8"><img src="brownie-relleno.webp" alt="Brownie relleno" loading="lazy"></figure>
+    </div>
+    <div class="ig-row"><a class="btn btn-ghost" href="https://www.instagram.com/dulcespermitidosgise/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      Seguinos en @dulcespermitidosgise</a></div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section id="pedir" style="background:#fff">
+  <div class="wrap center">
+    <span class="eyebrow rv">Cómo pedir</span>
+    <h2 class="rv" style="margin-top:1rem">Tu pedido en <span class="script">4 pasos</span></h2>
+    <div class="steps" style="text-align:left">
+      <div class="step rv"><h3>Elegí</h3><p>Sumá tus productos desde el catálogo o contanos qué tenés ganas de comer.</p></div>
+      <div class="step rv"><h3>Envialo</h3><p>Se arma un mensaje con tu pedido y lo mandás directo a nuestro WhatsApp.</p></div>
+      <div class="step rv"><h3>Coordinamos</h3><p>Trabajamos por encargo: acordamos el día de entrega con anticipación.</p></div>
+      <div class="step rv"><h3>Disfrutá</h3><p>Te lo llevamos por Uber Moto en Zona Norte. ¡Y a darse el gusto!</p></div>
+    </div>
+    <div class="delivery rv">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h6l-3-7h4l2 7M6 14l3-6h3"/></svg>Envíos por Uber Moto</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Zona Norte, Buenos Aires</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Pedidos con anticipación</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap center">
+    <span class="eyebrow rv">Preguntas frecuentes</span>
+    <h2 class="rv" style="margin-top:1rem">Todo lo que <span class="script">querés saber</span></h2>
+    <div class="faq" style="text-align:left">
+      <details class="rv"><summary>¿Son realmente aptos para diabéticos?</summary><p>Sí. Todos nuestros productos son sin azúcar añadida, bajos en carbohidratos y elaborados con harinas de almendra y frutos secos. Igualmente, si tenés una indicación médica particular, consultá siempre con tu profesional.</p></details>
+      <details class="rv"><summary>¿Con qué endulzan?</summary><p>Usamos endulzantes aptos como eritritol, que no elevan la glucosa como el azúcar común. Si tenés alguna preferencia, contanos y lo vemos.</p></details>
+      <details class="rv"><summary>¿Con cuánta anticipación tengo que pedir?</summary><p>Trabajamos por encargo para que todo llegue fresco. Escribinos con algunos días de anticipación y coordinamos la fecha; para cajas regalo y tortas, cuanto antes mejor.</p></details>
+      <details class="rv"><summary>¿Hacen envíos?</summary><p>Sí, enviamos por Uber Moto dentro de Zona Norte (Buenos Aires). El costo del envío depende de la distancia y lo coordinamos al confirmar el pedido.</p></details>
+      <details class="rv"><summary>¿Hacen tortas personalizadas?</summary><p>¡Sí! Contanos la ocasión, la cantidad de personas y la idea que tenés, y te armamos una propuesta permitida.</p></details>
+      <details class="rv"><summary>¿Las clases sirven si nunca cociné?</summary><p>Totalmente. Son súper fáciles y no necesitás experiencia previa. Las virtuales quedan grabadas e incluyen un PDF con todas las recetas.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <h2>¿Se te antojó <span class="script">un permitido?</span></h2>
+      <p>Escribinos por WhatsApp, contanos qué te gustaría y coordinamos tu pedido. Rico, casero y sin culpa.</p>
+      <a href="#" class="btn btn-wa js-wa" data-msg="¡Hola Gise! Vengo de la web y quiero hacer un pedido 😊">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+        Escribinos por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <span class="brand-text"><span class="script" style="font-size:2.2rem">Dulces Permitidos</span><small style="color:var(--lilac)">Repostería saludable · por Gisela Romero</small></span>
+        <p style="margin-top:1.1rem;max-width:36ch">Pastelería low carb, sin azúcar añadida y apta para diabéticos. Hecha a mano, por encargo, en Zona Norte.</p>
+      </div>
+      <div>
+        <h4>Navegá</h4>
+        <ul><li><a href="#productos">Productos</a></li><li><a href="#regalos">Cajas regalo</a></li><li><a href="#clases">Clases</a></li><li><a href="#pedir">Cómo pedir</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#" class="js-wa" data-msg="¡Hola Gise! Vengo de la web 😊">WhatsApp: <span id="waText"></span></a></li>
+          <li><a href="https://www.instagram.com/dulcespermitidosgise/" target="_blank" rel="noopener">Instagram: @dulcespermitidosgise</a></li>
+          <li>Envíos por Uber Moto · Zona Norte, Bs. As.</li>
+          <li>Pedidos con anticipación</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="yr"></span> Dulces Permitidos · Gisela Romero</span><span>Sitio web por MG Servicios Ejecutivos</span></div>
+  </div>
+</footer>
+
+<!-- FABs + DRAWER -->
+<a href="#" class="wa-fab js-wa" id="waFab" aria-label="WhatsApp" data-msg="¡Hola Gise! Vengo de la web 😊"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg></a>
+<button class="cart-fab" id="cartFab"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 016 0"/></svg>Ver mi pedido <span class="n" id="cartN">0</span></button>
+<div id="drawerWrap">
+  <div class="drawer-bg" id="drawerBg"></div>
+  <aside class="drawer" aria-label="Tu pedido">
+    <div class="drawer-head"><h3>Tu pedido</h3><button class="x" id="closeDrawer" aria-label="Cerrar">×</button></div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <form class="drawer-form" id="orderForm">
+      <label>Tu nombre<input id="fName" required placeholder="Ej: Carolina"></label>
+      <div class="row">
+        <label>Localidad<input id="fZone" placeholder="Ej: San Isidro"></label>
+        <label>Fecha deseada<input id="fDate" type="date"></label>
+      </div>
+      <label>Comentarios<textarea id="fNote" rows="2" placeholder="Ej: es para regalo, sin frutos secos..."></textarea></label>
+      <a class="btn btn-wa" id="sendWa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>Enviar pedido por WhatsApp</a>
+      <p class="hint">Te respondemos para confirmar disponibilidad, precio y envío.</p>
+    </form>
+  </aside>
+</div>
+
+<script>
+/* ====== CONFIGURACIÓN ====== */
+const WA_NUMBER = '5491100000000';      // ← número de WhatsApp de Gise (con 549 + código de área)
+const WA_LABEL  = '+54 9 11 0000-0000'; // ← cómo se muestra en el pie
+
+const PRODUCTS = [
+  {id:'a1',cat:'alfajores',name:'Alfajor de frambuesa y pistacho',desc:'Glaseado blanco, frambuesa liofilizada, pistachos y pétalos de rosa.',img:'alfajor-frambuesa-pistacho',tag:'Favorito',price:null},
+  {id:'a2',cat:'alfajores',name:'Alfajor de chocolate',desc:'Tapas húmedas de cacao con dulce de leche sin azúcar.',img:'alfajor-chocolate-ddl',tag:'Clásico',price:null},
+  {id:'a3',cat:'alfajores',name:'Alfajor bañado',desc:'Bañado en chocolate sin azúcar, con hilos de chocolate blanco.',img:'alfajores-banados',price:null},
+  {id:'a4',cat:'alfajores',name:'Alfajor de café',desc:'Triple capa de bizcocho de café con dulce de leche.',img:'alfajor-cafe',price:null},
+  {id:'a5',cat:'alfajores',name:'Alfajor de coco',desc:'Estilo maicena, con dulce de leche y bordes de coco rallado.',img:'alfajor-coco',price:null},
+  {id:'a6',cat:'alfajores',name:'Alfajor de avena',desc:'Tapas crocantes de avena y semillas con baño de chocolate.',img:'alfajor-avena',price:null},
+  {id:'a7',cat:'alfajores',name:'Alfajor red velvet',desc:'Relleno cremoso y frambuesas, medio bañado en chocolate.',img:'alfajor-red-velvet',tag:'Nuevo',price:null},
+  {id:'a8',cat:'alfajores',name:'Alfajor de nuez',desc:'Triple, con nueces y dulce de leche, bañado en blanco o negro.',img:'alfajor-nuez',price:null},
+  {id:'d1',cat:'dulces',name:'Cookies de frambuesa',desc:'Cookies tiernas con chocolate blanco y frambuesas.',img:'cookies-frambuesa',price:null},
+  {id:'d2',cat:'dulces',name:'Brownie relleno',desc:'Brownie húmedo de cacao con centro de dulce de leche.',img:'brownie-relleno',price:null},
+  {id:'d3',cat:'dulces',name:'Tartaletas surtidas',desc:'Frutos rojos, chocolate y glaseadas. Ideales para mesas dulces.',img:'tartaletas',price:null},
+  {id:'d4',cat:'dulces',name:'Alfajorcitos con frambuesa',desc:'Mini alfajores bañados, perfectos para regalar o compartir.',img:'bombones',price:null},
+  {id:'c1',cat:'cajas',name:'Caja “Te quiero”',desc:'Surtido de alfajores, cookies y tartaletas en caja de regalo.',img:'caja-te-quiero',tag:'Regalo',price:null},
+  {id:'c2',cat:'cajas',name:'Caja surtida grande',desc:'Corazón de chocolate, tartas de frutilla, brownies y más.',img:'caja-surtida',tag:'Regalo',price:null},
+  {id:'c3',cat:'cajas',name:'Torta corazón',desc:'Corazón de chocolate, copos de crema y pétalos de rosa. Ideal para una fecha especial.',img:'torta-corazon',price:null},
+  {id:'p1',cat:'pan',name:'Pan dulce keto',desc:'Con frutos secos y chips de chocolate. Sin gluten, sin lactosa y sin azúcar añadida.',img:'pan-dulce-keto',tag:'Fiestas',price:null},
+];
+
+/* ====== UTILIDADES ====== */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const waLink=msg=>`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+$$('.js-wa').forEach(a=>{a.href=waLink(a.dataset.msg||'¡Hola!');a.target='_blank';a.rel='noopener'});
+$('#waText').textContent=WA_LABEL; $('#yr').textContent=new Date().getFullYear();
+
+/* nav */
+const nav=$('#nav'); const onScroll=()=>nav.classList.toggle('scrolled',scrollY>20); onScroll(); addEventListener('scroll',onScroll,{passive:true});
+$('#burger').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
+
+/* catálogo */
+const cart={};
+const grid=$('#grid');
+function priceHTML(p){return p.price?`<span class="price"><b>$${p.price.toLocaleString('es-AR')}</b></span>`:`<span class="price">Consultá precio</span>`}
+function render(f='all'){
+  grid.innerHTML=PRODUCTS.filter(p=>f==='all'||p.cat===f).map(p=>`
+  <article class="card ${cart[p.id]?'in':''}" data-id="${p.id}">
+    <div class="card-img"><img src="${p.img}.webp" alt="${p.name}" loading="lazy">${p.tag?`<span class="tag ${p.cat==='cajas'?'sage':''}">${p.tag}</span>`:''}</div>
+    <div class="card-body"><h3>${p.name}</h3><p>${p.desc}</p>
+      <div class="card-foot">${priceHTML(p)}
+        <button class="add" data-a="add">+ Agregar</button>
+        <div class="qty"><button data-a="dec" aria-label="Quitar">−</button><span>${cart[p.id]||0}</span><button data-a="inc" aria-label="Sumar">+</button></div>
+      </div></div>
+  </article>`).join('');
+}
+render();
+$('#tabs').addEventListener('click',e=>{const t=e.target.closest('.tab');if(!t)return;$$('.tab').forEach(x=>x.classList.toggle('active',x===t));render(t.dataset.f)});
+function change(id,d){cart[id]=Math.max(0,(cart[id]||0)+d);if(!cart[id])delete cart[id];sync()}
+grid.addEventListener('click',e=>{const b=e.target.closest('button[data-a]');if(!b)return;const id=b.closest('.card').dataset.id;change(id,b.dataset.a==='dec'?-1:1)});
+function sync(){
+  $$('.card').forEach(c=>{const q=cart[c.dataset.id]||0;c.classList.toggle('in',q>0);c.querySelector('.qty span').textContent=q});
+  const n=Object.values(cart).reduce((a,b)=>a+b,0);
+  $('#cartN').textContent=n; $('#cartFab').classList.toggle('show',n>0); $('#waFab').classList.toggle('hide',n>0);
+  const items=Object.keys(cart).map(id=>PRODUCTS.find(p=>p.id===id));
+  $('#drawerItems').innerHTML=items.length?items.map(p=>`<div class="ditem" data-id="${p.id}"><img src="${p.img}.webp" alt=""><div><b>${p.name}</b><div class="qty"><button data-a="dec">−</button><span>${cart[p.id]}</span><button data-a="inc">+</button></div></div></div>`).join(''):'<p class="empty">Todavía no agregaste productos.</p>';
+}
+$('#drawerItems').addEventListener('click',e=>{const b=e.target.closest('button[data-a]');if(!b)return;change(b.closest('.ditem').dataset.id,b.dataset.a==='dec'?-1:1);updateSend()});
+const wrap=$('#drawerWrap');
+$('#cartFab').onclick=()=>wrap.classList.add('open');
+$('#closeDrawer').onclick=$('#drawerBg').onclick=()=>wrap.classList.remove('open');
+function orderMsg(){
+  const lines=Object.keys(cart).map(id=>{const p=PRODUCTS.find(x=>x.id===id);return `• ${cart[id]} x ${p.name}`});
+  const d=$('#fDate').value?new Date($('#fDate').value+'T12:00').toLocaleDateString('es-AR'):'';
+  let msg=`¡Hola Gise! 🌸 Quiero hacer este pedido:\n\n${lines.join('\n')}\n\nNombre: ${$('#fName').value}`;
+  if($('#fZone').value)msg+=`\nLocalidad: ${$('#fZone').value}`;
+  if(d)msg+=`\nFecha deseada: ${d}`;
+  if($('#fNote').value)msg+=`\nComentarios: ${$('#fNote').value}`;
+  return msg;
+}
+function updateSend(){$('#sendWa').href=waLink(orderMsg())}
+$('#orderForm').addEventListener('input',updateSend);
+$('#orderForm').addEventListener('submit',e=>e.preventDefault());
+$('#cartFab').addEventListener('click',updateSend);
+$('#sendWa').addEventListener('click',e=>{updateSend(); if(!$('#fName').value.trim()){e.preventDefault();$('#fName').focus();$('#fName').placeholder='Escribí tu nombre para enviar';}});
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
