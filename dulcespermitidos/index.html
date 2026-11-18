@@ -7,7 +7,12 @@
 <meta name="description" content="Pastelería low carb, sin azúcar y apta para diabéticos. Alfajores, cookies, cajas regalo y clases. Pedidos con anticipación, envíos por Zona Norte.">
 <meta property="og:title" content="Dulces Permitidos · Repostería saludable">
 <meta property="og:description" content="Low carb · Sin azúcar · Apto diabéticos. Hecho a mano por Gisela Romero.">
-<meta property="og:image" content="hero.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mgserviciosejecutivos.com/paginas/dulcespermitidos/">
+<meta property="og:image" content="https://mgserviciosejecutivos.com/paginas/dulcespermitidos/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#4A2556">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -635,7 +640,7 @@ footer a:hover{color:var(--lilac)}
     <form class="drawer-form" id="orderForm">
       <label>Tu nombre<input id="fName" required placeholder="Ej: Carolina"></label>
       <div class="row">
-        <label>Localidad<input id="fZone" placeholder="Ej: San Isidro"></label>
+        <label>Localidad / barrio<input id="fZone" placeholder="Ej: San Isidro, Martínez"></label>
         <label>Fecha deseada<input id="fDate" type="date"></label>
       </div>
       <label>Comentarios<textarea id="fNote" rows="2" placeholder="Ej: es para regalo, sin frutos secos..."></textarea></label>
@@ -714,7 +719,7 @@ function orderMsg(){
   const lines=Object.keys(cart).map(id=>{const p=PRODUCTS.find(x=>x.id===id);return `• ${cart[id]} x ${p.name}`});
   const d=$('#fDate').value?new Date($('#fDate').value+'T12:00').toLocaleDateString('es-AR'):'';
   let msg=`¡Hola Gise! 🌸 Quiero hacer este pedido:\n\n${lines.join('\n')}\n\nNombre: ${$('#fName').value}`;
-  if($('#fZone').value)msg+=`\nLocalidad: ${$('#fZone').value}`;
+  if($('#fZone').value)msg+=`\nLocalidad / barrio: ${$('#fZone').value}`;
   if(d)msg+=`\nFecha deseada: ${d}`;
   if($('#fNote').value)msg+=`\nComentarios: ${$('#fNote').value}`;
   return msg;
