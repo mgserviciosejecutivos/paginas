@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bocado Leve · Pastelería saludable</title>
+<meta name="description" content="Pastelería saludable, sin azúcar añadida y low carb. Alfajores, cookies, tartas y cajas regalo hechas a mano.">
+<meta property="og:title" content="Bocado Leve · Pastelería saludable">
+<meta property="og:description" content="Sin azúcar añadida · Low carb · Hecho a mano.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1702745284678-2ae974a7f0aa?w=1200&h=630&fit=crop&q=80">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F4A3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#2F4A3A;--green2:#4F6F58;--pista:#C9D8A5;--pista-soft:#EEF3E2;--terra:#C47F62;--terra-soft:#F7E9E2;--cream:#FAF7F0;--ink:#1F2A23;--muted:#66706A;--line:#E4E6DC;--r:20px;--shadow:0 18px 50px -22px rgba(31,42,35,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.05;color:var(--green)}
+h2{font-size:clamp(2.2rem,4.4vw,3.4rem)}
+em.it{font-style:italic;color:var(--terra);font-weight:500}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--green2)}
+.eyebrow::before{content:"";width:24px;height:1.5px;background:currentColor}
+.center{text-align:center}.center .eyebrow{justify-content:center}
+.lead{font-size:1.08rem;color:var(--muted);max-width:56ch}
+.center .lead{margin-inline:auto}
+section{padding:105px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.6rem;border-radius:999px;font-weight:500;font-size:1rem;transition:.25s;white-space:nowrap}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px -12px rgba(47,74,58,.8)}
+.btn-primary:hover{background:var(--green2);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--green);color:var(--green)}
+.btn-ghost:hover{background:var(--green);color:#fff}
+.btn-wa{background:#25D366;color:#fff}.btn-wa:hover{background:#1ebe5a}
+.btn svg{width:20px;height:20px;flex:none}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+.nav.scrolled{background:rgba(250,247,240,.93);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand svg{width:42px;height:42px;flex:none}
+.brand b{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:600;color:var(--green);line-height:1;display:block}
+.brand small{display:block;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-top:3px}
+.nav-links{display:flex;gap:2rem;align-items:center;font-size:.95rem}
+.nav-links a:not(.btn){position:relative}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:0;background:var(--terra);transition:.25s}
+.nav-links a:not(.btn):hover::after{width:100%}
+.nav .btn{padding:.7rem 1.2rem;font-size:.92rem}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:22px;height:2px;background:var(--green);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+/* hero */
+.hero{padding:150px 0 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,var(--pista-soft) 0%,transparent 70%);right:-160px;top:-140px;z-index:-1}
+.hero::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--terra-soft) 0%,transparent 70%);left:-220px;bottom:-220px;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+.hero h1{font-size:clamp(3rem,6.4vw,5.4rem);margin:1.1rem 0 1.3rem}
+.hero .lead{font-size:1.15rem}
+.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap;margin:2.1rem 0 2.3rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem}
+.badge{display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .95rem;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.85rem;font-weight:500;color:var(--green)}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--terra)}
+.hero-visual{position:relative;justify-self:center;width:min(460px,100%)}
+.arch{border-radius:240px 240px 26px 26px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);border:8px solid #fff;background:#fff}
+.arch img{width:100%;height:100%;object-fit:cover}
+.float-card{position:absolute;background:#fff;border-radius:16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:.8rem;padding:.7rem 1rem .7rem .7rem}
+.float-card img{width:56px;height:56px;border-radius:12px;object-fit:cover}
+.float-card b{display:block;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--green);font-size:1.1rem;line-height:1.15}
+.float-card span{font-size:.78rem;color:var(--terra);font-weight:500}
+.fc-1{left:-60px;bottom:70px;animation:bob 6s ease-in-out infinite}
+.fc-2{right:-40px;top:60px;animation:bob 6s ease-in-out infinite 1.5s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+/* marquee */
+.marquee{background:var(--green);color:#fff;overflow:hidden;padding:1rem 0}
+.marquee-track{display:flex;gap:2.6rem;width:max-content;animation:scroll 40s linear infinite}
+.marquee span{display:inline-flex;align-items:center;gap:2.6rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;white-space:nowrap}
+.marquee span::after{content:"❋";color:var(--pista);font-style:normal;font-size:1rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:3.4rem}
+.pillar{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.6rem;text-align:center;transition:.3s}
+.pillar:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.pillar .ic{width:64px;height:64px;border-radius:50%;margin:0 auto 1.1rem;display:grid;place-items:center;background:var(--pista-soft);color:var(--green2)}
+.pillar:nth-child(even) .ic{background:var(--terra-soft);color:var(--terra)}
+.pillar .ic svg{width:28px;height:28px}
+.pillar h3{font-size:1.45rem;margin-bottom:.45rem}
+.pillar p{color:var(--muted);font-size:.94rem}
+/* catalog */
+#productos{background:#fff}
+.cat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+.tab{padding:.6rem 1.15rem;border-radius:999px;border:1.5px solid var(--line);font-size:.92rem;font-weight:500;color:var(--muted);transition:.2s}
+.tab:hover{border-color:var(--pista);color:var(--green)}
+.tab.active{background:var(--green);border-color:var(--green);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.card{background:var(--cream);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.3s;border:1px solid transparent}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);background:#fff;border-color:var(--line)}
+.card-img{aspect-ratio:1;overflow:hidden;position:relative;background:var(--pista-soft)}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-img img{transform:scale(1.06)}
+.tag{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.95);color:var(--green);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.32rem .7rem;border-radius:999px}
+.card-body{padding:1.1rem 1.2rem 1.25rem;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:1.3rem;margin-bottom:.3rem}
+.card-body p{font-size:.88rem;color:var(--muted);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1rem;gap:.5rem}
+.price{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--green);font-weight:600;white-space:nowrap}
+.add{white-space:nowrap;display:inline-flex;align-items:center;gap:.35rem;background:var(--green);color:#fff;border-radius:999px;padding:.5rem .95rem;font-size:.85rem;font-weight:500;transition:.2s}
+.add:hover{background:var(--green2)}
+.qty{display:none;align-items:center;gap:.2rem;background:#fff;border:1.5px solid var(--pista);border-radius:999px;padding:.15rem}
+.qty button{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:var(--green);font-size:1.1rem;font-weight:600}
+.qty button:hover{background:var(--pista-soft)}
+.qty span{min-width:22px;text-align:center;font-weight:600;color:var(--green)}
+.card.in .add{display:none}.card.in .qty{display:inline-flex}
+.cat-note{text-align:center;margin-top:2.4rem;color:var(--muted);font-size:.95rem}
+/* gift */
+.gift{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center}
+.gift-pics{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.gift-pics img{border-radius:var(--r);width:100%;height:100%;object-fit:cover;box-shadow:var(--shadow)}
+.gift-pics .wide{grid-column:span 2;aspect-ratio:16/10}
+.gift-pics .sm{aspect-ratio:1}
+.occasions{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:2rem 0 2.2rem}
+.occ{display:flex;align-items:center;gap:.75rem;background:#fff;border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;font-weight:500;color:var(--green)}
+.occ em{font-style:normal;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--terra-soft);flex:none}
+/* about */
+#nosotras{background:linear-gradient(180deg,var(--pista-soft),var(--cream))}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:center}
+.about-pic{position:relative;width:min(440px,100%);justify-self:center}
+.about-pic .frame{border-radius:26px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);border:8px solid #fff}
+.about-pic .frame img{width:100%;height:100%;object-fit:cover}
+.years{position:absolute;left:-30px;top:40px;background:#fff;border-radius:18px;padding:1rem 1.3rem;box-shadow:var(--shadow);text-align:center}
+.years b{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--terra);line-height:1;display:block}
+.years span{font-size:.78rem;color:var(--muted)}
+.about-text p{color:var(--muted);margin-top:1.1rem;font-size:1.03rem}
+.quote{margin-top:2rem;padding:1.4rem 1.7rem;border-left:3px solid var(--terra);background:#fff;border-radius:0 16px 16px 0}
+.quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--green)!important;margin:0!important;line-height:1.3}
+.facts{display:flex;gap:2.5rem;margin-top:2rem;flex-wrap:wrap}
+.facts b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--green)}
+.facts span{font-size:.85rem;color:var(--muted)}
+/* classes */
+#talleres{padding-top:30px}
+.classes-top{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center;margin-bottom:3.4rem}
+.classes-top .pic{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/10}
+.classes-top .pic img{width:100%;height:100%;object-fit:cover}
+.class-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.ccard{border-radius:var(--r);padding:2rem;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.ccard.feat{background:var(--green);border-color:var(--green)}
+.ccard.feat h3,.ccard.feat .k{color:#fff}.ccard.feat li{color:rgba(255,255,255,.85)}.ccard.feat li::before{background:var(--pista)}
+.ccard .k{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--terra)}
+.ccard h3{font-size:1.8rem;margin:.5rem 0 1rem}
+.ccard ul{list-style:none;display:grid;gap:.6rem;flex:1;margin-bottom:1.6rem}
+.ccard li{position:relative;padding-left:1.3rem;font-size:.95rem;color:var(--muted)}
+.ccard li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--terra)}
+.ccard .btn{align-self:flex-start;padding:.75rem 1.25rem;font-size:.92rem}
+.ccard.feat .btn{background:#fff;color:var(--green)}
+/* gallery */
+#galeria{background:#fff;padding-bottom:0}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:.8rem;margin-top:3rem;grid-template-areas:"a a b b c c" "a a e f c c" "g g h h i i"}
+.gallery figure{overflow:hidden;border-radius:16px;background:var(--pista-soft)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gallery figure:hover img{transform:scale(1.07)}
+.g1{grid-area:a}.g2{grid-area:b}.g3{grid-area:c}.g4{grid-area:e}.g5{grid-area:f}.g6{grid-area:g}.g7{grid-area:h}.g8{grid-area:i}
+.ig-row{display:flex;justify-content:center;padding:2.6rem 0 0}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.4rem;counter-reset:s;text-align:left}
+.step{padding:2rem 1.6rem;border-radius:var(--r);background:var(--cream);border:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s);font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--terra);line-height:1;display:block;margin-bottom:.7rem}
+.step h3{font-size:1.4rem;margin-bottom:.4rem}
+.step p{font-size:.93rem;color:var(--muted)}
+.delivery{margin-top:2.2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.delivery div{display:flex;align-items:center;gap:.7rem;background:var(--pista-soft);color:var(--green);border-radius:999px;padding:.75rem 1.3rem;font-weight:500;font-size:.95rem}
+.delivery svg{width:20px;height:20px}
+/* faq */
+#faq{background:var(--pista-soft)}
+.faq{max-width:820px;margin:3rem auto 0;display:grid;gap:.8rem;text-align:left}
+.faq details{background:#fff;border-radius:16px;padding:0 1.6rem;border:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:1.25rem 0;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--green);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'DM Sans';font-size:1.5rem;color:var(--terra);transition:.25s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 1.3rem;color:var(--muted)}
+/* cta */
+.cta{padding:0 0 105px;background:var(--pista-soft)}
+.cta-box{border-radius:30px;background:var(--green);padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.cta-box::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;left:-110px;top:-140px;background:rgba(201,216,165,.16)}
+.cta-box::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-70px;bottom:-120px;background:rgba(196,127,98,.28)}
+.cta-box h2{color:#fff;position:relative}.cta-box h2 em.it{color:var(--pista)}
+.cta-box p{color:rgba(255,255,255,.82);max-width:52ch;margin:1.1rem auto 2rem;position:relative}
+.cta-box .btn{position:relative}
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.72);padding:4rem 0 2rem;font-size:.93rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem}
+footer .brand b{color:#fff}
+footer h4{font-family:'Cormorant Garamond',serif;font-weight:600;color:#fff;font-size:1.3rem;margin-bottom:1rem}
+footer ul{list-style:none;display:grid;gap:.55rem}
+footer a:hover{color:var(--pista)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:3rem;padding-top:1.6rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem;opacity:.7}
+/* fabs, drawer, modal */
+.cart-fab{visibility:hidden;opacity:0;position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:.7rem;background:var(--green);color:#fff;border-radius:999px;padding:.95rem 1.4rem;box-shadow:0 14px 34px -10px rgba(47,74,58,.8);font-weight:500;transform:translateY(140%);transition:.35s cubic-bezier(.3,1.4,.6,1)}
+.cart-fab.show{transform:none;visibility:visible;opacity:1}
+.cart-fab .n{background:var(--terra);color:#fff;min-width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.85rem;font-weight:700}
+.wa-fab{position:fixed;right:22px;bottom:22px;z-index:59;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.7);transition:.3s}
+.wa-fab svg{width:30px;height:30px;color:#fff}
+.wa-fab.hide{transform:scale(0)}
+.drawer-bg,.modal-bg{position:fixed;inset:0;background:rgba(31,42,35,.45);z-index:70;opacity:0;pointer-events:none;transition:.3s}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:min(430px,100%);background:var(--cream);z-index:71;transform:translateX(100%);transition:.4s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.open .drawer-bg{opacity:1;pointer-events:auto}.open .drawer{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 1.6rem;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-size:1.8rem}
+.x{width:40px;height:40px;border-radius:50%;font-size:1.5rem;color:var(--green);display:grid;place-items:center}
+.x:hover{background:var(--pista-soft)}
+.drawer-items{flex:1;overflow:auto;padding:1rem 1.6rem}
+.ditem{display:flex;gap:.9rem;align-items:center;padding:.8rem 0;border-bottom:1px dashed var(--line)}
+.ditem img{width:58px;height:58px;border-radius:12px;object-fit:cover}
+.ditem b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.15rem;color:var(--green);display:block;line-height:1.15}
+.ditem .qty{display:inline-flex;margin-top:.35rem}.ditem .qty button{width:26px;height:26px}
+.drawer-form{padding:1.2rem 1.6rem 1.6rem;border-top:1px solid var(--line);display:grid;gap:.7rem;background:#fff}
+.drawer-form label{font-size:.8rem;font-weight:600;color:var(--green)}
+.drawer-form input,.drawer-form textarea{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink);margin-top:.25rem}
+.drawer-form input:focus,.drawer-form textarea:focus{outline:none;border-color:var(--pista)}
+.drawer-form .row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.drawer-form .btn{width:100%}
+.hint{font-size:.78rem;color:var(--muted);text-align:center}
+.empty{text-align:center;color:var(--muted);padding:3rem 1rem}
+.modal-bg{z-index:80}
+.modal{position:fixed;left:50%;top:50%;z-index:81;width:min(420px,92vw);transform:translate(-50%,-46%);opacity:0;pointer-events:none;transition:.3s;background:#fff;border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.mopen .modal-bg{opacity:1;pointer-events:auto}.mopen .modal{opacity:1;transform:translate(-50%,-50%);pointer-events:auto}
+.modal-top{background:#075E54;color:#fff;padding:1rem 1.2rem;display:flex;align-items:center;gap:.8rem}
+.modal-top .av{width:40px;height:40px;border-radius:50%;background:var(--pista);display:grid;place-items:center;flex:none}
+.modal-top .av svg{width:26px;height:26px}
+.modal-top b{display:block;font-weight:600}.modal-top small{opacity:.8;font-size:.78rem}
+.chat{background:#ECE5DD;padding:1.3rem 1.1rem;min-height:140px}
+.bubble{background:#DCF8C6;border-radius:12px 0 12px 12px;padding:.75rem .9rem;margin-left:auto;max-width:92%;font-size:.9rem;white-space:pre-wrap;box-shadow:0 1px 1px rgba(0,0,0,.12);color:#111}
+.modal-bottom{padding:1.1rem 1.2rem 1.3rem;text-align:center}
+.modal-bottom p{font-size:.88rem;color:var(--muted);margin-bottom:.9rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+@media (max-width:1080px){.grid{grid-template-columns:repeat(3,1fr)}.pillars,.steps{grid-template-columns:repeat(2,1fr)}.fc-1{left:-20px}.fc-2{right:-10px}}
+@media (max-width:900px){
+section{padding:80px 0}
+.nav-links{position:fixed;inset:78px 0 auto 0;background:var(--cream);flex-direction:column;gap:1.2rem;padding:1.8rem 0 2.2rem;box-shadow:0 20px 30px -20px rgba(0,0,0,.2);transform:translateY(-130%);transition:.35s;z-index:-1}
+.nav-links.open{transform:none}.burger{display:flex}
+.hero{padding:120px 0 70px}
+.hero-grid,.gift,.about,.classes-top{grid-template-columns:1fr;gap:3rem}
+.hero-visual{width:min(400px,86%)}
+.hero-copy{text-align:center}.hero-copy .eyebrow{justify-content:center}.hero .lead{margin-inline:auto}.hero-cta,.badges{justify-content:center}
+.class-cards{grid-template-columns:1fr}
+.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;grid-template-areas:"a b" "a e" "c f" "c g" "h h" "i i"}
+.foot{grid-template-columns:1fr;gap:2rem}
+.years{left:-10px}.gift-pics{order:2}}
+@media (max-width:640px){
+.grid{grid-template-columns:repeat(2,1fr);gap:.9rem}
+.card-body{padding:.9rem}.card-body h3{font-size:1.12rem}.card-body p{display:none}
+.card-foot{flex-direction:column;align-items:stretch}.add,.qty{justify-content:center}.price{text-align:center}
+.pillars,.steps,.occasions{grid-template-columns:1fr}
+.fc-2{display:none}.fc-1{left:-14px;top:30px;bottom:auto}
+.hero-copy .eyebrow::before{display:none}
+.cta-box{padding:3.2rem 1.5rem}
+.cat-head{justify-content:center;text-align:center}.cat-head .eyebrow{justify-content:center}.tabs{justify-content:center}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="brand" aria-label="Bocado Leve">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#EEF3E2" stroke="#C9D8A5"/><path d="M24 36c-7-3-11-9-10-17 6 0 10 3 11 8 1-6 5-10 11-11 1 9-4 17-12 20z" fill="#4F6F58"/><path d="M24 36c0-6 2-11 7-16" stroke="#EEF3E2" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="17" cy="15" r="2.4" fill="#C47F62"/></svg>
+      <span><b>Bocado Leve</b><small>Pastelería saludable</small></span>
+    </a>
+    <nav class="nav-links" id="links">
+      <a href="#productos">Productos</a>
+      <a href="#regalos">Cajas regalo</a>
+      <a href="#nosotras">Nosotras</a>
+      <a href="#talleres">Talleres</a>
+      <a href="#pedir">Cómo pedir</a>
+      <a href="#" class="btn btn-primary js-wa" data-msg="Hola, vengo de la web y quiero hacer una consulta.">Hacé tu pedido</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy rv">
+      <span class="eyebrow">Sin azúcar añadida · Low carb</span>
+      <h1>Lo rico también <em class="it">puede ser liviano</em></h1>
+      <p class="lead">Tartas, alfajores y cookies hechos a mano con harinas de frutos secos y endulzantes naturales. Para disfrutar sin culpa, todos los días.</p>
+      <div class="hero-cta">
+        <a href="#productos" class="btn btn-primary">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#" class="btn btn-ghost js-wa" data-msg="Hola, vengo de la web y quiero hacer un pedido.">Pedir por WhatsApp</a>
+      </div>
+      <div class="badges"><span class="badge"><i></i>Sin azúcar añadida</span><span class="badge"><i></i>Low carb</span><span class="badge"><i></i>Harinas de frutos secos</span></div>
+    </div>
+    <div class="hero-visual rv">
+      <div class="arch"><img src="https://images.unsplash.com/photo-1702745284678-2ae974a7f0aa?w=900&h=1125&fit=crop&q=80" alt="Tartaletas de pistacho" fetchpriority="high"></div>
+      <div class="float-card fc-1"><img src="https://images.unsplash.com/photo-1593759608179-014a7dec4e7f?w=160&h=160&fit=crop&q=80" alt=""><div><b>Cookies de almendra</b><span>Sin harina de trigo</span></div></div>
+      <div class="float-card fc-2"><img src="https://images.unsplash.com/photo-1620980776848-84ac10194945?w=160&h=160&fit=crop&q=80" alt=""><div><b>Tartaletas frutales</b><span>Endulzadas naturalmente</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Sin azúcar añadida</span><span>Low carb</span><span>Harina de almendras</span><span>Hecho a mano</span><span>Ingredientes reales</span><span>Recetas propias</span>
+  <span>Sin azúcar añadida</span><span>Low carb</span><span>Harina de almendras</span><span>Hecho a mano</span><span>Ingredientes reales</span><span>Recetas propias</span>
+</div></div>
+
+<section>
+  <div class="wrap center">
+    <span class="eyebrow rv">Nuestra forma de hacer</span>
+    <h2 class="rv" style="margin-top:1rem">Pastelería que <em class="it">te hace bien</em></h2>
+    <p class="lead rv" style="margin-top:1rem">Creemos que darse un gusto no tiene por qué ser un exceso. Por eso cada receta está pensada para que sea igual de rica que la de siempre, pero más liviana.</p>
+    <div class="pillars">
+      <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div><h3>Sin azúcar añadida</h3><p>Endulzamos con eritritol, stevia y fruta, para cuidar la glucosa sin perder sabor.</p></div>
+      <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3c4 3 6 6.5 6 10a6 6 0 01-12 0c0-3.5 2-7 6-10z"/><path d="M12 9v10"/></svg></div><h3>Frutos secos</h3><p>Harinas de almendra, coco y pistacho en lugar de harinas refinadas.</p></div>
+      <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg></div><h3>Low carb</h3><p>Opciones bajas en carbohidratos para acompañar tu plan de alimentación.</p></div>
+      <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg></div><h3>Hecho a mano</h3><p>Producción pequeña, por encargo, para que todo llegue fresco a tu mesa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="productos">
+  <div class="wrap">
+    <div class="cat-head">
+      <div><span class="eyebrow">Nuestros productos</span><h2 style="margin-top:.8rem">Elegí tu <em class="it">bocado</em></h2></div>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-f="all">Todos</button>
+        <button class="tab" data-f="tartas">Tartas</button>
+        <button class="tab" data-f="alfajores">Alfajores</button>
+        <button class="tab" data-f="cookies">Cookies y brownies</button>
+        <button class="tab" data-f="cajas">Cajas regalo</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="cat-note">Sumá lo que quieras y te armamos el pedido por WhatsApp. Trabajamos por encargo.</p>
+  </div>
+</section>
+
+<section id="regalos">
+  <div class="wrap gift">
+    <div class="gift-pics rv">
+      <img class="wide" src="https://images.unsplash.com/photo-1622467827417-bbe2237067a9?w=1100&h=690&fit=crop&q=80" alt="Caja de cookies para regalar" loading="lazy">
+      <img class="sm" src="https://images.unsplash.com/photo-1640122438487-e5ad5f4b4fe4?w=600&h=600&fit=crop&q=80" alt="Caja de cookies surtidas" loading="lazy">
+      <img class="sm" src="https://images.unsplash.com/photo-1693464323440-e2d55f520411?w=600&h=600&fit=crop&q=80" alt="Caja regalo de galletas" loading="lazy">
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Cajas regalo</span>
+      <h2 style="margin-top:1rem">Regalá algo rico <em class="it">y distinto</em></h2>
+      <p class="lead" style="margin-top:1.1rem">Armamos cajas surtidas con cookies, alfajores y tartaletas, en packaging listo para entregar. Elegís los productos y le sumamos una tarjeta con tu mensaje.</p>
+      <div class="occasions">
+        <div class="occ"><em>🎂</em>Cumpleaños</div><div class="occ"><em>💐</em>Día de la Madre</div>
+        <div class="occ"><em>💌</em>Aniversarios</div><div class="occ"><em>🎄</em>Fiestas y empresas</div>
+      </div>
+      <a href="#" class="btn btn-primary js-wa" data-msg="Hola, quiero armar una caja regalo. ¿Me contás las opciones?">Armar mi caja regalo</a>
+    </div>
+  </div>
+</section>
+
+<section id="nosotras">
+  <div class="wrap about">
+    <div class="about-pic rv">
+      <div class="frame"><img src="https://images.unsplash.com/photo-1612884610549-ce221d92514a?w=900&h=1125&fit=crop&q=80" alt="Manos amasando" loading="lazy"></div>
+      <div class="years"><b>+5</b><span>años horneando<br>con amor</span></div>
+    </div>
+    <div class="about-text rv">
+      <span class="eyebrow">Nosotras</span>
+      <h2 style="margin-top:1rem">Una cocina chica, <em class="it">con mucho cariño</em></h2>
+      <p>Bocado Leve nació en la cocina de casa, buscando postres que pudiéramos compartir con toda la familia, incluso con quienes cuidan el azúcar.</p>
+      <p>Probamos, ajustamos y volvimos a probar hasta lograr recetas que no tienen nada que envidiarles a las tradicionales. Hoy horneamos cada pedido a mano, en tandas pequeñas y con ingredientes que elegimos uno por uno.</p>
+      <div class="quote"><p>“Comer rico y sano no tiene por qué ser difícil.”</p></div>
+      <div class="facts">
+        <div><b>Por encargo</b><span>Todo se hace a pedido</span></div>
+        <div><b>Envíos</b><span>A domicilio</span></div>
+        <div><b>Talleres</b><span>Virtuales y presenciales</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="talleres">
+  <div class="wrap">
+    <div class="classes-top">
+      <div class="rv">
+        <span class="eyebrow">Talleres</span>
+        <h2 style="margin-top:1rem">Aprendé a hacer <em class="it">tus propios postres</em></h2>
+        <p class="lead" style="margin-top:1.1rem">Talleres simples y sin experiencia previa, para llevar la pastelería saludable a tu casa o sumarla a tu emprendimiento.</p>
+      </div>
+      <div class="pic rv"><img src="https://images.unsplash.com/photo-1758874960573-75a9a6ad79b6?w=1100&h=690&fit=crop&q=80" alt="Taller de pastelería" loading="lazy"></div>
+    </div>
+    <div class="class-cards">
+      <div class="ccard rv"><span class="k">Desde tu casa</span><h3>Clases virtuales</h3><ul><li>En vivo y grabadas</li><li>Recetario en PDF</li><li>Consultas por chat</li><li>Tartas, cookies, alfajores y más</li></ul><a href="#" class="btn btn-ghost js-wa" data-msg="Hola, quiero info de las clases virtuales.">Quiero info</a></div>
+      <div class="ccard feat rv"><span class="k">Manos en la masa</span><h3>Talleres presenciales</h3><ul><li>Grupos reducidos</li><li>Cocinamos juntas paso a paso</li><li>Te llevás lo que preparás</li><li>Materiales incluidos</li></ul><a href="#" class="btn js-wa" data-msg="Hola, quiero saber cuándo es el próximo taller presencial.">Próximas fechas</a></div>
+      <div class="ccard rv"><span class="k">Para emprender</span><h3>Masterclass</h3><ul><li>Recetas pensadas para vender</li><li>Costos y presentación</li><li>Versiones low carb</li><li>Ediciones especiales</li></ul><a href="#" class="btn btn-ghost js-wa" data-msg="Hola, me interesa la próxima masterclass.">Reservar mi lugar</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap center">
+    <span class="eyebrow rv">Galería</span>
+    <h2 class="rv" style="margin-top:1rem">Hecho a mano, <em class="it">bocado a bocado</em></h2>
+    <div class="gallery">
+      <figure class="g1"><img src="https://images.unsplash.com/photo-1561339405-e1dd0d129449?w=800&h=800&fit=crop&q=80" alt="Tartaletas de frutos rojos" loading="lazy"></figure>
+      <figure class="g2"><img src="https://images.unsplash.com/photo-1644514539465-6f57e3ae50a6?w=800&h=500&fit=crop&q=80" alt="Mini tartas surtidas" loading="lazy"></figure>
+      <figure class="g3"><img src="https://images.unsplash.com/photo-1648471233533-a13856a7f3ab?w=800&h=800&fit=crop&q=80" alt="Torta de chocolate y frutillas" loading="lazy"></figure>
+      <figure class="g4"><img src="https://images.unsplash.com/photo-1792859443875-f11a28d17d24?w=400&h=400&fit=crop&q=80" alt="Alfajores" loading="lazy"></figure>
+      <figure class="g5"><img src="https://images.unsplash.com/photo-1772198537601-14fdef671a5f?w=400&h=400&fit=crop&q=80" alt="Galletas con mermelada" loading="lazy"></figure>
+      <figure class="g6"><img src="https://images.unsplash.com/photo-1606313564573-104197cf8f91?w=800&h=500&fit=crop&q=80" alt="Brownies" loading="lazy"></figure>
+      <figure class="g7"><img src="https://images.unsplash.com/photo-1657000154417-bcebe78dd105?w=800&h=500&fit=crop&q=80" alt="Cookies rellenas" loading="lazy"></figure>
+      <figure class="g8"><img src="https://images.unsplash.com/photo-1716579862099-acd0967de37b?w=800&h=500&fit=crop&q=80" alt="Cheesecake de pistacho" loading="lazy"></figure>
+    </div>
+    <div class="ig-row"><a class="btn btn-ghost" href="#" onclick="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Seguinos en @bocadoleve</a></div>
+  </div>
+</section>
+
+<section id="pedir" style="background:#fff">
+  <div class="wrap center">
+    <span class="eyebrow rv">Cómo pedir</span>
+    <h2 class="rv" style="margin-top:1rem">Tu pedido en <em class="it">4 pasos</em></h2>
+    <div class="steps">
+      <div class="step rv"><h3>Elegí</h3><p>Sumá tus productos desde el catálogo o contanos qué tenés ganas de comer.</p></div>
+      <div class="step rv"><h3>Envialo</h3><p>Se arma un mensaje con tu pedido y lo mandás directo por WhatsApp.</p></div>
+      <div class="step rv"><h3>Coordinamos</h3><p>Trabajamos por encargo, así que acordamos juntos el día de entrega.</p></div>
+      <div class="step rv"><h3>Disfrutá</h3><p>Te lo llevamos a tu casa o lo retirás. ¡Y a darse el gusto!</p></div>
+    </div>
+    <div class="delivery rv">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h6l-3-7h4l2 7M6 14l3-6h3"/></svg>Envíos a domicilio</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg>Retiro en el local</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Pedidos con anticipación</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap center">
+    <span class="eyebrow rv">Preguntas frecuentes</span>
+    <h2 class="rv" style="margin-top:1rem">Todo lo que <em class="it">querés saber</em></h2>
+    <div class="faq">
+      <details class="rv"><summary>¿Los productos tienen azúcar?</summary><p>No llevan azúcar añadida. Endulzamos con eritritol, stevia o fruta. Si tenés una indicación médica particular, consultá siempre con tu profesional.</p></details>
+      <details class="rv"><summary>¿Con cuánta anticipación tengo que pedir?</summary><p>Trabajamos por encargo para que todo llegue fresco. Escribinos con algunos días de anticipación y coordinamos la fecha.</p></details>
+      <details class="rv"><summary>¿Hacen envíos?</summary><p>Sí, hacemos envíos a domicilio. El costo depende de la distancia y lo coordinamos al confirmar el pedido. También podés retirar.</p></details>
+      <details class="rv"><summary>¿Hacen tortas personalizadas?</summary><p>¡Sí! Contanos la ocasión, la cantidad de personas y la idea que tenés, y te armamos una propuesta.</p></details>
+      <details class="rv"><summary>¿Los talleres sirven si nunca cociné?</summary><p>Totalmente. Son simples y no necesitás experiencia previa.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <h2>¿Se te antojó <em class="it">un bocado?</em></h2>
+      <p>Escribinos por WhatsApp, contanos qué te gustaría y coordinamos tu pedido.</p>
+      <a href="#" class="btn btn-wa js-wa" data-msg="Hola, vengo de la web y quiero hacer un pedido."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>Escribinos por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="brand" href="#inicio"><span><b style="font-size:2rem">Bocado Leve</b><small>Pastelería saludable</small></span></a><p style="margin-top:1.1rem;max-width:36ch">Pastelería sin azúcar añadida y low carb, hecha a mano y por encargo.</p></div>
+      <div><h4>Navegá</h4><ul><li><a href="#productos">Productos</a></li><li><a href="#regalos">Cajas regalo</a></li><li><a href="#talleres">Talleres</a></li><li><a href="#pedir">Cómo pedir</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="#" class="js-wa" data-msg="Hola, vengo de la web.">WhatsApp</a></li><li>Instagram @bocadoleve</li><li>Envíos a domicilio</li><li>Pedidos con anticipación</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>Bocado Leve es una marca ficticia · Sitio de ejemplo</span><span>Diseño web por MG Servicios Ejecutivos</span></div>
+  </div>
+</footer>
+
+<a href="#" class="wa-fab js-wa" id="waFab" aria-label="WhatsApp" data-msg="Hola, vengo de la web."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg></a>
+<button class="cart-fab" id="cartFab"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 016 0"/></svg>Ver mi pedido <span class="n" id="cartN">0</span></button>
+
+<div id="drawerWrap">
+  <div class="drawer-bg" id="drawerBg"></div>
+  <aside class="drawer" aria-label="Tu pedido">
+    <div class="drawer-head"><h3>Tu pedido</h3><button class="x" id="closeDrawer" aria-label="Cerrar">×</button></div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <form class="drawer-form" id="orderForm">
+      <label>Tu nombre<input id="fName" placeholder="Ej: Carolina"></label>
+      <div class="row"><label>Localidad / barrio<input id="fZone" placeholder="Ej: Nueva Córdoba"></label><label>Fecha deseada<input id="fDate" type="date"></label></div>
+      <label>Comentarios<textarea id="fNote" rows="2" placeholder="Ej: es para regalo, sin frutos secos..."></textarea></label>
+      <button class="btn btn-wa" type="submit" id="sendWa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/></svg>Enviar pedido por WhatsApp</button>
+      <p class="hint">Te respondemos para confirmar disponibilidad, precio y envío.</p>
+    </form>
+  </aside>
+</div>
+
+<div id="modalWrap">
+  <div class="modal-bg" id="modalBg"></div>
+  <div class="modal" role="dialog" aria-label="Vista previa del mensaje">
+    <div class="modal-top"><div class="av"><svg viewBox="0 0 48 48"><path d="M24 36c-7-3-11-9-10-17 6 0 10 3 11 8 1-6 5-10 11-11 1 9-4 17-12 20z" fill="#2F4A3A"/></svg></div><div><b>Bocado Leve</b><small>WhatsApp</small></div></div>
+    <div class="chat"><div class="bubble" id="bubble"></div></div>
+    <div class="modal-bottom"><p>Así le llegaría este mensaje al negocio por WhatsApp. Este es un sitio de ejemplo, por eso no se envía a ningún número.</p><button class="btn btn-primary" id="closeModal">Entendido</button></div>
+  </div>
+</div>
+
+<script>
+const U=(id,w,h)=>`https://images.unsplash.com/photo-${id}?w=${w||700}&h=${h||w||700}&fit=crop&q=80`;
+const PRODUCTS=[
+{id:'t1',cat:'tartas',name:'Tartaleta de pistacho',desc:'Masa sablée de almendras, frutos rojos y crema de pistacho.',img:'1702745284748-59c103941c41',tag:'Favorita',price:4800},
+{id:'t2',cat:'tartas',name:'Cheesecake de pistacho',desc:'Base de frutos secos, crema suave y pétalos de rosa.',img:'1716579862099-acd0967de37b',price:28500},
+{id:'t3',cat:'tartas',name:'Tartaletas frutales',desc:'Crema pastelera liviana con frutillas, arándanos y moras.',img:'1620980776848-84ac10194945',price:4200},
+{id:'t4',cat:'tartas',name:'Tarta de arándanos',desc:'Masa crocante de almendras con arándanos frescos.',img:'1646321155195-44f0a4f91d1b',price:24000},
+{id:'a1',cat:'alfajores',name:'Alfajores de chocolate',desc:'Tapas de almendra, relleno de chocolate y azúcar impalpable apta.',img:'1604953781841-004f1848ed3d',tag:'Clásico',price:2600},
+{id:'a2',cat:'alfajores',name:'Alfajores de coco',desc:'Estilo maicena, con dulce de leche sin azúcar y coco.',img:'1552552492-9c335658343d',price:2400},
+{id:'a3',cat:'alfajores',name:'Alfajor de cacao y dulce de leche',desc:'Tapas húmedas de cacao con mucho dulce de leche.',img:'1517400847543-fd27a32c8d12',price:2800},
+{id:'a4',cat:'alfajores',name:'Alfajor de maicena',desc:'Tapas que se deshacen, dulce de leche y bordes de coco.',img:'1792859441713-fd71352388ac',tag:'Nuevo',price:2400},
+{id:'c1',cat:'cookies',name:'Cookies rellenas',desc:'Dos cookies con chips y un relleno cremoso de vainilla.',img:'1559622214-f8a9850965bb',price:3200},
+{id:'c2',cat:'cookies',name:'Cookies de almendra',desc:'Cacao, harina de almendras y láminas tostadas.',img:'1593759608179-014a7dec4e7f',price:2200},
+{id:'c3',cat:'cookies',name:'Cookies doble chocolate',desc:'Bien húmedas, con trozos de chocolate blanco.',img:'1619149651177-b09092806f1a',price:2400},
+{id:'c4',cat:'cookies',name:'Cookies de avena y canela',desc:'Crocantes por fuera, tiernas por dentro.',img:'1547983053-4d1cfab04a60',price:2000},
+{id:'c5',cat:'cookies',name:'Brownie con frambuesas',desc:'Cacao intenso, frambuesas y chips de chocolate.',img:'1570145820259-b5b80c5c8bd6',price:3600},
+{id:'c6',cat:'cookies',name:'Brownie clásico',desc:'Húmedo, con costra crocante y nueces.',img:'1590841609987-4ac211afdde1',price:3200},
+{id:'k1',cat:'cajas',name:'Caja de cookies',desc:'Surtido de cookies para compartir o regalar.',img:'1640122438487-e5ad5f4b4fe4',tag:'Regalo',price:15000},
+{id:'k2',cat:'cajas',name:'Cajita de galletas',desc:'Galletas de manteca de almendras en caja con visor.',img:'1449049607083-e29383d58423',tag:'Regalo',price:9500},
+];
+const fmt=n=>'$'+n.toLocaleString('es-AR');
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* modal en lugar de WhatsApp real */
+const mw=$('#modalWrap');
+function preview(msg){$('#bubble').textContent=msg;mw.classList.add('mopen');}
+$('#closeModal').onclick=$('#modalBg').onclick=()=>mw.classList.remove('mopen');
+$$('.js-wa').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();preview(a.dataset.msg||'Hola');}));
+/* nav */
+const nav=$('#nav');const onS=()=>nav.classList.toggle('scrolled',scrollY>20);onS();addEventListener('scroll',onS,{passive:true});
+$('#burger').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
+/* catálogo */
+const cart={},grid=$('#grid');
+function render(f='all'){grid.innerHTML=PRODUCTS.filter(p=>f==='all'||p.cat===f).map(p=>`
+<article class="card ${cart[p.id]?'in':''}" data-id="${p.id}">
+<div class="card-img"><img src="${U(p.img)}" alt="${p.name}" loading="lazy">${p.tag?`<span class="tag">${p.tag}</span>`:''}</div>
+<div class="card-body"><h3>${p.name}</h3><p>${p.desc}</p>
+<div class="card-foot"><span class="price">${fmt(p.price)}</span>
+<button class="add" data-a="add">+ Agregar</button>
+<div class="qty"><button data-a="dec" aria-label="Quitar">−</button><span>${cart[p.id]||0}</span><button data-a="inc" aria-label="Sumar">+</button></div>
+</div></div></article>`).join('');}
+render();
+$('#tabs').addEventListener('click',e=>{const t=e.target.closest('.tab');if(!t)return;$$('.tab').forEach(x=>x.classList.toggle('active',x===t));render(t.dataset.f)});
+function change(id,d){cart[id]=Math.max(0,(cart[id]||0)+d);if(!cart[id])delete cart[id];sync()}
+grid.addEventListener('click',e=>{const b=e.target.closest('button[data-a]');if(!b)return;change(b.closest('.card').dataset.id,b.dataset.a==='dec'?-1:1)});
+function sync(){
+$$('.card').forEach(c=>{const q=cart[c.dataset.id]||0;c.classList.toggle('in',q>0);c.querySelector('.qty span').textContent=q});
+const n=Object.values(cart).reduce((a,b)=>a+b,0);
+$('#cartN').textContent=n;$('#cartFab').classList.toggle('show',n>0);$('#waFab').classList.toggle('hide',n>0);
+const items=Object.keys(cart).map(id=>PRODUCTS.find(p=>p.id===id));
+$('#drawerItems').innerHTML=items.length?items.map(p=>`<div class="ditem" data-id="${p.id}"><img src="${U(p.img,140)}" alt=""><div><b>${p.name}</b><div class="qty"><button data-a="dec">−</button><span>${cart[p.id]}</span><button data-a="inc">+</button></div></div></div>`).join(''):'<p class="empty">Todavía no agregaste productos.</p>';}
+$('#drawerItems').addEventListener('click',e=>{const b=e.target.closest('button[data-a]');if(!b)return;change(b.closest('.ditem').dataset.id,b.dataset.a==='dec'?-1:1)});
+const wrap=$('#drawerWrap');
+$('#cartFab').onclick=()=>wrap.classList.add('open');
+$('#closeDrawer').onclick=$('#drawerBg').onclick=()=>wrap.classList.remove('open');
+$('#orderForm').addEventListener('submit',e=>{e.preventDefault();
+if(!$('#fName').value.trim()){$('#fName').focus();$('#fName').placeholder='Escribí tu nombre para enviar';return}
+const lines=Object.keys(cart).map(id=>{const p=PRODUCTS.find(x=>x.id===id);return `• ${cart[id]} x ${p.name}`});
+const total=Object.keys(cart).reduce((s,id)=>s+cart[id]*PRODUCTS.find(x=>x.id===id).price,0);
+const d=$('#fDate').value?new Date($('#fDate').value+'T12:00').toLocaleDateString('es-AR'):'';
+let msg=`Hola, quiero hacer este pedido:\n\n${lines.join('\n')}\n\nTotal estimado: ${fmt(total)}\nNombre: ${$('#fName').value}`;
+if($('#fZone').value)msg+=`\nLocalidad / barrio: ${$('#fZone').value}`;
+if(d)msg+=`\nFecha deseada: ${d}`;
+if($('#fNote').value)msg+=`\nComentarios: ${$('#fNote').value}`;
+wrap.classList.remove('open');preview(msg);});
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
