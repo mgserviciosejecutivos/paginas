@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brote · Almacén Natural</title>
+<meta name="description" content="Brote, almacén natural. Granolas, frutos secos, productos sin TACC, viandas saludables y bebidas naturales. Pedí por WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mgserviciosejecutivos.com/paginas/brote/">
+<meta property="og:title" content="Brote · Almacén Natural">
+<meta property="og:description" content="Granolas, frutos secos, línea sin TACC, viandas y bebidas naturales. Armá tu pedido y te llega por WhatsApp.">
+<meta property="og:image" content="https://mgserviciosejecutivos.com/paginas/brote/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mgserviciosejecutivos.com/paginas/brote/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#F6F1E7; --crema2:#EFE7D8; --verde:#1F3D2B; --verde2:#2E5A3F;
+  --salvia:#A9BC9B; --terra:#D9774B; --texto:#26302A; --gris:#6B736D;
+  --radio:18px; --sombra:0 10px 30px rgba(31,61,43,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--crema);color:var(--texto);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--verde);line-height:1.12;font-weight:600}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:.98rem;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-verde{background:var(--verde);color:#fff}
+.btn-verde:hover{background:var(--verde2)}
+.btn-borde{background:transparent;color:var(--verde);box-shadow:inset 0 0 0 1.5px var(--verde)}
+.btn svg{width:20px;height:20px}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,61,43,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo svg{width:42px;height:42px}
+.logo b{font-family:Fraunces,serif;font-size:1.55rem;color:var(--verde);font-weight:700;letter-spacing:-.01em;display:block;line-height:1}
+.logo small{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);margin-top:3px}
+.menu{display:flex;gap:30px;font-weight:500;font-size:.95rem}
+.menu a:hover{color:var(--terra)}
+.carrito-btn{position:relative;width:46px;height:46px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;border:0;cursor:pointer}
+.carrito-btn svg{width:21px;height:21px}
+.badge{position:absolute;top:-4px;right:-4px;background:var(--terra);color:#fff;font-size:.72rem;font-weight:700;min-width:21px;height:21px;border-radius:99px;display:grid;place-items:center;padding:0 5px;transform:scale(0);transition:transform .25s}
+.badge.on{transform:scale(1)}
+
+/* Hero */
+.hero{padding:64px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero p{font-size:1.12rem;color:var(--gris);margin:22px 0 32px;max-width:500px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-datos{display:flex;gap:34px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(31,61,43,.12)}
+.hero-datos div b{display:block;font-family:Fraunces,serif;font-size:1.5rem;color:var(--verde)}
+.hero-datos div span{font-size:.86rem;color:var(--gris)}
+.hero-fotos{position:relative;display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:520px}
+.foto{border-radius:var(--radio);overflow:hidden;background:linear-gradient(135deg,var(--salvia),var(--crema2));box-shadow:var(--sombra)}
+.foto img{width:100%;height:100%;object-fit:cover}
+.hero-fotos .f1{grid-row:1/3}
+.sello{position:absolute;left:-26px;bottom:34px;background:#fff;border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:var(--sombra)}
+.sello i{width:42px;height:42px;border-radius:50%;background:var(--crema);display:grid;place-items:center;font-style:normal}
+.sello i svg{width:22px;height:22px}
+.sello b{display:block;font-size:.95rem;color:var(--verde)}
+.sello span{font-size:.8rem;color:var(--gris)}
+
+/* Beneficios */
+.beneficios{background:var(--verde);color:#fff;padding:34px 0}
+.ben-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.ben{display:flex;align-items:center;gap:14px}
+.ben i{flex:none;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center}
+.ben i svg{width:22px;height:22px;stroke:#E9C9A6}
+.ben b{display:block;font-size:.98rem}
+.ben span{font-size:.84rem;opacity:.75}
+
+/* Secciones */
+section{scroll-margin-top:80px}
+.sec{padding:96px 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 48px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.8rem)}
+.sec-head p{color:var(--gris);margin-top:14px}
+
+/* Categorías */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cat{position:relative;height:340px;border-radius:var(--radio);overflow:hidden;cursor:pointer;background:linear-gradient(135deg,var(--salvia),var(--verde2))}
+.cat img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.cat:hover img{transform:scale(1.06)}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,40,28,.78))}
+.cat div{position:absolute;left:24px;right:24px;bottom:22px;z-index:2;color:#fff}
+.cat h3{color:#fff;font-size:1.55rem}
+.cat span{font-size:.9rem;opacity:.85}
+
+/* Productos */
+.productos{background:var(--crema2)}
+.filtros{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:38px}
+.filtro{padding:10px 20px;border-radius:99px;border:1.5px solid rgba(31,61,43,.18);background:transparent;font:inherit;font-weight:500;font-size:.92rem;color:var(--verde);cursor:pointer;transition:.2s}
+.filtro.on,.filtro:hover{background:var(--verde);color:#fff;border-color:var(--verde)}
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod{background:#fff;border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 0 rgba(31,61,43,.04);transition:transform .25s,box-shadow .25s}
+.prod:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.prod-img{aspect-ratio:1/1;display:grid;place-items:center;position:relative}
+.prod-img svg{width:44%;height:44%}
+.tag{position:absolute;top:14px;left:14px;background:#fff;color:var(--verde);font-size:.72rem;font-weight:600;padding:5px 11px;border-radius:99px}
+.prod-info{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.prod-info h3{font-family:Inter,sans-serif;font-size:1.02rem;font-weight:600;color:var(--texto)}
+.prod-info p{font-size:.86rem;color:var(--gris);margin:4px 0 16px;flex:1}
+.prod-pie{display:flex;align-items:center;justify-content:space-between}
+.precio{font-family:Fraunces,serif;font-size:1.3rem;color:var(--verde);font-weight:600}
+.add{width:42px;height:42px;border-radius:50%;border:0;background:var(--verde);color:#fff;font-size:1.4rem;cursor:pointer;display:grid;place-items:center;transition:.2s}
+.add:hover{background:var(--terra)}
+.add.ok{background:var(--terra)}
+
+/* Nosotros */
+.nos-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.nos-fotos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.nos-fotos .foto{height:420px}
+.nos-fotos .foto:last-child{margin-top:60px}
+.nos h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+.nos p{color:var(--gris);margin-top:18px}
+.lista{list-style:none;margin:26px 0 32px;display:grid;gap:12px}
+.lista li{display:flex;gap:12px;align-items:flex-start}
+.lista li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--salvia) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F3D2B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/13px no-repeat}
+
+/* Cómo pedir */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.paso{background:#fff;border-radius:var(--radio);padding:34px 30px;text-align:center}
+.paso .num{width:54px;height:54px;border-radius:50%;margin:0 auto 18px;background:var(--crema);color:var(--terra);font-family:Fraunces,serif;font-size:1.4rem;font-weight:700;display:grid;place-items:center}
+.paso h3{font-size:1.3rem;margin-bottom:8px}
+.paso p{color:var(--gris);font-size:.95rem}
+
+/* Contacto */
+.contacto{background:var(--verde);color:#fff;border-radius:28px;padding:64px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contacto h2{color:#fff;font-size:clamp(2rem,3.6vw,2.7rem)}
+.contacto p{opacity:.8;margin-top:14px}
+.datos{display:grid;gap:16px;margin-top:30px}
+.dato{display:flex;gap:14px;align-items:center}
+.dato i{flex:none;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center}
+.dato i svg{width:20px;height:20px;stroke:#E9C9A6}
+.dato small{display:block;font-size:.78rem;opacity:.65}
+form{background:#fff;border-radius:20px;padding:32px;display:grid;gap:14px}
+form label{font-size:.82rem;font-weight:600;color:var(--verde)}
+form input,form textarea,form select{width:100%;margin-top:6px;padding:13px 15px;border-radius:12px;border:1.5px solid #E2DCCF;font:inherit;font-size:.95rem;color:var(--texto);background:#FCFAF6}
+form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--salvia)}
+form .btn{width:100%;margin-top:6px}
+
+footer{padding:40px 0;text-align:center;color:var(--gris);font-size:.88rem}
+footer .logo{justify-content:center;margin-bottom:14px}
+footer a{color:var(--verde);font-weight:600}
+
+/* Carrito */
+.velo{position:fixed;inset:0;background:rgba(20,30,24,.45);opacity:0;pointer-events:none;transition:.3s;z-index:90}
+.velo.on{opacity:1;pointer-events:auto}
+.panel{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--crema);z-index:100;transform:translateX(100%);transition:transform .35s ease;display:flex;flex-direction:column}
+.panel.on{transform:none}
+.panel-head{display:flex;justify-content:space-between;align-items:center;padding:24px 26px;border-bottom:1px solid rgba(31,61,43,.1)}
+.panel-head h3{font-size:1.5rem}
+.cerrar{width:40px;height:40px;border-radius:50%;border:0;background:#fff;font-size:1.3rem;cursor:pointer;color:var(--verde)}
+.items{flex:1;overflow:auto;padding:16px 26px}
+.item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(31,61,43,.08)}
+.item .mini{flex:none;width:52px;height:52px;border-radius:12px;display:grid;place-items:center}
+.item .mini svg{width:26px;height:26px}
+.item div{flex:1}
+.item b{display:block;font-size:.95rem}
+.item span{font-size:.85rem;color:var(--gris)}
+.cant{display:flex;align-items:center;gap:8px}
+.cant button{width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(31,61,43,.2);background:#fff;cursor:pointer;color:var(--verde);font-size:1rem}
+.vacio{text-align:center;color:var(--gris);padding:60px 10px}
+.panel-pie{padding:22px 26px 28px;border-top:1px solid rgba(31,61,43,.1);background:#fff}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.total b{font-family:Fraunces,serif;font-size:1.6rem;color:var(--verde)}
+.panel-pie .btn{width:100%}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,120px);background:var(--verde);color:#fff;padding:13px 22px;border-radius:99px;font-size:.92rem;font-weight:500;z-index:120;transition:transform .35s;box-shadow:var(--sombra);white-space:nowrap}
+.toast.on{transform:translate(-50%,0)}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.vis{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:1000px){
+  .menu{display:none}
+  .hero-grid,.nos-grid,.contacto{grid-template-columns:1fr}
+  .hero{padding:36px 0 64px}
+  .hero-fotos{height:420px}
+  .sello{left:14px}
+  .ben-grid{grid-template-columns:repeat(2,1fr)}
+  .prods{grid-template-columns:repeat(2,1fr)}
+  .cats{grid-template-columns:1fr}
+  .cat{height:240px}
+  .pasos{grid-template-columns:1fr}
+  .contacto{padding:44px 30px;gap:36px}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 36px)}
+  .sec{padding:72px 0}
+  .hero-btns .btn{width:100%}
+  .hero-datos{gap:20px;justify-content:space-between}
+  .hero-datos div b{font-size:1.25rem}
+  .hero-fotos{height:340px;gap:10px}
+  .sello{bottom:16px;padding:10px 14px}
+  .ben-grid{grid-template-columns:1fr;gap:18px}
+  .prods{gap:12px}
+  .prod-info{padding:14px}
+  .prod-info h3{font-size:.92rem}
+  .prod-info p{font-size:.8rem}
+  .precio{font-size:1.08rem}
+  .add{width:36px;height:36px}
+  .nos-fotos .foto{height:280px}
+  .nos-fotos .foto:last-child{margin-top:40px}
+  .contacto{padding:36px 22px;border-radius:22px}
+  form{padding:22px}
+  .logo b{font-size:1.35rem}
+}
+.prod-img img{width:100%;height:100%;object-fit:cover}.prod-img .tag{z-index:2}.item .mini{overflow:hidden}.item .mini img{width:100%;height:100%;object-fit:cover}
+</style>
+</head>
+<body>
+
+<div style="background:#14261B;color:#E9DFCB;text-align:center;font-size:.8rem;padding:9px 16px;letter-spacing:.02em">Web demo diseñada por <a href="https://mgserviciosejecutivos.com" style="color:#E9C9A6;font-weight:600;text-decoration:underline">MG Servicios Ejecutivos</a> · Pedí la tuya para tu negocio</div>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Brote, inicio">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1F3D2B"/><path d="M24 36V22" stroke="#F6F1E7" stroke-width="2.4" stroke-linecap="round"/><path d="M24 24c0-6.5-4.6-10.5-11-10.5 0 6.5 4.6 10.5 11 10.5z" fill="#A9BC9B"/><path d="M24 21c0-5.6 4-9.4 9.8-9.4 0 5.6-4 9.4-9.8 9.4z" fill="#D9774B"/></svg>
+      <span><b>brote</b><small>Almacén natural</small></span>
+    </a>
+    <nav class="menu">
+      <a href="#categorias">Categorías</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="carrito-btn" id="abrirCarrito" aria-label="Ver mi pedido">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span class="badge" id="badge">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="fade">
+      <span class="eyebrow">Almacén natural · Córdoba</span>
+      <h1>Comer rico y sano <em>es más fácil</em> de lo que pensás</h1>
+      <p>Granolas artesanales, frutos secos, productos sin TACC y viandas listas para tu semana. Armá tu pedido acá y te lo confirmamos por WhatsApp.</p>
+      <div class="hero-btns">
+        <a href="#productos" class="btn btn-verde">Ver productos</a>
+        <a href="#" class="btn btn-borde" data-wa>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Escribinos
+        </a>
+      </div>
+      <div class="hero-datos">
+        <div><b>+120</b><span>productos</span></div>
+        <div><b>Sin TACC</b><span>línea propia</span></div>
+        <div><b>48 h</b><span>envíos</span></div>
+      </div>
+    </div>
+    <div class="hero-fotos fade">
+      <div class="foto f1"><img src="img/ensalada-color.jpg" alt="Bowl de ensalada fresca" onerror="this.remove()"></div>
+      <div class="foto"><img src="img/plato-mesa.jpg" alt="Platos de comida saludable" onerror="this.remove()"></div>
+      <div class="foto"><img src="img/frutas.jpg" alt="Frutas frescas" onerror="this.remove()"></div>
+      <div class="sello">
+        <i><svg viewBox="0 0 24 24" fill="none" stroke="#2E5A3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.2-6.1"/></svg></i>
+        <div><b>100% natural</b><span>Sin conservantes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Beneficios ===== -->
+<div class="beneficios">
+  <div class="wrap ben-grid">
+    <div class="ben"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></i><div><b>Envíos a domicilio</b><span>En toda la ciudad</span></div></div>
+    <div class="ben"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M4.9 4.9l14.2 14.2"/></svg></i><div><b>Línea sin TACC</b><span>Apto celíacos</span></div></div>
+    <div class="ben"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></i><div><b>Calidad elegida</b><span>Productores locales</span></div></div>
+    <div class="ben"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i><div><b>Pedido por WhatsApp</b><span>Rápido y simple</span></div></div>
+  </div>
+</div>
+
+<!-- ===== Categorías ===== -->
+<section class="sec" id="categorias">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Nuestras categorías</span>
+      <h2>Todo lo que necesitás para comer mejor</h2>
+      <p>Elegimos cada producto pensando en sabor, calidad y en que te haga bien.</p>
+    </div>
+    <div class="cats">
+      <a class="cat fade" href="#productos" data-filtro="almacen"><img src="img/frutos-secos.jpg" alt="Almacén natural" onerror="this.remove()"><div><h3>Almacén natural</h3><span>Granolas, semillas y frutos secos</span></div></a>
+      <a class="cat fade" href="#productos" data-filtro="viandas"><img src="img/bowl-tofu.jpg" alt="Viandas saludables" onerror="this.remove()"><div><h3>Viandas saludables</h3><span>Listas para calentar y disfrutar</span></div></a>
+      <a class="cat fade" href="#productos" data-filtro="bebidas"><img src="img/jugo-verde.jpg" alt="Bebidas naturales" onerror="this.remove()"><div><h3>Bebidas y frescos</h3><span>Jugos, kombucha y verdura de estación</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Productos ===== -->
+<section class="sec productos" id="productos">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Armá tu pedido</span>
+      <h2>Productos destacados</h2>
+      <p>Sumá lo que quieras y al final te llega el pedido armado por WhatsApp.</p>
+    </div>
+    <div class="filtros">
+      <button class="filtro on" data-f="todos">Todos</button>
+      <button class="filtro" data-f="almacen">Almacén</button>
+      <button class="filtro" data-f="sintacc">Sin TACC</button>
+      <button class="filtro" data-f="viandas">Viandas</button>
+      <button class="filtro" data-f="bebidas">Bebidas</button>
+    </div>
+    <div class="prods" id="prods"></div>
+  </div>
+</section>
+
+<!-- ===== Nosotros ===== -->
+<section class="sec nos" id="nosotros">
+  <div class="wrap nos-grid">
+    <div class="nos-fotos fade">
+      <div class="foto"><img src="img/ensalada-bol.jpg" alt="Ensalada de estación" onerror="this.remove()"></div>
+      <div class="foto"><img src="img/canasta.jpg" alt="Frutas y verduras frescas" onerror="this.remove()"></div>
+    </div>
+    <div class="fade">
+      <span class="eyebrow">Sobre nosotros</span>
+      <h2>Un almacén de barrio con alma natural</h2>
+      <p>En Brote creemos que comer bien no tiene que ser complicado ni aburrido. Por eso juntamos en un solo lugar los productos que usamos en casa, de marcas y productores que conocemos.</p>
+      <ul class="lista">
+        <li>Productos a granel para comprar lo justo</li>
+        <li>Opciones sin TACC, veganas y sin azúcar agregada</li>
+        <li>Viandas caseras preparadas cada semana</li>
+        <li>Te asesoramos para armar tu compra</li>
+      </ul>
+      <a href="#" class="btn btn-verde" data-wa>Hablemos por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Cómo pedir ===== -->
+<section class="sec productos" id="como">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Así de simple</span>
+      <h2>¿Cómo hago mi pedido?</h2>
+    </div>
+    <div class="pasos">
+      <div class="paso fade"><div class="num">1</div><h3>Elegí</h3><p>Sumá a tu pedido los productos que quieras con el botón +.</p></div>
+      <div class="paso fade"><div class="num">2</div><h3>Enviá</h3><p>Tocá “Enviar pedido” y se abre WhatsApp con todo ya escrito.</p></div>
+      <div class="paso fade"><div class="num">3</div><h3>Recibí</h3><p>Te confirmamos el total y coordinamos el envío o el retiro.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contacto ===== -->
+<section class="sec" id="contacto">
+  <div class="wrap">
+    <div class="contacto fade">
+      <div>
+        <span class="eyebrow" style="color:#E9C9A6">Contacto</span>
+        <h2>Vení a visitarnos o escribinos</h2>
+        <p>Estamos para ayudarte a elegir y armar tu compra de la semana.</p>
+        <div class="datos">
+          <div class="dato"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></i><div><small>Dirección</small>Av. Siempre Verde 1234, Córdoba</div></div>
+          <div class="dato"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></i><div><small>Horarios</small>Lunes a sábado de 9 a 20 h</div></div>
+          <div class="dato"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i><div><small>WhatsApp</small>351 000-0000</div></div>
+        </div>
+      </div>
+      <form id="form">
+        <label>Nombre<input id="fNombre" required placeholder="Tu nombre"></label>
+        <label>¿Envío o retiro?<select id="fEntrega"><option>Envío a domicilio</option><option>Retiro en el local</option></select></label>
+        <label>Mensaje<textarea id="fMsj" rows="4" placeholder="Contanos qué estás buscando"></textarea></label>
+        <button class="btn btn-verde" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1F3D2B"/><path d="M24 36V22" stroke="#F6F1E7" stroke-width="2.4" stroke-linecap="round"/><path d="M24 24c0-6.5-4.6-10.5-11-10.5 0 6.5 4.6 10.5 11 10.5z" fill="#A9BC9B"/><path d="M24 21c0-5.6 4-9.4 9.8-9.4 0 5.6-4 9.4-9.8 9.4z" fill="#D9774B"/></svg>
+      <span><b>brote</b><small>Almacén natural</small></span>
+    </div>
+    <p>© 2026 Brote · Almacén natural. Sitio diseñado por <a href="https://mgserviciosejecutivos.com">MG Servicios Ejecutivos</a></p>
+  </div>
+</footer>
+
+<!-- ===== Carrito ===== -->
+<div class="velo" id="velo"></div>
+<aside class="panel" id="panel" aria-label="Mi pedido">
+  <div class="panel-head"><h3>Mi pedido</h3><button class="cerrar" id="cerrar" aria-label="Cerrar">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="panel-pie">
+    <div class="total"><span>Total estimado</span><b id="total">$0</b></div>
+    <button class="btn btn-verde" id="enviar">Enviar pedido por WhatsApp</button>
+  </div>
+</aside>
+<div class="toast" id="toast">Agregado a tu pedido</div>
+
+<script>
+const WA = "5493510000000"; // número de WhatsApp del negocio
+
+const ICON = {
+  granola:'<path d="M8 20h8l2-9H6l2 9z" fill="#C98B4E"/><path d="M6 11c0-3 2.7-5 6-5s6 2 6 5" fill="#E9C9A6"/><circle cx="10" cy="8.5" r="1" fill="#8A5A2B"/><circle cx="13.5" cy="7.5" r="1" fill="#8A5A2B"/>',
+  nuez:'<ellipse cx="12" cy="12" rx="7" ry="8" fill="#B8814A"/><path d="M12 4v16M8 7c2 2 2 8 0 10M16 7c-2 2-2 8 0 10" stroke="#7A4E25" stroke-width="1.3" fill="none"/>',
+  semilla:'<path d="M12 3c4 4 6 8 6 11a6 6 0 0 1-12 0c0-3 2-7 6-11z" fill="#6F8F5C"/><path d="M12 9v9" stroke="#F6F1E7" stroke-width="1.5" stroke-linecap="round"/>',
+  pan:'<path d="M4 12a8 5 0 0 1 16 0v6H4z" fill="#D9A066"/><path d="M8 10l1 3M12 9.5v3.5M16 10l-1 3" stroke="#9C6634" stroke-width="1.4" stroke-linecap="round"/>',
+  galleta:'<circle cx="12" cy="12" r="8" fill="#D6A56A"/><circle cx="9" cy="10" r="1.2" fill="#6B4223"/><circle cx="14" cy="9" r="1" fill="#6B4223"/><circle cx="13" cy="14" r="1.2" fill="#6B4223"/><circle cx="9.5" cy="14.5" r=".9" fill="#6B4223"/>',
+  bowl:'<path d="M3 11h18a9 9 0 0 1-18 0z" fill="#2E5A3F"/><circle cx="8" cy="9" r="2.2" fill="#D9774B"/><circle cx="12.5" cy="8" r="2.6" fill="#A9BC9B"/><circle cx="16.5" cy="9.3" r="2" fill="#E9C9A6"/>',
+  tarta:'<path d="M3 15l9-9 9 9z" fill="#E3B76B"/><rect x="3" y="15" width="18" height="4" rx="1" fill="#C98B4E"/><circle cx="12" cy="11.5" r="1.4" fill="#6F8F5C"/>',
+  kombucha:'<rect x="8" y="2" width="8" height="3" rx="1" fill="#1F3D2B"/><path d="M8 5h8v3l2 3v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-9l2-3z" fill="#E7A07A"/><rect x="6" y="12" width="12" height="5" fill="#F6F1E7"/>',
+  jugo:'<path d="M7 7h10l-1.5 14h-7z" fill="#9DBB6A"/><path d="M13 7l3-5" stroke="#1F3D2B" stroke-width="1.6" stroke-linecap="round"/><path d="M7.4 11h9.2" stroke="#F6F1E7" stroke-width="1.4"/>'
+};
+
+const PRODUCTOS = [
+  {id:1,n:"Granola artesanal",d:"Avena, miel y frutos secos · 500 g",img:"granola.jpg",p:4900,c:"almacen",i:"granola",bg:"#F3E3CF",t:"Más vendido"},
+  {id:2,n:"Mix de frutos secos",d:"Nueces, almendras y castañas · 250 g",img:"frutos-secos.jpg",p:6200,c:"almacen",i:"nuez",bg:"#EFDCC6"},
+  {id:3,n:"Almendras y frutas secas",d:"Almendras, orejones y arándanos · 300 g",img:"cuencos-secos.jpg",p:2800,c:"almacen",i:"semilla",bg:"#E2EAD9"},
+  {id:4,n:"Pan de masa madre sin TACC",d:"Harinas libres de gluten · 600 g",img:"pan2.jpg",p:5400,c:"sintacc",i:"pan",bg:"#F5E4CC",t:"Sin TACC"},
+  {id:5,n:"Bowl de açaí",d:"Açaí, banana, frutillas y granola · 350 g",p:5900,c:"sintacc",i:"galleta",bg:"#F1E0CB",t:"Sin TACC",img:"acai.jpg"},
+  {id:6,n:"Bowl de tofu y vegetales",d:"Vianda lista · 400 g",img:"bowl-tofu.jpg",p:6900,c:"viandas",i:"bowl",bg:"#DDE7D6",t:"Vegano"},
+  {id:7,n:"Ensalada de estación",d:"Hojas verdes, brotes y semillas · 350 g",img:"ensalada-bol.jpg",p:5800,c:"viandas",i:"tarta",bg:"#F4E6C9"},
+  {id:8,n:"Licuado verde",d:"Manzana, kiwi, pepino y menta · 500 ml",img:"jugo-verde.jpg",p:3900,c:"bebidas",i:"kombucha",bg:"#F6DFD2"}
+];
+
+const $ = s => document.querySelector(s);
+const fmt = n => "$" + n.toLocaleString("es-AR");
+let carrito = {};
+
+function svg(k){return '<svg viewBox="0 0 24 24">'+ICON[k]+'</svg>'}
+
+function render(f="todos"){
+  $("#prods").innerHTML = PRODUCTOS.filter(p=>f==="todos"||p.c===f).map(p=>`
+    <article class="prod">
+      <div class="prod-img" style="background:${p.bg}">${p.t?`<span class="tag">${p.t}</span>`:""}<img src="img/${p.img}" alt="${p.n}" loading="lazy"></div>
+      <div class="prod-info">
+        <h3>${p.n}</h3><p>${p.d}</p>
+        <div class="prod-pie"><span class="precio">${fmt(p.p)}</span><button class="add" data-id="${p.id}" aria-label="Agregar ${p.n}">+</button></div>
+      </div>
+    </article>`).join("");
+}
+render();
+
+document.querySelectorAll(".filtro").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".filtro").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on"); render(b.dataset.f);
+});
+document.querySelectorAll(".cat").forEach(c=>c.addEventListener("click",()=>{
+  const f=c.dataset.filtro; const b=document.querySelector(`.filtro[data-f="${f}"]`); if(b) b.click();
+}));
+
+$("#prods").addEventListener("click",e=>{
+  const b=e.target.closest(".add"); if(!b) return;
+  const id=+b.dataset.id; carrito[id]=(carrito[id]||0)+1;
+  b.classList.add("ok"); b.textContent="✓"; setTimeout(()=>{b.classList.remove("ok");b.textContent="+"},900);
+  toast(); pintar();
+});
+
+function toast(){const t=$("#toast");t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),1600)}
+
+function pintar(){
+  const ids=Object.keys(carrito).filter(k=>carrito[k]>0);
+  const cant=ids.reduce((a,k)=>a+carrito[k],0);
+  const badge=$("#badge"); badge.textContent=cant; badge.classList.toggle("on",cant>0);
+  let total=0;
+  $("#items").innerHTML = ids.length? ids.map(k=>{
+    const p=PRODUCTOS.find(x=>x.id==k); total+=p.p*carrito[k];
+    return `<div class="item"><span class="mini" style="background:${p.bg}"><img src="img/${p.img}" alt=""></span><div><b>${p.n}</b><span>${fmt(p.p)}</span></div>
+      <div class="cant"><button data-m="${k}">−</button><span>${carrito[k]}</span><button data-s="${k}">+</button></div></div>`;
+  }).join("") : '<p class="vacio">Tu pedido está vacío.<br>Sumá productos con el botón +.</p>';
+  $("#total").textContent=fmt(total);
+}
+pintar();
+
+$("#items").addEventListener("click",e=>{
+  const m=e.target.dataset.m, s=e.target.dataset.s;
+  if(m){carrito[m]--; if(carrito[m]<=0) delete carrito[m]}
+  if(s){carrito[s]++}
+  pintar();
+});
+
+const abrir=()=>{$("#panel").classList.add("on");$("#velo").classList.add("on")};
+const cerrar=()=>{$("#panel").classList.remove("on");$("#velo").classList.remove("on")};
+$("#abrirCarrito").onclick=abrir; $("#cerrar").onclick=cerrar; $("#velo").onclick=cerrar;
+
+function wa(txt){window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(txt),"_blank")}
+document.querySelectorAll("[data-wa]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();wa("Hola Brote, quería hacer una consulta.")}));
+
+$("#enviar").onclick=()=>{
+  const ids=Object.keys(carrito); if(!ids.length){toast();return}
+  let total=0, txt="Hola Brote, quiero hacer este pedido\n\n";
+  ids.forEach(k=>{const p=PRODUCTOS.find(x=>x.id==k); total+=p.p*carrito[k]; txt+=`• ${carrito[k]} x ${p.n} (${fmt(p.p*carrito[k])})\n`});
+  txt+=`\nTotal estimado ${fmt(total)}`; wa(txt);
+};
+
+$("#form").addEventListener("submit",e=>{
+  e.preventDefault();
+  wa(`Hola Brote, soy ${$("#fNombre").value}.\nPrefiero ${$("#fEntrega").value.toLowerCase()}.\n${$("#fMsj").value}`);
+});
+
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("vis");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".fade").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

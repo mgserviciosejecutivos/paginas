@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raíz · Cocina Consciente</title>
+<meta name="description" content="Raíz, cocina consciente y almacén gourmet saludable. Viandas, panadería de masa madre, almacén orgánico. Pedí por WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mgserviciosejecutivos.com/paginas/raiz/">
+<meta property="og:title" content="Raíz · Cocina Consciente">
+<meta property="og:description" content="Viandas de autor, panadería de masa madre y almacén orgánico. Pedí online y confirmamos por WhatsApp.">
+<meta property="og:image" content="https://mgserviciosejecutivos.com/paginas/raiz/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mgserviciosejecutivos.com/paginas/raiz/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--negro:#0F1A14;--bosque:#16261D;--bosque2:#1F3328;--oro:#C9A46A;--oro2:#E3C796;--hueso:#F3EDE2;--gris:#A7B0A9;--radio:6px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--negro);color:var(--hueso);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--oro);font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--oro)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 32px;font-weight:600;font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;border:0;cursor:pointer;border-radius:var(--radio);transition:.3s}
+.btn-oro{background:var(--oro);color:var(--negro)}
+.btn-oro:hover{background:var(--oro2)}
+.btn-linea{background:transparent;color:var(--hueso);box-shadow:inset 0 0 0 1px rgba(243,237,226,.45)}
+.btn-linea:hover{box-shadow:inset 0 0 0 1px var(--oro);color:var(--oro)}
+
+.mg{background:var(--oro);color:var(--negro);text-align:center;font-size:.78rem;padding:9px 16px;font-weight:500}
+.mg a{font-weight:700;text-decoration:underline}
+
+header{position:absolute;left:0;right:0;z-index:40}
+header.fijo{position:fixed;top:0;background:rgba(15,26,20,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,164,106,.18);animation:baja .4s}
+@keyframes baja{from{transform:translateY(-100%)}to{transform:none}}
+.nav{display:flex;align-items:center;justify-content:space-between;height:86px}
+.logo{display:flex;align-items:center;gap:13px}
+.logo svg{width:40px;height:40px}
+.logo b{font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;letter-spacing:.18em;line-height:1;display:block}
+.logo small{display:block;font-size:.58rem;letter-spacing:.42em;text-transform:uppercase;color:var(--oro);margin-top:4px}
+.menu{display:flex;gap:38px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.menu a{opacity:.85}.menu a:hover{color:var(--oro);opacity:1}
+.bolsa{position:relative;display:flex;align-items:center;gap:10px;background:transparent;border:1px solid rgba(201,164,106,.5);color:var(--hueso);padding:11px 18px;border-radius:var(--radio);cursor:pointer;font:inherit;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.bolsa svg{width:18px;height:18px;stroke:var(--oro)}
+.bolsa .n{background:var(--oro);color:var(--negro);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-weight:700;font-size:.72rem}
+
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;background:var(--bosque) center/cover}
+.hero-bg{position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 70% 40%,#2B4535,var(--negro))}
+.hero-bg img{width:100%;height:100%;object-fit:cover;animation:zoom 18s ease-out forwards}
+@keyframes zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,26,20,.94) 0%,rgba(15,26,20,.72) 45%,rgba(15,26,20,.25) 100%)}
+.hero-in{position:relative;z-index:2;padding:150px 0 110px;max-width:680px}
+.hero h1{font-size:clamp(3rem,7vw,6rem);margin:22px 0 24px}
+.hero h1 em{color:var(--oro);font-style:italic}
+.hero p{font-size:1.1rem;color:#CFD5CF;max-width:520px;margin-bottom:40px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll::after{content:"";width:1px;height:46px;background:linear-gradient(var(--oro),transparent);animation:lat 2s infinite}
+@keyframes lat{0%,100%{opacity:.3}50%{opacity:1}}
+
+.cinta{background:var(--oro);color:var(--negro);overflow:hidden;padding:18px 0;white-space:nowrap}
+.cinta div{display:inline-flex;gap:48px;animation:corre 30s linear infinite;font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-style:italic}
+.cinta span::after{content:"✦";margin-left:48px;font-style:normal;font-size:.9rem;vertical-align:middle}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+section{scroll-margin-top:86px}
+.sec{padding:120px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px}
+.head h2{font-size:clamp(2.6rem,5vw,4.2rem);margin-top:16px}
+.head p{color:var(--gris);max-width:400px}
+
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.intro-fotos{position:relative;height:600px}
+.ft{position:absolute;overflow:hidden;border-radius:var(--radio);background:linear-gradient(135deg,var(--bosque2),#3A5443)}
+.ft img{width:100%;height:100%;object-fit:cover}
+.ft.a{left:0;top:0;width:68%;height:80%}
+.ft.b{right:0;bottom:0;width:52%;height:56%;outline:10px solid var(--negro)}
+.sello{position:absolute;left:52%;top:6%;width:120px;height:120px;border-radius:50%;background:var(--oro);color:var(--negro);display:grid;place-items:center;text-align:center;font-family:"Cormorant Garamond",serif;font-size:1.05rem;line-height:1.1;z-index:3;animation:gira 22s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.intro h2{font-size:clamp(2.4rem,4.4vw,3.6rem);margin:18px 0 22px}
+.intro p{color:var(--gris);margin-bottom:16px}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;padding-top:34px;border-top:1px solid rgba(201,164,106,.25)}
+.cifras b{display:block;font-family:"Cormorant Garamond",serif;font-size:2.6rem;color:var(--oro);font-weight:500;line-height:1}
+.cifras span{font-size:.8rem;color:var(--gris);letter-spacing:.06em}
+
+.carta{background:var(--bosque)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:50px;border-bottom:1px solid rgba(201,164,106,.2)}
+.tab{background:none;border:0;color:var(--gris);font:inherit;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:14px 18px;cursor:pointer;position:relative}
+.tab.on{color:var(--oro)}
+.tab.on::after{content:"";position:absolute;left:18px;right:18px;bottom:-1px;height:2px;background:var(--oro)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:var(--negro);border:1px solid rgba(201,164,106,.14);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;transition:.35s}
+.card:hover{border-color:rgba(201,164,106,.55);transform:translateY(-5px)}
+.card-img{height:250px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--bosque2),#3A5443)}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover .card-img img{transform:scale(1.07)}
+.card-img .tag{position:absolute;top:16px;left:16px;background:rgba(15,26,20,.85);color:var(--oro);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;padding:7px 12px;border-radius:4px;backdrop-filter:blur(4px)}
+.card-in{padding:26px;display:flex;flex-direction:column;flex:1}
+.card-in h3{font-size:1.65rem}
+.card-in p{color:var(--gris);font-size:.9rem;margin:8px 0 22px;flex:1}
+.card-pie{display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px dashed rgba(201,164,106,.25)}
+.precio{font-family:"Cormorant Garamond",serif;font-size:1.7rem;color:var(--oro)}
+.add{background:transparent;color:var(--hueso);border:1px solid rgba(243,237,226,.35);padding:10px 16px;border-radius:var(--radio);font:inherit;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:.25s}
+.add:hover,.add.ok{background:var(--oro);color:var(--negro);border-color:var(--oro)}
+
+.banda{position:relative;padding:150px 0;text-align:center;overflow:hidden;background:var(--bosque2)}
+.banda img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.banda::after{content:"";position:absolute;inset:0;background:rgba(15,26,20,.78)}
+.banda .wrap{position:relative;z-index:2;max-width:820px}
+.banda h2{font-size:clamp(2.4rem,5vw,4.4rem);font-style:italic;margin:20px 0 34px}
+.banda .eyebrow::after{content:"";width:34px;height:1px;background:var(--oro)}
+
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,164,106,.2);border:1px solid rgba(201,164,106,.2)}
+.paso{background:var(--negro);padding:46px 38px}
+.paso b{font-family:"Cormorant Garamond",serif;font-size:3.4rem;color:var(--oro);font-weight:500;line-height:1}
+.paso h3{font-size:1.7rem;margin:16px 0 10px}
+.paso p{color:var(--gris);font-size:.93rem}
+
+.contacto{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contacto h2{font-size:clamp(2.4rem,4.4vw,3.6rem);margin:18px 0 22px}
+.contacto>div>p{color:var(--gris)}
+.datos{margin-top:38px;display:grid;gap:22px}
+.dato{display:flex;gap:18px;padding-bottom:22px;border-bottom:1px solid rgba(201,164,106,.15)}
+.dato small{display:block;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--oro);margin-bottom:4px}
+form{background:var(--bosque);padding:44px;border-radius:var(--radio);border:1px solid rgba(201,164,106,.18);display:grid;gap:22px;align-content:start}
+form label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--oro)}
+form input,form select,form textarea{width:100%;margin-top:8px;background:transparent;border:0;border-bottom:1px solid rgba(243,237,226,.25);padding:10px 0;color:var(--hueso);font:inherit;font-size:1rem}
+form select option{color:#000}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--oro)}
+form .btn{width:100%}
+
+footer{border-top:1px solid rgba(201,164,106,.18);padding:50px 0;text-align:center;color:var(--gris);font-size:.84rem}
+footer .logo{justify-content:center;margin-bottom:18px}
+footer a{color:var(--oro)}
+
+.velo{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:.35s;z-index:90}
+.velo.on{opacity:1;pointer-events:auto}
+.panel{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--bosque);border-left:1px solid rgba(201,164,106,.25);z-index:100;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.panel.on{transform:none}
+.p-head{display:flex;justify-content:space-between;align-items:center;padding:28px;border-bottom:1px solid rgba(201,164,106,.18)}
+.p-head h3{font-size:2rem}
+.x{background:none;border:1px solid rgba(243,237,226,.3);color:var(--hueso);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.2rem}
+.items{flex:1;overflow:auto;padding:10px 28px}
+.item{display:flex;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid rgba(201,164,106,.12)}
+.item div{flex:1}
+.item b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;font-weight:500}
+.item span{font-size:.85rem;color:var(--gris)}
+.cant{display:flex;align-items:center;gap:10px}
+.cant button{width:30px;height:30px;border-radius:50%;background:none;border:1px solid rgba(201,164,106,.5);color:var(--oro);cursor:pointer}
+.vacio{text-align:center;color:var(--gris);padding:70px 10px;font-family:"Cormorant Garamond",serif;font-size:1.3rem;font-style:italic}
+.p-pie{padding:24px 28px 30px;border-top:1px solid rgba(201,164,106,.18)}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
+.total b{font-family:"Cormorant Garamond",serif;font-size:2.1rem;color:var(--oro);letter-spacing:0;font-weight:500}
+.p-pie .btn{width:100%}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,130px);background:var(--oro);color:var(--negro);padding:14px 26px;border-radius:var(--radio);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;z-index:120;transition:transform .35s;white-space:nowrap}
+.toast.on{transform:translate(-50%,0)}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.rv.vis{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .menu{display:none}
+  .intro,.contacto{grid-template-columns:1fr;gap:56px}
+  .intro-fotos{height:480px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .head{flex-direction:column;align-items:flex-start;gap:16px}
+  .pasos{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 36px)}
+  .sec{padding:84px 0}
+  .nav{height:72px}
+  .logo b{font-size:1.5rem}
+  .bolsa .t{display:none}
+  .hero-in{padding:130px 0 120px}
+  .hero-bg::after{background:linear-gradient(180deg,rgba(15,26,20,.65),rgba(15,26,20,.92))}
+  .hero-btns .btn{width:100%}
+  .intro-fotos{height:400px}
+  .sello{width:96px;height:96px;font-size:.9rem;left:56%}
+  .cifras b{font-size:2rem}
+  .grid{grid-template-columns:1fr}
+  .card-img{height:230px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .tab{white-space:nowrap;padding:14px 12px}
+  .banda{padding:110px 0}
+  .paso{padding:36px 28px}
+  form{padding:30px 24px}
+}
+.total{display:none!important}
+.precio.consul{font-family:inherit;font-size:.82rem;font-weight:600;letter-spacing:.04em;opacity:.85}
+</style>
+</head>
+<body>
+
+<div class="mg">Web demo diseñada por <a href="https://mgserviciosejecutivos.com">MG Servicios Ejecutivos</a> · Pedí la tuya para tu negocio</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Raíz, inicio">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#C9A46A" stroke-width="1.6" stroke-linecap="round"><circle cx="24" cy="24" r="22.5"/><path d="M24 10v17"/><path d="M24 18c-3.5-4-8-5-11-4.5 .5 4 4 7.5 11 7.5"/><path d="M24 15c3-3.6 7-4.5 10-4 -.5 3.6-3.6 6.8-10 6.8"/><path d="M24 27c-2 3-5 4.5-8 5M24 27c2 3 5 4.5 8 5M24 27v9"/></svg>
+      <span><b>RAÍZ</b><small>Cocina consciente</small></span>
+    </a>
+    <nav class="menu">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#carta">Carta</a>
+      <a href="#pedir">Cómo pedir</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="bolsa" id="abrir" aria-label="Ver mi pedido">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span class="t">Pedido</span><span class="n" id="n">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-bg"><img src="img/mesa-hd.jpg" alt="Plato saludable" onerror="this.remove()"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <span class="eyebrow">Cocina saludable de autor</span>
+      <h1>Lo natural, <em>llevado a otro nivel</em></h1>
+      <p>Viandas de autor, panadería de masa madre y un almacén orgánico seleccionado. Comida real, hecha cada día con ingredientes nobles.</p>
+      <div class="hero-btns">
+        <a href="#carta" class="btn btn-oro">Ver la carta</a>
+        <a href="#" class="btn btn-linea" data-wa>Reservar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll">Descubrí</div>
+</section>
+
+<div class="cinta" aria-hidden="true"><div>
+  <span>Sin conservantes</span><span>Masa madre</span><span>Opciones sin TACC</span><span>Productores locales</span><span>Hecho cada día</span><span>Envíos a domicilio</span>
+  <span>Sin conservantes</span><span>Masa madre</span><span>Opciones sin TACC</span><span>Productores locales</span><span>Hecho cada día</span><span>Envíos a domicilio</span>
+</div></div>
+
+<section class="sec" id="nosotros">
+  <div class="wrap intro">
+    <div class="intro-fotos rv">
+      <div class="ft a"><img src="img/barra-vegetales.jpg" alt="Barra de vegetales frescos" onerror="this.remove()"></div>
+      <div class="ft b"><img src="img/pan2.jpg" alt="Pan de masa madre" onerror="this.remove()"></div>
+      <div class="sello">Hecho<br>con<br><em>amor</em></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Nuestra filosofía</span>
+      <h2>Volver a lo esencial, sin resignar sabor</h2>
+      <p>En Raíz cocinamos como en casa, pero con técnica de restaurante. Elegimos productores de la zona, respetamos la estación y no usamos ultraprocesados.</p>
+      <p>Cada vianda está pensada para nutrirte y disfrutar, y nuestro almacén reúne lo que usamos en nuestra propia cocina.</p>
+      <div class="cifras">
+        <div><b>100%</b><span>Ingredientes reales</span></div>
+        <div><b>+40</b><span>Platos de estación</span></div>
+        <div><b>24 h</b><span>Entrega en el día</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec carta" id="carta">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">La carta</span><h2>Elegí, sumá y pedí</h2></div>
+      <p>Agregá lo que quieras a tu pedido y te llega armado por WhatsApp para confirmar.</p>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab on" data-f="todos">Todo</button>
+      <button class="tab" data-f="viandas">Viandas</button>
+      <button class="tab" data-f="panaderia">Panadería</button>
+      <button class="tab" data-f="almacen">Almacén</button>
+      <button class="tab" data-f="bebidas">Bebidas</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="banda">
+  <img src="img/tienda.jpg" alt="" onerror="this.remove()">
+  <div class="wrap rv">
+    <span class="eyebrow">Plan semanal</span>
+    <h2>Tu semana resuelta, con cinco viandas elegidas para vos</h2>
+    <a href="#" class="btn btn-oro" data-wa-plan>Quiero el plan semanal</a>
+  </div>
+</section>
+
+<section class="sec" id="pedir">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Simple y rápido</span><h2>Cómo pedir</h2></div>
+    </div>
+    <div class="pasos rv">
+      <div class="paso"><b>01</b><h3>Elegí</h3><p>Recorré la carta y sumá tus platos y productos favoritos.</p></div>
+      <div class="paso"><b>02</b><h3>Enviá</h3><p>Tocá “Enviar pedido” y se abre WhatsApp con todo ya escrito.</p></div>
+      <div class="paso"><b>03</b><h3>Disfrutá</h3><p>Confirmamos el total y coordinamos el envío o el retiro.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec carta" id="contacto">
+  <div class="wrap contacto">
+    <div class="rv">
+      <span class="eyebrow">Contacto</span>
+      <h2>Te esperamos en nuestra casa</h2>
+      <p>Visitanos, escribinos o hacé tu pedido online. Estamos para asesorarte.</p>
+      <div class="datos">
+        <div class="dato"><div><small>Dirección</small>Bv. de los Álamos 845, Córdoba</div></div>
+        <div class="dato"><div><small>Horarios</small>Lunes a sábado de 9 a 21 h</div></div>
+        <div class="dato"><div><small>WhatsApp</small>351 000-0000</div></div>
+      </div>
+    </div>
+    <form id="form" class="rv">
+      <label>Nombre<input id="fN" required placeholder="Tu nombre"></label>
+      <label>Entrega<select id="fE"><option>Envío a domicilio</option><option>Retiro en el local</option></select></label>
+      <label>Mensaje<textarea id="fM" rows="3" placeholder="Contanos qué necesitás"></textarea></label>
+      <button class="btn btn-oro" type="submit">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#C9A46A" stroke-width="1.6" stroke-linecap="round"><circle cx="24" cy="24" r="22.5"/><path d="M24 10v17"/><path d="M24 18c-3.5-4-8-5-11-4.5 .5 4 4 7.5 11 7.5"/><path d="M24 15c3-3.6 7-4.5 10-4 -.5 3.6-3.6 6.8-10 6.8"/><path d="M24 27c-2 3-5 4.5-8 5M24 27c2 3 5 4.5 8 5M24 27v9"/></svg>
+      <span><b>RAÍZ</b><small>Cocina consciente</small></span>
+    </div>
+    <p>© 2026 Raíz · Cocina consciente. Sitio diseñado por <a href="https://mgserviciosejecutivos.com">MG Servicios Ejecutivos</a></p>
+  </div>
+</footer>
+
+<div class="velo" id="velo"></div>
+<aside class="panel" id="panel" aria-label="Mi pedido">
+  <div class="p-head"><h3>Tu pedido</h3><button class="x" id="cerrar" aria-label="Cerrar">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="p-pie"><div class="total"><span>Total estimado</span><b id="total">$0</b></div><button class="btn btn-oro" id="enviar">Enviar pedido</button></div>
+</aside>
+<div class="toast" id="toast">Agregado a tu pedido</div>
+
+<script>
+const WA="5493510000000", NEG="Raíz";
+const U=f=>`img/${f}`;
+const P=[
+ {id:1,n:"Bowl Raíz",d:"Quinoa, palta, garbanzos asados, hojas verdes y tahini.",p:7900,c:"viandas",img:"bowl-hd.jpg",t:"Firma de la casa"},
+ {id:2,n:"Ensalada de estación",d:"Vegetales de huerta, semillas tostadas y vinagreta de cítricos.",p:6800,c:"viandas",img:"ensalada-color.jpg"},
+ {id:3,n:"Buddha bowl tibio",d:"Arroz yamaní, calabaza asada, hummus y brotes.",p:7400,c:"viandas",img:"ensalada-bol.jpg",t:"Vegano"},
+ {id:4,n:"Hogaza de masa madre",d:"Fermentación de 48 horas con harina integral agroecológica.",p:5200,c:"panaderia",img:"pan.jpg"},
+ {id:5,n:"Canasta de huerta",d:"Selección semanal de frutas y verduras orgánicas.",p:9500,c:"almacen",img:"canasta-top.jpg",t:"Orgánico"},
+ {id:6,n:"Jugo verde prensado",d:"Manzana, apio, pepino, espinaca y jengibre. 500 ml.",p:3900,c:"bebidas",img:"jugo-verde.jpg"}
+];
+const $=s=>document.querySelector(s), fmt=n=>"$"+n.toLocaleString("es-AR");
+let cart={};
+function render(f="todos"){
+  $("#grid").innerHTML=P.filter(p=>f==="todos"||p.c===f).map(p=>`
+  <article class="card"><div class="card-img">${p.t?`<span class="tag">${p.t}</span>`:""}<img src="${U(p.img)}" alt="${p.n}" loading="lazy" onerror="this.remove()"></div>
+  <div class="card-in"><h3>${p.n}</h3><p>${p.d}</p><div class="card-pie"><span class="precio consul">Consultá el precio</span><button class="add" data-id="${p.id}">Agregar</button></div></div></article>`).join("");
+}
+render();
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));b.classList.add("on");render(b.dataset.f)});
+$("#grid").addEventListener("click",e=>{const b=e.target.closest(".add");if(!b)return;const id=b.dataset.id;cart[id]=(cart[id]||0)+1;b.classList.add("ok");b.textContent="Agregado";setTimeout(()=>{b.classList.remove("ok");b.textContent="Agregar"},1000);toast();paint()});
+function toast(){const t=$("#toast");t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),1600)}
+function paint(){
+  const ids=Object.keys(cart);let tot=0,c=0;
+  $("#items").innerHTML=ids.length?ids.map(k=>{const p=P.find(x=>x.id==k);tot+=p.p*cart[k];c+=cart[k];
+    return `<div class="item"><div><b>${p.n}</b><span>Cantidad</span></div><div class="cant"><button data-m="${k}">−</button><span>${cart[k]}</span><button data-s="${k}">+</button></div></div>`}).join(""):'<p class="vacio">Tu pedido está vacío</p>';
+  $("#total").textContent=fmt(tot);$("#n").textContent=c;
+}
+paint();
+$("#items").addEventListener("click",e=>{const m=e.target.dataset.m,s=e.target.dataset.s;if(m){cart[m]--;if(cart[m]<=0)delete cart[m]}if(s)cart[s]++;paint()});
+const open=()=>{$("#panel").classList.add("on");$("#velo").classList.add("on")},close=()=>{$("#panel").classList.remove("on");$("#velo").classList.remove("on")};
+$("#abrir").onclick=open;$("#cerrar").onclick=close;$("#velo").onclick=close;
+const wa=t=>window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t),"_blank");
+document.querySelectorAll("[data-wa]").forEach(a=>a.onclick=e=>{e.preventDefault();wa(`Hola ${NEG}, quería hacer una consulta.`)});
+document.querySelector("[data-wa-plan]").onclick=e=>{e.preventDefault();wa(`Hola ${NEG}, me interesa el plan semanal de viandas.`)};
+$("#enviar").onclick=()=>{const ids=Object.keys(cart);if(!ids.length)return;let t=`Hola ${NEG}, quiero hacer este pedido\n\n`,tot=0;ids.forEach(k=>{const p=P.find(x=>x.id==k);tot+=p.p*cart[k];t+=`• ${cart[k]} x ${p.n}\n`});wa(t+`\n¿Me pasan el total y la disponibilidad?`)};
+$("#form").onsubmit=e=>{e.preventDefault();wa(`Hola ${NEG}, soy ${$("#fN").value}.\nPrefiero ${$("#fE").value.toLowerCase()}.\n${$("#fM").value}`)};
+const hdr=$("#hdr");addEventListener("scroll",()=>hdr.classList.toggle("fijo",scrollY>innerHeight*.7),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("vis");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
