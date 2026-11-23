@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muebles Duccó</title>
+<meta name="description" content="Muebles Duccó: fabricación y venta de mesas, sillas, sillones y rinconeros en Córdoba. Showroom en Av. Castro Barros 773 y 212. Hasta 12 cuotas.">
+<link rel="canonical" href="https://mgserviciosejecutivos.com/paginas/ducco/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Muebles Duccó">
+<meta property="og:description" content="Muebles Duccó: fabricación y venta de mesas, sillas, sillones y rinconeros en Córdoba. Showroom en Av. Castro Barros 773 y 212. Hasta 12 cuotas.">
+<meta property="og:url" content="https://mgserviciosejecutivos.com/paginas/ducco/">
+<meta property="og:image" content="https://mgserviciosejecutivos.com/paginas/ducco/og.jpg">
+<meta property="og:image:secure_url" content="https://mgserviciosejecutivos.com/paginas/ducco/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vista previa del sitio web de Muebles Duccó">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muebles Duccó">
+<meta name="twitter:description" content="Muebles Duccó: fabricación y venta de mesas, sillas, sillones y rinconeros en Córdoba. Showroom en Av. Castro Barros 773 y 212. Hasta 12 cuotas.">
+<meta name="twitter:image" content="https://mgserviciosejecutivos.com/paginas/ducco/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#3B1517; --ember:#E14A2B; --sand:#F4EEE8; --oak:#C99A62; --ink:#221A19; --mute:#7A6C68;
+  --display:"Playfair Display", Georgia, serif; --body:"Outfit", "Helvetica Neue", Arial, sans-serif;
+  /* layout: showroom-first: real photos of their own floor, product cards that ask for the price on WhatsApp */
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--sand);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+.wrap{max-width:1260px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+.wrap>*{min-width:0}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.06;text-wrap:balance;overflow-wrap:break-word}
+section{scroll-margin-top:84px}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;background:var(--ember);color:#fff;text-decoration:none;font-weight:600;border:0;cursor:pointer;font-family:var(--body);font-size:.96rem;border-radius:999px;transition:background .2s, transform .2s}
+.btn:hover{background:#c63a1e;transform:translateY(-2px)}
+.btn.out{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.btn.out:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:19px;height:19px}
+
+.top{background:var(--ember);color:#fff;text-align:center;font-size:.86rem;padding:9px 16px;font-weight:500}
+.nav{position:sticky;top:0;z-index:40;background:var(--wine);color:#fff}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.nav .logo img{height:38px;width:auto}
+.nav ul{display:flex;gap:32px;list-style:none;font-size:.94rem}
+.nav ul a{text-decoration:none;opacity:.85}.nav ul a:hover{opacity:1;color:var(--oak)}
+.mt{display:none;background:none;border:0;color:#fff;font:inherit;cursor:pointer;letter-spacing:.14em;font-size:.82rem}
+
+.hero{background:var(--wine);color:#fff;padding:clamp(44px,6vw,80px) 0 clamp(56px,7vw,90px);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero h1{font-size:clamp(2.8rem,6vw,5.4rem);margin:18px 0 22px}
+.hero h1 i{color:var(--oak)}
+.hero p{color:#dccbc6;max-width:44ch;font-size:1.08rem;margin-bottom:32px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:42px;padding-top:24px;border-top:1px solid rgba(255,255,255,.15)}
+.hero .facts b{font-family:var(--display);font-size:1.8rem;display:block;line-height:1.1}
+.hero .facts span{font-size:.84rem;color:#cdb9b3}
+.stack{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:end}
+.stack img{width:100%;object-fit:cover;border-radius:22px}
+.stack .a{aspect-ratio:4/5}.stack .b{aspect-ratio:3/4;margin-bottom:40px}
+.cuotas{position:absolute;left:50%;top:18px;transform:translateX(-50%) rotate(-4deg);background:var(--ember);color:#fff;border-radius:18px;padding:14px 20px;text-align:center;box-shadow:0 18px 40px -14px rgba(0,0,0,.5)}
+.cuotas b{font-family:var(--display);font-size:2.2rem;line-height:1;display:block}
+.cuotas span{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+
+.perks{background:#fff;border-bottom:1px solid #eadfd6}
+.perks .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.perk{display:flex;gap:14px;align-items:center;padding:26px 18px}
+.perk+.perk{border-left:1px solid #eadfd6}
+.perk svg{width:32px;height:32px;color:var(--ember);flex:none}
+.perk h3{font-family:var(--body);font-size:.98rem;font-weight:600}
+.perk p{font-size:.84rem;color:var(--mute)}
+
+.catalog{padding:clamp(70px,9vw,110px) 0}
+.chead{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.chead h2{font-size:clamp(2.3rem,4.6vw,3.6rem);margin-top:10px}
+.chead p{color:var(--mute);max-width:46ch;margin-top:8px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{border:1px solid #d7c9bf;background:#fff;padding:10px 20px;border-radius:999px;font:inherit;font-size:.92rem;cursor:pointer;color:var(--ink);transition:all .2s}
+.filters button.on,.filters button:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod{background:#fff;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .3s, transform .3s}
+.prod:hover{box-shadow:0 26px 50px -28px rgba(59,21,23,.5);transform:translateY(-5px)}
+.prod .im{aspect-ratio:4/5;overflow:hidden;background:#eee;cursor:zoom-in;position:relative}
+.prod img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.prod:hover img{transform:scale(1.05)}
+.prod .chip{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);color:var(--wine);font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.prod .tx{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod h3{font-size:1.28rem}
+.prod .meas{font-size:.86rem;color:var(--mute)}
+.prod a{margin-top:auto;padding-top:14px;display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--ember);text-decoration:none}
+.prod a svg{width:17px;height:17px}
+.prod a:hover{text-decoration:underline}
+.prod.hide{display:none}
+
+.wall{position:relative;color:#fff;padding:clamp(80px,11vw,140px) 0;background:linear-gradient(rgba(59,21,23,.78),rgba(59,21,23,.78)),url(img/pared.jpg) center/cover}
+.wall .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.wall h2{font-size:clamp(2.2rem,4.8vw,3.8rem)}
+.wall h2 i{color:var(--oak)}
+.wall p{color:#ead9d4;margin-top:16px;max-width:52ch}
+.wall .box{background:var(--sand);color:var(--ink);border-radius:22px;padding:26px}
+.wall .box h3{font-size:1.4rem;margin-bottom:14px}
+.loc{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid #e3d8cf;text-decoration:none}
+.loc svg{width:22px;height:22px;color:var(--ember);flex:none;margin-top:2px}
+.loc b{display:block;font-weight:600}
+.loc span{font-size:.88rem;color:var(--mute)}
+
+.detail{padding:clamp(70px,9vw,110px) 0}
+.detail .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
+.detail .imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.detail .imgs img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px}
+.detail h2{font-size:clamp(2.1rem,4.2vw,3.3rem);margin:12px 0 18px}
+.detail p{color:var(--mute);max-width:50ch;margin-bottom:14px}
+.steps{display:grid;gap:0;margin:22px 0 30px}
+.steps div{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:14px 0;border-top:1px solid #e3d8cf}
+.steps b{font-family:var(--display);color:var(--ember);font-size:1.3rem}
+
+.cta{background:var(--ember);color:#fff;padding:clamp(50px,7vw,80px) 0}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{font-size:clamp(1.9rem,4vw,3rem);max-width:22ch}
+.cta .btn{background:var(--wine)}.cta .btn:hover{background:#2a0e10}
+
+footer{background:#1d0b0c;color:#b09a95;font-size:.86rem}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding-top:50px;padding-bottom:30px}
+footer h4{color:#fff;font-weight:500;margin-bottom:12px;font-size:.98rem}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+footer .bottom{border-top:1px solid #3a2224;padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.35)}
+.wa svg{width:30px;height:30px;color:#fff}
+.lb{position:fixed;inset:0;background:rgba(29,11,12,.93);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+.lb.on{display:flex}.lb img{max-height:90vh;max-width:92vw;border-radius:12px}
+
+@media (max-width:1060px){.grid{grid-template-columns:repeat(3,1fr)}.perks .wrap{grid-template-columns:1fr 1fr}.perk:nth-child(3){border-left:0}.perk:nth-child(n+3){border-top:1px solid #eadfd6}}
+@media (max-width:880px){
+  .nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:var(--wine);flex-direction:column;gap:0;padding:8px 24px 20px}
+  .nav ul.open{display:flex}.nav ul li{padding:12px 0}.mt{display:block}.nav .btn{display:none}
+  .hero .wrap,.wall .wrap,.detail .wrap{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  footer .wrap{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .ctas{display:grid!important;grid-template-columns:1fr;gap:10px}.ctas .btn{width:100%}
+  .grid{gap:12px}.prod .tx{padding:12px 12px 14px}.prod h3{font-size:1.02rem}.prod .meas{font-size:.78rem}.prod a{font-size:.82rem}
+  .perks .wrap{grid-template-columns:1fr}.perk+.perk{border-left:0;border-top:1px solid #eadfd6}
+  .hero .facts b{font-size:1.35rem}.hero .facts span{font-size:.74rem}
+  .cuotas b{font-size:1.7rem}
+  .cta .btn{width:100%}
+  .filters{display:grid;grid-template-columns:repeat(4,1fr);width:100%}.filters button{padding:10px 6px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="top">Hasta 12 cuotas · Fabricación propia · 2 locales en Av. Castro Barros</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><img src="img/logo.jpg" alt="Duccó Amoblamientos"></a>
+    <ul id="menu">
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#showroom">Showroom</a></li>
+      <li><a href="#como-comprar">Cómo comprar</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn" href="https://wa.me/5493518042042" target="_blank" rel="noopener">Consultar</a>
+    <button class="mt" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Abrir menú">MENÚ</button>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag" style="color:var(--oak)">Fábrica y showroom en Córdoba</span>
+      <h1>Muebles que hacen <i>casa</i>.</h1>
+      <p>Mesas, sillas, sillones y rinconeros fabricados por nosotros. Vení a probarlos a nuestro showroom de Av. Castro Barros o pedí precio por WhatsApp.</p>
+      <div class="ctas">
+        <a class="btn" href="#catalogo">Ver catálogo</a>
+        <a class="btn out" href="https://wa.me/5493518042042" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Pedir precio</a>
+      </div>
+      <div class="facts">
+        <div><b>21,5 mil</b><span>seguidores</span></div>
+        <div><b>2</b><span>locales en Córdoba</span></div>
+        <div><b>12</b><span>cuotas para pagar</span></div>
+      </div>
+    </div>
+    <div class="stack">
+      <img class="a" src="img/hero1.jpg" alt="Rinconero en el showroom de Duccó">
+      <img class="b" src="img/hero2.jpg" alt="Mesa Arpegio con sillas de madera">
+      <div class="cuotas"><b>12</b><span>cuotas</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="perks">
+  <div class="wrap">
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><div><h3>Fábrica propia</h3><p>Sin intermediarios.</p></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><div><h3>Hasta 12 cuotas</h3><p>Y precio especial de contado.</p></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="16" r="3"/></svg><div><h3>Telas a elección</h3><p>Tapizados en varios colores.</p></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><h3>2 showrooms</h3><p>Av. Castro Barros 773 y 212.</p></div></div>
+  </div>
+</section>
+
+<section class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="chead">
+      <div><span class="tag">Catálogo</span><h2>Recorré nuestro showroom</h2><p>Fotos reales de los muebles que tenemos exhibidos. Tocá "Pedir precio" y te respondemos por WhatsApp.</p></div>
+      <div class="filters" role="group" aria-label="Filtrar catálogo">
+        <button class="on" data-f="all">Todos</button>
+        <button data-f="comedor">Comedor</button>
+        <button data-f="living">Living</button>
+        <button data-f="sillas">Sillas</button>
+      </div>
+    </div>
+    <div class="grid" id="grid">
+      <article class="prod" data-c="comedor" data-n="Mesa Radicce + 4 Sillas X"><div class="im"><img src="img/radicce.jpg" alt="Mesa redonda Radicce con sillas X" loading="lazy"><span class="chip">Comedor</span></div><div class="tx"><h3>Mesa Radicce + 4 Sillas X</h3><span class="meas">Redonda · madera natural</span><a href="#">Pedir precio →</a></div></article>
+      <article class="prod" data-c="comedor" data-n="Mesa Arpegio + 6 Sillas Merlin"><div class="im"><img src="img/arpegio.jpg" alt="Mesa Arpegio con sillas Merlin" loading="lazy"><span class="chip">Comedor</span></div><div class="tx"><h3>Mesa Arpegio + 6 Sillas Merlin</h3><span class="meas">2,00 × 0,90 m</span><a href="#">Pedir precio →</a></div></article>
+      <article class="prod" data-c="comedor" data-n="Mesa Doble Canal + 6 sillas"><div class="im"><img src="img/doblecanal.jpg" alt="Mesa Doble Canal de madera" loading="lazy"><span class="chip">Comedor</span></div><div class="tx"><h3>Mesa Doble Canal + 6 sillas</h3><span class="meas">1,60 × 0,90 m</span><a href="#">Pedir precio →</a></div></article>
+      <article class="prod" data-c="comedor" data-n="Mesa de 2 x 1 m + Sillas Catalina"><div class="im"><img src="img/mesa2x1.jpg" alt="Mesa de madera de 2 por 1 metro" loading="lazy"><span class="chip">Comedor</span></div><div class="tx"><h3>Mesa 2 × 1 m + Sillas Catalina</h3><span class="meas">Madera con lustre</span><a href="#">Pedir precio →</a></div></article>
+      <article class="prod" data-c="living" data-n="Sillón Movex"><div class="im"><img src="img/movex.jpg" alt="Sillón Movex gris" loading="lazy"><span class="chip">Living</span></div><div class="tx"><h3>Sillón Movex</h3><span class="meas">1,95 × 1,00 m · Floyd Graphite</span><a href="#">Pedir precio →</a></div></article>
+      <article class="prod" data-c="living" data-n="Rinconero Ónix"><div class="im"><img src="img/onix.jpg" alt="Rinconero Ónix beige" loading="lazy"><span class="chip">Living</span></div><div class="tx"><h3>Rinconero Ónix</h3><span class="meas">2,95 × 1,80 m · extensible</span><a href="#">Pedir precio →</a></div></article>
+      <article class="prod" data-c="sillas" data-n="Silla Catalina"><div class="im"><img src="img/catalina.jpg" alt="Silla Catalina tapizada capitoné" loading="lazy"><span class="chip">Sillas</span></div><div class="tx"><h3>Silla Catalina</h3><span class="meas">Tapizada · respaldo capitoné</span><a href="#">Pedir precio →</a></div></article>
+      <article class="prod" data-c="sillas" data-n="Sillas de madera con almohadón"><div class="im"><img src="img/naoto.jpg" alt="Silla de madera con almohadón" loading="lazy"><span class="chip">Sillas</span></div><div class="tx"><h3>Silla de madera con almohadón</h3><span class="meas">Ideal para juegos de comedor</span><a href="#">Pedir precio →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="wall" id="showroom">
+  <div class="wrap">
+    <div>
+      <span class="tag" style="color:var(--oak)">Showroom</span>
+      <h2>Vení a sentarte <i>antes de elegir</i></h2>
+      <p>En nuestros dos locales de Av. Castro Barros tenés todos los muebles exhibidos. Te asesoramos con medidas, telas y combinaciones para que queden perfectos en tu casa.</p>
+    </div>
+    <div class="box">
+      <h3>Dónde estamos</h3>
+      <a class="loc" href="https://maps.app.goo.gl/9Pe9xcQwrgLkhwLF6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>Casa central</b><span>Av. Castro Barros 773 · Ver mapa</span></div></a>
+      <a class="loc" href="https://maps.app.goo.gl/2BuEDE7S6iVZzMC17" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>Sucursal</b><span>Av. Castro Barros 212 · Ver mapa</span></div></a>
+      <a class="loc" href="https://wa.me/5493518042042" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><b>Consultas y ventas</b><span>WhatsApp 351 804-2042</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="detail" id="como-comprar">
+  <div class="wrap">
+    <div class="imgs">
+      <img src="img/textura.jpg" alt="Detalle del tapizado del sillón" loading="lazy">
+      <img src="img/detalle.jpg" alt="Detalle de mesa y sillas de madera" loading="lazy">
+    </div>
+    <div>
+      <span class="tag">Cómo comprar</span>
+      <h2>Elegís, te asesoramos y lo llevamos a tu casa</h2>
+      <p>Cuidamos cada detalle: maderas, tapizados y terminaciones pensados para durar.</p>
+      <div class="steps">
+        <div><b>01</b><span>Mirá el catálogo o vení al showroom.</span></div>
+        <div><b>02</b><span>Pedí precio por WhatsApp: te pasamos opciones de contado y en cuotas.</span></div>
+        <div><b>03</b><span>Coordinamos la entrega de tu mueble.</span></div>
+      </div>
+      <a class="btn" href="https://wa.me/5493518042042" target="_blank" rel="noopener">Hablar con un asesor</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div class="wrap">
+    <h2>¿Lo querés en tu casa? Escribinos y te pasamos precio y cuotas.</h2>
+    <a class="btn" href="https://wa.me/5493518042042?text=Hola%20Ducc%C3%B3!%20Quiero%20consultar%20por%20un%20mueble" target="_blank" rel="noopener">WhatsApp 351 804-2042</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><img src="img/logo.jpg" alt="Duccó" style="height:44px;margin-bottom:14px"><p>Fabricación y venta de muebles que le dan un estilo único a tu ambiente.</p></div>
+    <div><h4>Catálogo</h4><p><a href="#catalogo">Comedor</a><br><a href="#catalogo">Living</a><br><a href="#catalogo">Sillas</a></p></div>
+    <div><h4>Contacto</h4><p>Casa central: Av. Castro Barros 773<br>Sucursal: Av. Castro Barros 212<br><a href="https://wa.me/5493518042042" target="_blank" rel="noopener">WhatsApp 351 804-2042</a><br><a href="https://www.instagram.com/amoblamientosducco/" target="_blank" rel="noopener">@amoblamientosducco</a></p></div>
+  </div>
+  <div class="wrap bottom"><span>© 2026 Muebles Duccó · Córdoba</span><span>Sitio diseñado por MG Servicios Ejecutivos</span></div>
+</footer>
+<a class="wa" href="https://wa.me/5493518042042" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+document.querySelectorAll('.prod').forEach(p=>{const a=p.querySelector('.tx a'); a.href='https://wa.me/5493518042042?text='+encodeURIComponent('Hola Duccó! Quiero el precio de: '+p.dataset.n+'. ¿Opciones de contado y en cuotas?'); a.target='_blank'; a.rel='noopener';});
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  const f=b.dataset.f; document.querySelectorAll('.prod').forEach(p=>p.classList.toggle('hide',f!=='all'&&p.dataset.c!==f));
+}));
+const lb=document.getElementById('lb');
+document.querySelectorAll('.prod .im').forEach(f=>f.addEventListener('click',()=>{lb.querySelector('img').src=f.querySelector('img').src;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+</script>
+</body>
+</html>

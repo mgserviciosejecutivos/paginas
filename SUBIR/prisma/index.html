@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arquitectura Prisma</title>
+<meta name="description" content="Arquitectura Prisma, Córdoba: proyectos, dirección técnica, relevamientos, asesoramiento e interiorismo.">
+<link rel="canonical" href="https://mgserviciosejecutivos.com/paginas/prisma/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Arquitectura Prisma">
+<meta property="og:description" content="Arquitectura Prisma, Córdoba: proyectos, dirección técnica, relevamientos, asesoramiento e interiorismo.">
+<meta property="og:url" content="https://mgserviciosejecutivos.com/paginas/prisma/">
+<meta property="og:image" content="https://mgserviciosejecutivos.com/paginas/prisma/og.jpg">
+<meta property="og:image:secure_url" content="https://mgserviciosejecutivos.com/paginas/prisma/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vista previa del sitio web de Arquitectura Prisma">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arquitectura Prisma">
+<meta name="twitter:description" content="Arquitectura Prisma, Córdoba: proyectos, dirección técnica, relevamientos, asesoramiento e interiorismo.">
+<meta name="twitter:image" content="https://mgserviciosejecutivos.com/paginas/prisma/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0C0C0B; --char:#171716; --bone:#EEEBE5; --wood:#B98A5E; --grey:#8E8B85; --line:rgba(238,235,229,.14);
+  --display:"Tenor Sans", "Optima", "Gill Sans", sans-serif; --body:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  /* layout: monochrome gallery, wood as the only colour, horizontal project rail named like their obra codes */
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--black);color:var(--bone);font-family:var(--body);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:1px solid var(--wood);outline-offset:4px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-transform:uppercase;letter-spacing:.04em;text-wrap:balance}
+section{scroll-margin-top:80px}
+.sm{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--grey)}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:16px 28px;border:1px solid var(--bone);color:var(--bone);text-decoration:none;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;background:transparent;cursor:pointer;font-family:var(--body);transition:all .3s}
+.btn:hover{background:var(--bone);color:var(--black)}
+.btn.solid{background:var(--bone);color:var(--black)}
+.btn.solid:hover{background:var(--wood);border-color:var(--wood)}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;mix-blend-mode:normal;background:linear-gradient(var(--black),rgba(12,12,11,0))}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo img{height:46px;width:46px;object-fit:cover}
+.nav ul{display:flex;gap:36px;list-style:none;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase}
+.nav ul a{text-decoration:none;color:var(--grey);transition:color .2s}.nav ul a:hover{color:var(--bone)}
+.mt{display:none;background:none;border:0;color:var(--bone);font:inherit;font-size:.74rem;letter-spacing:.24em;cursor:pointer}
+
+.hero{min-height:min(920px,100svh);display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.hero .l{display:flex;flex-direction:column;justify-content:flex-end;padding:120px clamp(18px,4vw,48px) 70px max(clamp(18px,4vw,48px),calc((100vw - 1280px)/2 + 48px))}
+.hero h1{font-size:clamp(2rem,4.2vw,4.1rem);margin:22px 0 28px}
+.hero>*{min-width:0}
+.hero h1 span{color:var(--wood)}
+.hero p{color:#b7b3ab;max-width:42ch;margin-bottom:36px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero .r{position:relative;overflow:hidden}
+.hero .r img{width:100%;height:100%;object-fit:cover}
+.hero .r .cap{position:absolute;right:20px;bottom:20px;background:rgba(12,12,11,.7);padding:10px 16px;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
+.hero .meta{display:flex;flex-wrap:wrap;gap:24px 40px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line)}
+.hero .meta b{font-family:var(--display);font-weight:400;font-size:1.7rem;display:block}
+.hero .meta span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+
+.intro{padding:clamp(80px,11vw,150px) 0}
+.intro .wrap{display:grid;grid-template-columns:1fr 2fr;gap:60px}
+.intro p.big{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.35;text-transform:none;letter-spacing:.01em}
+.intro p.big em{font-style:normal;color:var(--wood)}
+.intro p.sub{margin-top:26px;color:#a9a59d;max-width:60ch}
+
+.svc{border-top:1px solid var(--line)}
+.svc .row{display:grid;grid-template-columns:90px 1.1fr 1.4fr 40px;gap:30px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:background .3s,padding .3s}
+.svc .row:hover{background:var(--char);padding-left:14px;padding-right:14px}
+.svc .n{color:var(--grey);font-size:.8rem;letter-spacing:.2em}
+.svc h3{font-size:clamp(1.3rem,2.4vw,2rem)}
+.svc p{color:#a9a59d;font-size:.95rem}
+.svc .ar{font-size:1.4rem;color:var(--wood);text-align:right}
+
+.rail{padding:clamp(80px,11vw,140px) 0}
+.rhead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+.rhead h2{font-size:clamp(2rem,4.4vw,3.6rem);margin-top:14px}
+.rctl{display:flex;gap:10px}
+.rctl button{width:52px;height:52px;border:1px solid var(--line);background:none;color:var(--bone);font-size:1.2rem;cursor:pointer;transition:all .2s}
+.rctl button:hover{border-color:var(--bone)}
+.track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(18px,4vw,48px) 20px max(clamp(18px,4vw,48px),calc((100vw - 1280px)/2 + 48px));scrollbar-width:thin;scroll-padding-left:max(24px,calc(50vw - 592px));scrollbar-color:#444 transparent}
+.proj{flex:0 0 clamp(260px,30vw,400px);scroll-snap-align:start;cursor:zoom-in}
+.proj .im{aspect-ratio:3/4;overflow:hidden}
+.proj img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15);transition:transform .8s, filter .5s}
+.proj:hover img{transform:scale(1.04);filter:none}
+.proj .info{display:flex;justify-content:space-between;padding-top:16px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.proj h3{font-size:1.05rem}
+.proj span{font-size:.72rem;letter-spacing:.2em;color:var(--grey);text-transform:uppercase}
+
+.case{background:var(--bone);color:var(--black);padding:clamp(80px,11vw,140px) 0}
+.case .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.case .sm{color:#6f6b64}
+.case h2{font-size:clamp(2rem,4vw,3.3rem);margin:16px 0 22px}
+.case p{color:#4c4944;margin-bottom:14px;max-width:52ch}
+.case .pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.case .pair img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.case .pair figcaption{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;margin-top:10px;color:#6f6b64}
+.checks{list-style:none;display:grid;gap:8px;margin:20px 0 30px;font-weight:400}
+.checks li{display:flex;gap:12px}.checks li::before{content:"—";color:var(--wood)}
+.case .btn{border-color:var(--black);color:var(--black)}.case .btn:hover{background:var(--black);color:var(--bone)}
+
+.quote{padding:clamp(80px,11vw,140px) 0;text-align:left}
+.quote blockquote{font-family:var(--display);font-size:clamp(1.8rem,4vw,3.4rem);line-height:1.2;text-transform:uppercase;letter-spacing:.03em;max-width:22ch}
+.quote blockquote span{color:var(--wood)}
+.quote .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:center}
+.quote img{aspect-ratio:4/5;object-fit:cover;width:100%}
+
+.contact{border-top:1px solid var(--line);padding:clamp(80px,11vw,130px) 0}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact h2{font-size:clamp(2.6rem,6vw,5rem)}
+.contact .mail{display:inline-block;margin-top:22px;font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);text-decoration:none;border-bottom:1px solid var(--wood);padding-bottom:6px;word-break:break-all}
+form{display:grid;gap:18px}
+label{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey)}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid #3a3936;color:var(--bone);padding:10px 0 12px;font:inherit;font-size:1rem}
+select option{color:#111}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--wood)}
+textarea{resize:vertical;min-height:90px}
+#ok{font-size:.9rem;color:var(--wood)}
+footer{border-top:1px solid var(--line);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+.lb.on{display:flex}.lb img{max-height:90vh;max-width:92vw}
+
+@media (max-width:900px){
+  .nav ul{display:none;position:absolute;top:84px;left:0;right:0;background:var(--black);flex-direction:column;gap:0;padding:10px 24px 24px}
+  .nav ul.open{display:flex}.nav ul li{padding:12px 0}.mt{display:block}
+  .hero{grid-template-columns:1fr;min-height:0}.hero .r{height:70vw;order:-1}.hero .l{padding:40px clamp(18px,4vw,48px) 60px}
+  .nav{background:var(--black)}
+  .intro .wrap,.case .wrap,.quote .wrap,.contact .wrap{grid-template-columns:1fr}
+  .svc .row{grid-template-columns:50px 1fr;gap:10px 20px}.svc p{grid-column:2}.svc .ar{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+/* mobile symmetry */
+@media (max-width:560px){.hero .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.hero .meta b{font-size:1.4rem}.hero .meta span{font-size:.6rem;letter-spacing:.12em}}
+.wrap>*{min-width:0}
+h1,h2,h3{overflow-wrap:break-word}
+@media (max-width:560px){.ctas{display:grid!important;grid-template-columns:1fr;gap:10px}.ctas .btn{justify-content:center;width:100%}form button[type=submit]{width:100%;justify-content:center;justify-self:stretch!important}}
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.35)}.wa svg{width:30px;height:30px;color:#fff}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><img src="img/logo.jpg" alt="aP, Arquitectura Prisma"></a>
+    <ul id="menu">
+      <li><a href="#estudio">Estudio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#obras">Obras</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="mt" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Abrir menú">MENÚ</button>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="l">
+    <span class="sm">Arquitectura · Córdoba, Argentina</span>
+    <h1>Diseñar es <span>anticiparse</span>.</h1>
+    <p>Proyectamos, dirigimos y transformamos espacios pensando en cada decisión antes de que aparezca en obra: cómo entra la luz, qué altura necesita un ambiente, dónde va ese enchufe que nadie pensó a tiempo.</p>
+    <div class="ctas"><a class="btn solid" href="#contacto">Iniciar proyecto</a><a class="btn" href="#obras">Ver obras</a></div>
+    <div class="meta">
+      <div><b>6.300+</b><span>Comunidad en IG</span></div>
+      <div><b>5</b><span>Servicios</span></div>
+      <div><b>CBA</b><span>Base de operaciones</span></div>
+    </div>
+  </div>
+  <div class="r"><img src="img/hero.jpg" alt="Cocina de madera con vigas a la vista"><span class="cap">Interiorismo · Cocina</span></div>
+</section>
+
+<section class="intro" id="estudio">
+  <div class="wrap">
+    <span class="sm">El estudio</span>
+    <div>
+      <p class="big">La arquitectura también se define en las decisiones previas. <em>No necesitás más metros cuadrados</em>: necesitás que cada uno funcione.</p>
+      <p class="sub">En Arquitectura Prisma acompañamos obras nuevas, remodelaciones y ampliaciones desde el relevamiento hasta la última terminación. Mostramos el proceso de obra tal cual es, porque creemos que un cliente informado decide mejor.</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="svc">
+      <div class="row"><span class="n">01</span><h3>Proyectos</h3><p>Viviendas, dúplex, quinchos y locales: anteproyecto, documentación y legajo completo.</p><span class="ar">→</span></div>
+      <div class="row"><span class="n">02</span><h3>Dirección técnica</h3><p>Seguimiento de obra para que lo construido coincida con lo proyectado, en plazos y costos.</p><span class="ar">→</span></div>
+      <div class="row"><span class="n">03</span><h3>Relevamiento</h3><p>Medición y diagnóstico del estado actual antes de remodelar o ampliar.</p><span class="ar">→</span></div>
+      <div class="row"><span class="n">04</span><h3>Asesoramiento</h3><p>Materiales, soluciones y decisiones con impacto real en confort, funcionalidad y durabilidad.</p><span class="ar">→</span></div>
+      <div class="row"><span class="n">05</span><h3>Interiorismo</h3><p>Cocinas, baños y departamentos: más luz, mejor guardado y una paleta pensada para durar.</p><span class="ar">→</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="rail" id="obras">
+  <div class="wrap rhead">
+    <div><span class="sm">Obras</span><h2>Proyectos seleccionados</h2></div>
+    <div class="rctl"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Siguiente">→</button></div>
+  </div>
+  <div class="track" id="track">
+    <article class="proj"><div class="im"><img src="img/p1.jpg" alt="Cocina con mesada de piedra" loading="lazy"></div><div class="info"><h3>Cocina</h3><span>Interiorismo</span></div></article>
+    <article class="proj"><div class="im"><img src="img/p3.jpg" alt="Vivienda con muro de piedra" loading="lazy"></div><div class="info"><h3>Vivienda</h3><span>Proyecto</span></div></article>
+    <article class="proj"><div class="im"><img src="img/p2.jpg" alt="Baño con bacha de piedra" loading="lazy"></div><div class="info"><h3>Baño</h3><span>Interiorismo</span></div></article>
+    <article class="proj"><div class="im"><img src="img/p5.jpg" alt="Fachada de ladrillo y hierro" loading="lazy"></div><div class="info"><h3>Fachada</h3><span>Exterior</span></div></article>
+    <article class="proj"><div class="im"><img src="img/p6.jpg" alt="Cocina clara con isla" loading="lazy"></div><div class="info"><h3>Cocina integrada</h3><span>Interiorismo</span></div></article>
+    <article class="proj"><div class="im"><img src="img/p4.jpg" alt="Dúplex con cochera" loading="lazy"></div><div class="info"><h3>Dúplex</h3><span>Obra</span></div></article>
+    <article class="proj"><div class="im"><img src="img/p7.jpg" alt="Departamento renovado" loading="lazy"></div><div class="info"><h3>Departamento</h3><span>Remodelación</span></div></article>
+  </div>
+</section>
+
+<section class="case">
+  <div class="wrap">
+    <div class="pair">
+      <figure><img src="img/p1.jpg" alt="Cocina con mesada de piedra" loading="lazy"><figcaption>Materialidad</figcaption></figure>
+      <figure><img src="img/hero.jpg" alt="Cocina terminada" loading="lazy" style="object-position:30% center"><figcaption>Calidez y luz</figcaption></figure>
+    </div>
+    <div>
+      <span class="sm">Caso · Remodelación de cocina</span>
+      <h2>Una cocina oscura que pidió luz</h2>
+      <p>La cocina se sentía oscura y poco aprovechada. La respuesta no estuvo en gastar más, sino en elegir mejor.</p>
+      <ul class="checks"><li>Paleta más clara y luz bien ubicada</li><li>Mayor capacidad de guardado</li><li>Nueva distribución integrada al resto de la casa</li></ul>
+      <a class="btn" href="#contacto">Quiero transformar mi casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote>Un enchufe que quedó lejos. Una altura que no funciona. <span>Por eso diseñar también es anticipar.</span></blockquote>
+    <img src="img/p3.jpg" alt="Vivienda con muro de piedra" loading="lazy">
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div>
+      <span class="sm">Contacto</span>
+      <h2>Hablemos de tu obra</h2>
+      <a class="mail" href="https://wa.me/5493512268939" target="_blank" rel="noopener">WhatsApp 351 226-8939</a><br>
+      <a class="mail" href="mailto:prismaarquitectoscba@gmail.com">prismaarquitectoscba@gmail.com</a>
+      <p style="margin-top:22px;color:var(--grey)">Instagram: <a href="https://www.instagram.com/arquitectura.prisma/" target="_blank" rel="noopener">@arquitectura.prisma</a></p>
+    </div>
+    <form id="f">
+      <div><label for="n">Nombre</label><input id="n" required></div>
+      <div><label for="e">Email o teléfono</label><input id="e" required></div>
+      <div><label for="t">Servicio</label><select id="t"><option>Proyecto</option><option>Dirección técnica</option><option>Relevamiento</option><option>Asesoramiento</option><option>Interiorismo</option></select></div>
+      <div><label for="m">Contanos tu idea</label><textarea id="m"></textarea></div>
+      <button class="btn solid" type="submit" style="justify-self:start">Enviar por WhatsApp</button>
+      <a id="walink" style="display:none;font-size:.9rem;color:var(--wood)">Si no se abrió WhatsApp, tocá acá →</a>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 Arquitectura Prisma · Córdoba</span><span>Sitio diseñado por MG Servicios Ejecutivos</span></div></footer>
+<a class="wa" href="https://wa.me/5493512268939" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+const tr=document.getElementById('track'); const step=()=>tr.querySelector('.proj').offsetWidth+22;
+document.getElementById('next').onclick=()=>tr.scrollBy({left:step(),behavior:'smooth'});
+document.getElementById('prev').onclick=()=>tr.scrollBy({left:-step(),behavior:'smooth'});
+const lb=document.getElementById('lb');
+document.querySelectorAll('.proj').forEach(f=>f.addEventListener('click',()=>{lb.querySelector('img').src=f.querySelector('img').src;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value;
+  const t=`Hola Arquitectura Prisma! Soy ${v('n')}.\n• Contacto: ${v('e')}\n• Servicio: ${v('t')}\n• Mi idea: ${v('m')||'-'}`;
+  const url='https://wa.me/5493512268939?text='+encodeURIComponent(t);const a=document.getElementById('walink');a.href=url;a.style.display='inline-block';
+  try{window.open(url,'_blank')}catch(err){}
+});
+</script>
+</body>
+</html>

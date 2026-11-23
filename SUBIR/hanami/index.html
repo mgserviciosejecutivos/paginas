@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hanami Florería</title>
+<meta name="description" content="Hanami Florería: flores, plantas y regalos en Córdoba. Ramos únicos y envíos a todo el mundo.">
+<link rel="canonical" href="https://mgserviciosejecutivos.com/paginas/hanami/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Hanami Florería">
+<meta property="og:description" content="Hanami Florería: flores, plantas y regalos en Córdoba. Ramos únicos y envíos a todo el mundo.">
+<meta property="og:url" content="https://mgserviciosejecutivos.com/paginas/hanami/">
+<meta property="og:image" content="https://mgserviciosejecutivos.com/paginas/hanami/og.jpg">
+<meta property="og:image:secure_url" content="https://mgserviciosejecutivos.com/paginas/hanami/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vista previa del sitio web de Hanami Florería">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hanami Florería">
+<meta name="twitter:description" content="Hanami Florería: flores, plantas y regalos en Córdoba. Ramos únicos y envíos a todo el mundo.">
+<meta name="twitter:image" content="https://mgserviciosejecutivos.com/paginas/hanami/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --washi:#FAF5F1; --blush:#F2DEE4; --camellia:#9E3358; --sumi:#171314; --leaf:#4F5E44; --mute:#776C6A;
+  --display:"Shippori Mincho", "Hiragino Mincho ProN", Georgia, serif; --body:"Zen Kaku Gothic New", "Hiragino Sans", Arial, sans-serif;
+  /* layout: washi-paper page, vertical kanji marks as section markers, round 'hanko' stamp, collage hero */
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--washi);color:var(--sumi);font-family:var(--body);line-height:1.75;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--camellia);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.2;text-wrap:balance}
+section{scroll-margin-top:80px}
+.kanji{writing-mode:vertical-rl;font-family:var(--display);color:var(--camellia);font-size:.9rem;letter-spacing:.5em;display:flex;align-items:center;gap:14px}
+.kanji::after{content:"";width:1px;height:46px;background:currentColor;opacity:.5}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;background:var(--camellia);color:#fff;text-decoration:none;font-weight:500;letter-spacing:.04em;border:0;cursor:pointer;font-family:var(--body);font-size:.95rem;transition:transform .2s, background .2s}
+.btn:hover{background:#951f3a;transform:translateY(-2px)}
+.btn.line{background:transparent;color:var(--sumi);box-shadow:inset 0 0 0 1px var(--sumi)}
+.btn.line:hover{background:var(--sumi);color:var(--washi)}
+.btn svg{width:18px;height:18px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--washi) 90%,transparent);backdrop-filter:blur(8px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo .lg{height:46px;width:46px;color:var(--camellia);flex:none}
+.logo span{font-family:var(--display);font-size:1.25rem;line-height:1}
+.logo small{display:block;font-family:var(--body);font-size:.62rem;letter-spacing:.32em;color:var(--mute);margin-top:4px}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:.9rem}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{color:var(--camellia)}
+.mt{display:none;background:none;border:0;font:inherit;cursor:pointer;font-size:.85rem;letter-spacing:.15em}
+
+/* hero */
+.hero{padding:clamp(30px,5vw,70px) 0 clamp(60px,8vw,110px);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.8rem);margin:18px 0 22px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--camellia)}
+.hero .sub{font-size:1.08rem;color:var(--mute);max-width:44ch;margin-bottom:34px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.pill{display:inline-flex;gap:10px;align-items:center;background:var(--blush);padding:8px 16px;border-radius:999px;font-size:.82rem;color:var(--camellia);font-weight:500}
+.collage{position:relative;height:clamp(440px,48vw,600px)}
+.collage figure{position:absolute;overflow:hidden;border-radius:220px 220px 18px 18px;box-shadow:0 30px 60px -30px rgba(80,20,30,.35)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.c1{left:0;top:6%;width:52%;height:82%}
+.c2{right:0;top:0;width:44%;height:52%;border-radius:18px!important}
+.c3{right:4%;bottom:0;width:40%;height:42%;border-radius:18px 18px 160px 160px!important}
+.hanko{position:absolute;left:44%;bottom:6%;width:118px;height:118px;border-radius:50%;background:var(--camellia);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--display);font-size:.82rem;line-height:1.3;transform:rotate(-10deg);box-shadow:0 10px 30px -10px rgba(177,42,71,.6);z-index:2}
+.hanko b{display:block;font-size:1.5rem}
+.petal{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--blush) 0%,transparent 68%);right:-160px;top:-120px;z-index:-1}
+
+/* marquee */
+.band{background:var(--sumi);color:var(--washi);overflow:hidden;white-space:nowrap;padding:16px 0;font-family:var(--display);font-size:1.15rem}
+.band div{display:inline-block;animation:mq 38s linear infinite}
+.band span{margin:0 26px}.band i{font-style:normal;color:#E9A0B0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* occasions */
+.occ{padding:clamp(70px,9vw,120px) 0}
+.head{display:grid;grid-template-columns:auto 1fr;gap:40px;margin-bottom:50px;align-items:start}
+.head h2{font-size:clamp(2rem,4vw,3.2rem)}
+.head p{color:var(--mute);max-width:56ch;margin-top:14px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s}
+.card:hover{transform:translateY(-6px)}
+.card .im{aspect-ratio:4/5;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover img{transform:scale(1.06)}
+.card .tx{padding:20px 22px 24px}
+.card h3{font-size:1.35rem;margin-bottom:6px}
+.card p{font-size:.9rem;color:var(--mute)}
+
+/* story */
+.story{background:var(--blush);padding:clamp(70px,9vw,120px) 0;position:relative}
+.story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,6vw,90px);align-items:center}
+.story .ph{position:relative}
+.story .ph img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.story .ph .small{position:absolute;width:44%;right:-6%;bottom:-8%;border:8px solid var(--blush);border-radius:18px;aspect-ratio:1}
+.story h2{font-size:clamp(2rem,4vw,3.1rem);margin:16px 0 20px}
+.story p{color:#5e4d4f;margin-bottom:16px;max-width:52ch}
+.addr{margin-top:26px;display:flex;gap:16px;align-items:center;background:var(--washi);padding:18px 22px;border-radius:14px;max-width:440px}
+.addr b{font-family:var(--display);font-size:1.1rem;display:block}
+.addr small{color:var(--mute)}
+.addr svg{width:30px;height:30px;color:var(--camellia);flex:none}
+
+/* delivery */
+.delivery{padding:clamp(70px,9vw,120px) 0}
+.del{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+.del div{border-top:2px solid var(--sumi);padding-top:22px}
+.del b{font-family:var(--display);font-size:3rem;color:var(--camellia);line-height:1;display:block;margin-bottom:14px}
+.del h3{font-size:1.3rem;margin-bottom:8px}
+.del p{color:var(--mute);font-size:.95rem}
+.world{margin-top:56px;background:var(--sumi);color:var(--washi);border-radius:24px;padding:clamp(30px,5vw,56px);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.world h3{font-size:clamp(1.6rem,3vw,2.4rem)}
+.world p{color:#c9bcbc;margin-top:10px}
+
+/* gallery */
+.gal{padding:0 0 clamp(70px,9vw,120px)}
+.masonry{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.masonry figure{aspect-ratio:1;border-radius:14px;overflow:hidden;cursor:zoom-in}
+.masonry img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+@media (max-width:760px){.masonry{grid-template-columns:1fr 1fr;gap:10px}}
+.masonry figure:hover img{transform:scale(1.04)}
+
+/* order */
+.order{background:var(--washi);border-top:1px solid #eadcd6;padding:clamp(70px,9vw,120px) 0}
+.order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px)}
+.order h2{font-size:clamp(2.1rem,4.4vw,3.4rem);margin:16px 0 18px}
+.order p{color:var(--mute);max-width:46ch}
+.contact-l{margin-top:30px;display:grid;gap:12px;font-size:.95rem}
+.contact-l a{text-decoration:none;display:flex;gap:12px;align-items:center}
+.contact-l svg{width:20px;height:20px;color:var(--camellia)}
+form{background:#fff;border-radius:22px;padding:clamp(24px,4vw,40px);display:grid;gap:16px;box-shadow:0 30px 60px -40px rgba(80,20,30,.3)}
+form h3{font-size:1.4rem}
+label{font-size:.8rem;font-weight:500;color:var(--mute);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;border:1px solid #e8dcd8;background:var(--washi);border-radius:12px;padding:13px 14px;font:inherit;font-size:.95rem;color:var(--sumi)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--camellia)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#walink{display:none;font-size:.9rem;color:var(--camellia);font-weight:500}
+
+footer{background:var(--sumi);color:#a99c9c;font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;padding-top:28px;padding-bottom:28px;flex-wrap:wrap}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.35)}
+.wa svg{width:30px;height:30px;color:#fff}
+.lb{position:fixed;inset:0;background:rgba(23,19,20,.93);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+.lb.on{display:flex}.lb img{max-height:88vh;max-width:92vw;border-radius:10px}
+
+@media (prefers-reduced-motion:reduce){.band div{animation:none}html{scroll-behavior:auto}}
+@media (max-width:920px){
+  .nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:var(--washi);flex-direction:column;gap:0;padding:8px 24px 20px}
+  .nav ul.open{display:flex}.nav ul li{padding:12px 0}.mt{display:block}.nav .btn{display:none}
+  .hero .wrap,.story .wrap,.order .wrap,.world{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}.del{grid-template-columns:1fr}
+  .head{grid-template-columns:1fr}.head .kanji{writing-mode:horizontal-tb}
+  .story .ph .small{right:4%}
+}
+@media (max-width:480px){.cards{grid-template-columns:1fr}.row{grid-template-columns:1fr}.hanko{width:96px;height:96px;font-size:.7rem}}
+/* mobile symmetry */
+.wrap>*{min-width:0}
+h1,h2,h3{overflow-wrap:break-word}
+@media (max-width:560px){.ctas{display:grid!important;grid-template-columns:1fr;gap:10px}.ctas .btn{justify-content:center;width:100%}form button[type=submit]{width:100%;justify-content:center;justify-self:stretch!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><svg class="lg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.2"/><g fill="currentColor"><ellipse cx="24" cy="15.2" rx="5.2" ry="7.6" transform="rotate(0 24 24)" opacity=".92"/><ellipse cx="24" cy="15.2" rx="5.2" ry="7.6" transform="rotate(72 24 24)" opacity=".92"/><ellipse cx="24" cy="15.2" rx="5.2" ry="7.6" transform="rotate(144 24 24)" opacity=".92"/><ellipse cx="24" cy="15.2" rx="5.2" ry="7.6" transform="rotate(216 24 24)" opacity=".92"/><ellipse cx="24" cy="15.2" rx="5.2" ry="7.6" transform="rotate(288 24 24)" opacity=".92"/></g><circle cx="24" cy="24" r="3.2" fill="#FAF5F1"/></svg><span>Hanami<small>FLORERÍA</small></span></a>
+    <ul id="menu">
+      <li><a href="#ocasiones">Ocasiones</a></li>
+      <li><a href="#historia">Nuestra historia</a></li>
+      <li><a href="#envios">Envíos</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#pedido">Pedidos</a></li>
+    </ul>
+    <a class="btn" href="#pedido">Hacer un pedido</a>
+    <button class="mt" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Abrir menú">MENÚ</button>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="petal" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="pill">Florería de autor · Córdoba</span>
+      <h1>Flores que dicen <em>lo que sentís</em>.</h1>
+      <p class="sub">Ramos únicos, plantas y regalos armados a mano en nuestro taller de Córdoba. Vos elegís las flores, nosotros nos encargamos de que lleguen y sorprendan.</p>
+      <div class="ctas">
+        <a class="btn" href="https://wa.me/5493512061051" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Pedir por WhatsApp</a>
+        <a class="btn line" href="#ocasiones">Ver ocasiones</a>
+      </div>
+    </div>
+    <div class="collage">
+      <figure class="c1"><img src="img/f3.jpg" alt="Ramo de flores multicolor"></figure>
+      <figure class="c2"><img src="img/f1.jpg" alt="Ramo de girasoles"></figure>
+      <figure class="c3"><img src="img/f2.jpg" alt="Ramo de flores blancas"></figure>
+      <div class="hanko"><div><b>花</b>envíos a<br>todo el mundo</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div>
+  <span>Ramos únicos</span><i>✿</i><span>Plantas</span><i>✿</i><span>Regalos</span><i>✿</i><span>Novias</span><i>✿</i><span>Envíos a todo el mundo</span><i>✿</i><span>Córdoba</span><i>✿</i>
+  <span>Ramos únicos</span><i>✿</i><span>Plantas</span><i>✿</i><span>Regalos</span><i>✿</i><span>Novias</span><i>✿</i><span>Envíos a todo el mundo</span><i>✿</i><span>Córdoba</span><i>✿</i>
+</div></div>
+
+<section class="occ" id="ocasiones">
+  <div class="wrap">
+    <div class="head">
+      <div class="kanji">花言葉</div>
+      <div><h2>Una flor para cada momento</h2><p>Porque no se trata solo de regalar flores, sino de hacerle saber a alguien lo especial que es. A veces un pequeño ramo dice lo que las palabras no alcanzan.</p></div>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="im"><img src="img/f9.jpg" alt="Ramo para sorprender" loading="lazy"></div><div class="tx"><h3>Ramos para sorprender</h3><p>Cumpleaños, aniversarios o un martes cualquiera. Diseños únicos, nunca dos iguales.</p></div></article>
+      <article class="card"><div class="im"><img src="img/f4.jpg" alt="Regalo con flores" loading="lazy"></div><div class="tx"><h3>Regalos</h3><p>Combiná flores con chocolates, velas y detalles para un regalo completo.</p></div></article>
+      <article class="card"><div class="im"><img src="img/f10.jpg" alt="Plantas de interior" loading="lazy"></div><div class="tx"><h3>Plantas</h3><p>Variedad en plantas de interior y exterior para llenar de vida tu casa u oficina.</p></div></article>
+      <article class="card"><div class="im"><img src="img/f8.jpg" alt="Ramo de novia" loading="lazy"></div><div class="tx"><h3>Novias y eventos</h3><p>Ramos de novia y arreglos especiales pensados junto a vos, con tiempo y cariño.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="historia">
+  <div class="wrap">
+    <div class="ph">
+      <img src="img/f7.jpg" alt="Florista armando un ramo" loading="lazy">
+      <img class="small" src="img/f5.jpg" alt="Mercado de flores frescas" loading="lazy">
+    </div>
+    <div>
+      <div class="kanji" style="writing-mode:horizontal-tb">物語 · NUESTRA HISTORIA</div>
+      <h2>Flores elegidas una por una</h2>
+      <p>Hanami nace de la costumbre japonesa de detenerse a mirar las flores. En nuestro taller de Córdoba elegimos cada flor de forma personal en el mercado para que tu ramo llegue fresco y dure más.</p>
+      <p>Somos una florería de barrio con alma de taller: escuchamos qué querés decir y lo traducimos en flores.</p>
+      <div class="addr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <div><b>Taller en Córdoba Capital</b><small>Entregas en toda la ciudad · Retiro con turno</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="delivery" id="envios">
+  <div class="wrap">
+    <div class="head">
+      <div class="kanji">配達</div>
+      <div><h2>Donde hay alguien para sorprender, ahí estamos</h2><p>Hacemos envíos en Córdoba y, a través de nuestra red, a todo el mundo.</p></div>
+    </div>
+    <div class="del">
+      <div><b>01</b><h3>Elegí</h3><p>Mirá nuestros ramos o contanos la ocasión, colores preferidos y presupuesto.</p></div>
+      <div><b>02</b><h3>Personalizá</h3><p>Sumá una tarjeta con tu mensaje y algún regalo extra si querés.</p></div>
+      <div><b>03</b><h3>Sorprendé</h3><p>Lo armamos el mismo día y lo llevamos a destino, o lo retirás por el local.</p></div>
+    </div>
+    <div class="world">
+      <div><h3>¿La persona que querés sorprender vive lejos?</h3><p>Coordinamos envíos de flores a otras ciudades y países. Escribinos y te asesoramos.</p></div>
+      <div><a class="btn" href="https://wa.me/5493512061051?text=Hola!%20Quiero%20hacer%20un%20env%C3%ADo%20de%20flores" target="_blank" rel="noopener">Consultar envío</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="gal" id="galeria">
+  <div class="wrap">
+    <div class="head">
+      <div class="kanji">写真</div>
+      <div><h2>Recién salidos del taller</h2><p>Algunos de los ramos y arreglos que armamos esta temporada.</p></div>
+    </div>
+    <div class="masonry">
+      <figure><img src="img/f3.jpg" alt="Ramo multicolor" loading="lazy"></figure>
+      <figure><img src="img/f6.jpg" alt="Ramos envueltos en papel" loading="lazy"></figure>
+      <figure><img src="img/f1.jpg" alt="Girasoles" loading="lazy"></figure>
+      <figure><img src="img/f2.jpg" alt="Ramo blanco" loading="lazy"></figure>
+      <figure><img src="img/f9.jpg" alt="Ramo envuelto" loading="lazy"></figure>
+      <figure><img src="img/f4.jpg" alt="Regalo con flores" loading="lazy"></figure>
+      <figure><img src="img/f8.jpg" alt="Ramo de novia" loading="lazy"></figure>
+      <figure><img src="img/f10.jpg" alt="Plantas" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="pedido">
+  <div class="wrap">
+    <div>
+      <div class="kanji" style="writing-mode:horizontal-tb">注文 · PEDIDOS</div>
+      <h2>Armemos tu ramo</h2>
+      <p>Completá estos datos y te abrimos WhatsApp con el pedido listo para enviar. Te respondemos con opciones y precios.</p>
+      <div class="contact-l">
+        <a href="https://wa.me/5493512061051" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>351 206-1051</a>
+        <a href="#envios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Envíos en Córdoba</a>
+      </div>
+    </div>
+    <form id="f">
+      <h3>Tu pedido</h3>
+      <div class="row">
+        <div><label for="o">Ocasión</label><select id="o"><option>Cumpleaños</option><option>Aniversario</option><option>Día de la Madre</option><option>Nacimiento</option><option>Novias</option><option>Solo porque sí</option></select></div>
+        <div><label for="p">Presupuesto</label><select id="p"><option>A consultar</option><option>Ramo chico</option><option>Ramo mediano</option><option>Ramo grande</option></select></div>
+      </div>
+      <div><label for="c">Colores o flores preferidas</label><input id="c" placeholder="Ej: rosas rosadas, girasoles, tonos pastel"></div>
+      <div class="row">
+        <div><label for="d">Fecha de entrega</label><input id="d" type="date"></div>
+        <div><label for="e">¿Envío o retiro?</label><select id="e"><option>Envío</option><option>Retiro en el local</option></select></div>
+      </div>
+      <div><label for="m">Mensaje para la tarjeta</label><textarea id="m" rows="3"></textarea></div>
+      <button class="btn" type="submit">Enviar pedido por WhatsApp</button>
+      <a id="walink" target="_blank" rel="noopener">Si no se abrió WhatsApp, tocá acá →</a>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Hanami Florería · Flores, plantas y regalos · Córdoba</span><span>Sitio diseñado por MG Servicios Ejecutivos</span></div></footer>
+<a class="wa" href="https://wa.me/5493512061051" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+const lb=document.getElementById('lb');
+document.querySelectorAll('.masonry figure').forEach(f=>f.addEventListener('click',()=>{lb.querySelector('img').src=f.querySelector('img').src;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault(); const v=id=>document.getElementById(id).value;
+  const t=`Hola Hanami! Quiero hacer un pedido 🌷\n• Ocasión: ${v('o')}\n• Presupuesto: ${v('p')}\n• Flores/colores: ${v('c')||'-'}\n• Fecha: ${v('d')||'-'}\n• ${v('e')}\n• Tarjeta: ${v('m')||'-'}`;
+  const url='https://wa.me/5493512061051?text='+encodeURIComponent(t); const a=document.getElementById('walink'); a.href=url; a.style.display='inline';
+  try{window.open(url,'_blank')}catch(err){}
+});
+</script>
+</body>
+</html>
